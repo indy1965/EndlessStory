@@ -114,10 +114,15 @@ gulp.task( 'build-css', ()=>{
     )
     //.pipe(webpCss())
     .pipe(cssbeautify())        // Делаем код css красивым
+    .pipe(
+      rename({
+        prefix: "main-",                 // Переименовывает файлы
+      })
     .pipe(dest(path.build.css)) // Сохраняем не минифицированый файл стилей
     .pipe( cleanCSS({level: { 1: { specialComments: 0 } } }) )         // Чистит и сжимает css файлы на выходе.
     .pipe(
-      rename({                  // Переименовывает файлы
+      rename({
+        prefix: "main-",                 // Переименовывает файлы
         suffix: '.min',
         extname: '.css'
       })
