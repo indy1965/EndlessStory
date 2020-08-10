@@ -4,14 +4,11 @@
     @@include('./tplhtml/blocks/head.html',{"title": "Главная" })
   </head>
   <body>
-    <div class="page"></div>
-
-
-
-
-
-
-
+    <div class="page_content">
+      <!-- Header -->
+      @@include('./tplhtml/blocks/_header.html',{})
+      <!-- /.header -->
+    </div> <!-- /page_content -->
     @@include('./tplhtml/blocks/_scripts-js.html',{})
   </body>
 </html>

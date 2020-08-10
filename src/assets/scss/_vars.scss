@@ -1,11 +1,43 @@
-$minWidth: 320px;
-$maxWidth: 1920;
-$maxWidthContainer:1060;
-$maxWidthContainerHeader:1400px;
-$md1: $maxWidthContainer+12;
-$md2: 991.98;
-$md3: 767.98;
-$md4: 479.98;
+// Размеры контейнеров и экранов.
+$container-md1: 1140px;
+$container-md2: 960px;
+$container-md3: 720px;
+$container-md4: 540px;
+$container-md5: 100%;
+$md1: 1200px;
+$md2: 992px;
+$md3: 768px;
+$md4: 576px;
+$md4: 320px;
 
-// Цвет
+// Цвета
 $white: #fff;
+$red: #FA4E5E;
+$black: #000;
+
+$defTextColor: #000;
+$hoverColor: #6098C6;
+$bg_head: rgba(73, 64, 87, 0.9); // #2F2B35;
+$bg_footer: $bg-head;
+
+$selection: #e6ae48;
+
+//product-item
+$brd-card_shdow: 3px 5px 10px rgba(154, 154, 154, 0.25);
+$brd_card: 1px solid #CFCFCF;
+$brd_card_hover: 1px solid #d649cf;
+$color_title_card: #1E1E1E;
+$color_text_price: #BCA480;
+
+// button
+$color_font_btn: #5D5E62;
+$color_brd_btn: #D5D5D5;
+$brd_btn: 1px solid $color_brd_btn;
+
+// title
+$color_title_section: #2F2B35;
+$font_title_section: 'SFProDisplay';
+$font_title_weight: 200;
+$font_title_size: 4em; // размер шрифта в em
+
+
