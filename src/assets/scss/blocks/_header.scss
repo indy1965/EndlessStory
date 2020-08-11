@@ -37,13 +37,16 @@
   }
 }
 
-// .logo
+/*
+    Logo
+*/
 .logo {
 
   // .logo__img
   &__img {
     width: 63px;
     height: 63px;
+    margin-right: 10px;
   }
 
   h2 {
@@ -55,12 +58,13 @@
   }
 }
 
-//  navbar-head
+/*********************************
+    navbar
+*********************************/
 .navbar-head {
 
-
   // .navbar_head__menu
-  &__menu {
+  &__list-menu {
     display: flex;
     text-align: center;
 
@@ -130,39 +134,21 @@
   }
 }
 
-.action-head {
-  &__account {
+/*********************************
+    Block icons
+*********************************/
+.action-icons {
+  &__user {
     display: inline-block;
     position: relative;
   }
 
-  &__cart {
-    a {
-      border-radius: 50%;
-      background: #636363; //#285755;
-
-      span {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: -9px;
-        left: 25px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: #fe4c50;
-        color: #ffffff;
-      }
-    }
-  }
 }
 
 /*********************************
- Account
+ User Account
 *********************************/
-.account {
+.user-icon {
   &:hover &::selection {
     visibility: visible;
     opacity: 1;
@@ -218,6 +204,31 @@
       &:last-child a {
         border-bottom: none;
       }
+    }
+  }
+}
+
+/*********************************
+ User Account
+*********************************/
+.cart-icon {
+  &>a {
+    border-radius: 50%;
+    background: #636363; //#285755;
+
+    span {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -9px;
+      left: 25px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fe4c50;
+      color: #ffffff;
     }
   }
 }
