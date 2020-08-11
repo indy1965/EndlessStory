@@ -289,19 +289,21 @@ $shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
     display: flex;
     flex-direction: column;
     justify-content: start;
-    max-width: 280px;
+    width: 350px;
     padding: 20px 15px;
   }
 
   // .minicart__list
   &__list {
-    max-height: 200px;
+    max-height: 310px;
     overflow-x: hidden;
     overflow-y: auto;
 
     &>li {
       display: flex;
       position: relative;
+      padding: 10px 0;
+      border-top: 1px solid #aeaeae;
     }
   }
 
@@ -310,19 +312,25 @@ $shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
     display: flex;
     flex-direction: row;
     zoom: 1;
-    max-height: 70px;
+    max-height: 60px;
     overflow: hidden;
-    margin-bottom: 20px;
   }
 
   // .minicart__item-remove
   &__item-remove {
     display: inline-block;
     position: absolute;
-    right: 0;
+    right: 15px;
     width: 10px;
     height: 10px;
-    color: #333;
+    color: #a4a4a4;
+    font-size: 1.4em;
+    font-weight: 100;
+    transition:all .3s ease;
+
+    &:hover{
+      color: $red;
+    }
   }
 }
 
@@ -330,13 +338,14 @@ $shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
   // .item-cart__body
   &__body{
     padding-right: 35px;
+    margin-right: 30px;
     overflow: hidden;
   }
   // .item-cart__image
   &__image {
     //background: #dfdfdf;
     flex: 1 0 40px;
-    max-width: 60px;
+    max-width: 50px;
     margin-right: 15px;
     display: flex;
     align-items: center;
@@ -361,13 +370,20 @@ $shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
     line-height: 1.2em;
     overflow: hidden;
     max-height: 30px;
+    transition:all .3s ease;
 
     &>a{
       &>h3{
         font-family: $font-family_minicart;
-        font-size: 1em;
+        font-size: 1.1em;
         font-weight: $font-Medium;
         color: #333;
+      }
+    }
+
+    &:hover{
+      &>a>h3{
+        color: $hoverColor;
       }
     }
   }
@@ -385,7 +401,7 @@ $shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
 
 .minicart-total {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
@@ -402,18 +418,19 @@ $shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
 
   &>.price {
     color: #ffa200;
+    margin-left: 10px;
   }
 }
 
 .minicart-action {
   display: flex;
-  flex-direction: column;
   width: 100%;
+  justify-content: space-around;
 }
 
-.btn {
+.btn-lg {
   color: #333;
-  border-color: $color_brd_btn ; //#333;
+  border: 1px solid #6e6e6e ; //$color_brd_btn;
   background: 0 0;
   font-family: 'SFProDisplay';
   text-transform: uppercase;
