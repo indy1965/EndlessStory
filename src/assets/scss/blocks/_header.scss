@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background:$bg_head;
+  background: $bg_head;
   z-index: 10;
   // .header__row
 
@@ -16,11 +16,8 @@
     height: 80px;
   }
 
-  &__logo{
+  &__logo {
     display: block;
-  }
-
-  &__logo.column{
     flex: 0 1 35%;
   }
 
@@ -36,22 +33,20 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-
-  &__navbar.navbar-head.column {
     flex: 0 1 100%;
   }
 }
 
 // .logo
 .logo {
+
   // .logo__img
   &__img {
     width: 63px;
     height: 63px;
   }
 
-  h2{
+  h2 {
     display: inline-block;
     color: $white;
     font-family: 'SFProDisplay';
@@ -69,7 +64,7 @@
     display: flex;
     text-align: center;
 
-    li{
+    li {
       display: inline-block;
 
       a {
@@ -80,25 +75,23 @@
         padding: 20px;
         transition: color 0.3s ease;
 
-        &:hover{
-          color:$hoverColor;
+        &:hover {
+          color: $hoverColor;
         }
       }
     }
-
-
   }
 
-  &__action{
+  &__action {
     display: flex;
     text-align: center;
     margin-left: 60px;
 
-    li{
+    li {
       display: inline-block;
       text-align: center;
 
-      a{
+      a {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -110,13 +103,13 @@
         transition: color 0.3s ease;
 
 
-        &:hover{
-          i{
+        &:hover {
+          i {
             color: $hoverColor;
           }
         }
 
-        i{
+        i {
           font-size: 1.2em;
           color: $white;
         }
@@ -131,23 +124,24 @@
     color: $white;
     transition: all .3s ease;
 
-    &:hover{
+    &:hover {
       color: #b5aec4;
     }
   }
 }
 
-.action-head{
-  &__account{
+.action-head {
+  &__account {
     display: inline-block;
     position: relative;
   }
 
-  &__cart{
-    a{
+  &__cart {
+    a {
       border-radius: 50%;
       background: #636363; //#285755;
-      span{
+
+      span {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -164,23 +158,24 @@
     }
   }
 }
+
 /*********************************
  Account
 *********************************/
-.account{
-  &:hover &::selection{
+.account {
+  &:hover &::selection {
     visibility: visible;
     opacity: 1;
     top: 100%;
   }
 
-  &:hover &__selection{
+  &:hover &__selection {
     visibility: visible;
     opacity: 1;
     top: 100%;
   }
 
-  &__selection{
+  &__selection {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -188,19 +183,19 @@
     top: 130%;
     margin: 0;
     width: 210px;
-    background:  #52535f; //rgb(68, 65, 65);
+    background: #52535f; //rgb(68, 65, 65);
     visibility: hidden;
     opacity: 0;
     z-index: 1;
     box-shadow: 0 0 25px rgba(63, 78, 100, 0.15);
     transition: all 0.2s ease;
 
-    li{
+    li {
       padding-left: 10px;
       padding-right: 10px;
       line-height: 50px;
 
-      a{
+      a {
         margin: 0;
         display: block;
         border-bottom: solid 1px #dddddd;
@@ -211,22 +206,18 @@
         width: 100%;
         transition: all 0.3s ease;
 
-        &:hover{
+        &:hover {
           color: $hoverColor;
         }
 
-        i{
+        i {
           margin-right: 10px;
         }
       }
 
-      &:last-child a{
+      &:last-child a {
         border-bottom: none;
       }
     }
   }
 }
-
-
-
-
