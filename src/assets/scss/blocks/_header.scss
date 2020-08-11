@@ -289,12 +289,16 @@ $shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
     display: flex;
     flex-direction: column;
     justify-content: start;
-    max-width: 260px;
+    max-width: 280px;
     padding: 20px 15px;
   }
 
   // .minicart__list
   &__list {
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
     &>li {
       display: flex;
       position: relative;
