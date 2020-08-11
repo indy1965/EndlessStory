@@ -94,30 +94,6 @@
     li {
       display: inline-block;
       text-align: center;
-
-      a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        width: 40px;
-        height: 40px;
-        margin: 10px;
-        transition: color 0.3s ease;
-
-
-        &:hover {
-          i {
-            color: $hoverColor;
-          }
-        }
-
-        i {
-          font-size: 1.2em;
-          color: $white;
-        }
-      }
     }
   }
 
@@ -143,6 +119,29 @@
     position: relative;
   }
 
+  &__user>a, &__cart>a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    transition: color 0.3s ease;
+
+
+    &:hover {
+      i {
+        color: $hoverColor;
+      }
+    }
+
+    i {
+      font-size: 1.2em;
+      color: $white;
+    }
+  }
 }
 
 /*********************************
@@ -231,4 +230,94 @@
       color: #ffffff;
     }
   }
+
+  &__minicart {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    right: 5%;
+    top: 130%;
+
+  }
 }
+
+.minicart {
+
+  // .minicart__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  // .minicart__list
+  &__list {
+    li {
+      display: flex;
+    }
+
+    border: 1px solid blue;
+  }
+
+  // .minicart__item
+  &__item {
+    display: flex;
+
+
+    border: 1px solid red;
+  }
+
+  // .minicart__item-remove
+
+  &__item-remove {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    color: #000;
+    ;
+  }
+}
+
+.item-cart {
+
+  // .item-cart__image
+
+  &__image {
+    background: #c5c5c5;
+  }
+}
+
+.item-car {
+
+  // .item-car__body
+
+  &__body {}
+}
+
+.cart-body {
+
+  // .cart-body__name
+
+  &__name {}
+
+  // .cart-body__price
+
+  &__price {}
+
+  // .cart-body__quantity
+
+  &__quantity {}
+}
+
+.icon {}
+
+.icon-remove {}
+
+.minicart-total {}
+
+.price {}
+
+.minicart-action {}
+
+.btn {}
