@@ -53,6 +53,8 @@
   // .minicart__action
 
   &__action {
+    display: flex;
+    justify-content: space-between;
     margin: 0 -1.1%;
     padding: 12px 15px 0;
     position: relative;
@@ -131,6 +133,7 @@
   &__curency-symbol {}
 }
 
-.btn{
-   display: block;
+.btn-mk{
+  padding: 10px 0;
+  width: 120px;
 }

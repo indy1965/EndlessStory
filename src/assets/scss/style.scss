@@ -31,16 +31,6 @@ $fontFamily: '';
   content: '₽';
 }
 //* ========================================================
-img {
-  display: inline-block;
-  color: transparent;
-  height: auto;
-  font-size: 0;
-  vertical-align: middle;
-  max-width: 100%;
-  image-rendering: -webkit-optimize-contrast;
-  border: 0;
-}
 body{
   font-size: 12px;
   font-weight: normal;
@@ -73,6 +63,6 @@ body{
 }
 
 
-
+@import './components/components';
 @import './blocks/header';
 
