@@ -1,0 +1,136 @@
+.action-icons {
+  // .action-icons__cart-minicart
+  &__cart-minicart {
+    width: 280px;
+    padding: 0 0 25px;
+    margin: 40px 0 0;
+    position: absolute;
+    left: auto;
+    right: -20%;
+    top: 100%;
+    z-index: 1000;
+    border: 1px solid #000;
+    // visibility: hidden;
+    // opacity: 0;
+  }
+}
+.minicart {
+
+  // .minicart__list
+  &__list {
+    max-height: 350px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  // .minicart__item
+
+  &__item {
+    display: block;
+    min-height: 40px;
+    margin: 0;
+    padding: 15px 15px 15px 70px;
+    position: relative;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+  }
+
+  // .minicart__total
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 12px 15px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  // .minicart__action
+
+  &__action {
+    margin: 0 -1.1%;
+    padding: 12px 15px 0;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.item-minicart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // .item-minicart__remove
+
+  &__remove {
+    font-size: 16px;
+    line-height: 1em;
+    background-color: trnsparent;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    right: 15px;
+    left: auto;
+    top: 15px;
+
+  }
+
+  // .item-minicart__image
+
+  &__image {
+    text-align: left;
+    padding-right: 15px;
+    &>img{
+      width: 40px;
+      height: 65px;
+      margin: 0;
+      position: absolute;
+      left: 15px;
+      right: auto;
+      top: 3px;
+      bottom: auto;
+    }
+  }
+
+  // .item-minicart__quantity
+
+  &__quantity {
+    font-family: 'OpenSans';
+    font-size: 14px;
+    font-weight: $font-Thin;
+    display: block;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+
+
+    * {
+      display: inline-block;
+      direction: ltr;
+    }
+  }
+
+  // .item-minicart__amount
+
+  &__amount {
+    color: #888888;
+    white-space: nowrap;
+    font-weight:$font-Bold;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  // .item-minicart__curency-symbol
+
+  &__curency-symbol {}
+}
+
+.btn{
+   display: block;
+}
