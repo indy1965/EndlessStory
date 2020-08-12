@@ -1,0 +1,17 @@
+.btn {
+  display: inline-block;
+  color: #333;
+  border: 1px solid #6e6e6e ; //$color_brd_btn;
+  background: 0 0;
+  font-family: 'SFProDisplay';
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px 25px;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #ffa200;
+  border-color: #ffa200;
+}
