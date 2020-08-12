@@ -10,10 +10,12 @@
 
 // <Иконочные шрифты> ===================================================
 //@import = 'icons'
+@import './vendor/fontello';
 // </Иконочные шрифты> ==================================================
 
 // <Шрифты по умолчанию> ================================================
-$fontFamily: '';
+$fontFamilyPrim: 'Poppins', Arial, Helvetica, sans-serif;
+$fontFamilySecond: 'SFProDisplay', Arial, Helvetica, sans-serif;
 // </Шрифты по умолчанию> ===============================================
 //* </ШРИФТЫ> ===========================================================
 
@@ -34,7 +36,7 @@ $fontFamily: '';
 body{
   font-size: 12px;
   font-weight: normal;
-  font-family: 'OpenSans', Helvetica, sans-serif;
+  font-family: $fontFamilyPrim;
   background: #ffffff;
   line-height: 21px;
 }

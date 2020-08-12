@@ -1,24 +1,20 @@
 /*
   local vars
 */
-$font-family_logo-text: 'SFProDisplay';
+$font-family_logo-text: $fontFamilySecond;
 $font-weight_logo-text: $font-Thin;
 $font-size_logo-text: 2em;
 
-$font-family_nav-menu: 'SFProDisplay';
+$font-family_nav-menu: $fontFamilySecond;
 $font-weight_nav-menu: $font-Light;
 $font-size_nav-menu: 1.2em;
 
-$font-family_account: 'SFProDisplay';
+$font-family_account: $fontFamilySecond;
 $font-weight_account: $font-Light;
 $font-size_account: 1.2em;
 
 $font-size_icon_sm: 1.2em;
 $font-size_icon_lg: 2em;
-
-$font-family_minicart: 'SFProDisplay';
-
-$shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
 
 //**************************
 
@@ -140,12 +136,12 @@ $shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
     Block icons
 *********************************/
 .action-icons {
-  &__user , &__cart{
+  &__user , &__cart,&__instagram{
     display: inline-block;
     position: relative;
   }
 
-  &__user>a, &__cart>a {
+  &__user>a, &__cart>a, &__instagram>a {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,43 +182,37 @@ $shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
   }
 
   &__selection {
-    right: -126%;
-    top: 130%;
+    @include submenu(-100%);
     width: 210px;
-    @include submenu(#52535f, $shadow-sub-menu);
+    padding-left: 10px;
+    padding-right: 10px;
 
-    &>li {
-      padding-left: 10px;
-      padding-right: 10px;
-      line-height: 50px;
+    & a {
+      margin: 0;
+      display: block;
+      border-bottom: solid 1px $boder-color-submenu;
+      font-family: $font-family_account;
+      font-size: $font-size_account;
+      font-weight: $font-weight_account;
+      line-height: 40px;
+      color: #504e4e;
+      letter-spacing: .1em;
+      text-align: left;
+      width: 100%;
+      transition: all 0.3s ease;
 
-      &>a {
-        margin: 0;
-        display: block;
-        border-bottom: solid 1px #dddddd;
-        font-family: $font-family_account;
-        font-size: $font-size_account;
-        font-weight: $font-weight_account;
-        line-height: 40px;
-        color: #ffffff;
-        letter-spacing: .1em;
-        text-align: left;
-        width: 100%;
-        transition: all 0.3s ease;
-
-        &:hover {
-          color: $hoverColor;
-        }
-
-        i {
-          font-size: $font-size_icon_sm;
-          margin-right: 10px;
-        }
+      &:hover {
+        color: $hoverColor;
       }
 
-      &:last-child a {
-        border-bottom: none;
+     i {
+        font-size: $font-size_icon_sm;
+        margin-right: 10px;
       }
+    }
+
+    li:last-child a {
+       border-bottom: none;
     }
   }
 }

@@ -1,21 +1,30 @@
-.action-icons {
-  // .action-icons__cart-minicart
-  &__cart-minicart {
-    width: 280px;
-    padding: 0 0 25px;
-    margin: 40px 0 0;
-    position: absolute;
-    left: auto;
-    right: -20%;
+
+
+.cart-icon {
+  &:hover &::selection {
+    visibility: visible;
+    opacity: 1;
     top: 100%;
-    z-index: 1000;
-    border: 1px solid #000;
-    // visibility: hidden;
-    // opacity: 0;
+  }
+
+  &:hover &__minicart {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+  }
+  // .cart-icon__minicart
+  &__minicart {
+    @include submenu(0%);
+    width: 280px;
+    padding-bottom: 25px;
   }
 }
+
 .minicart {
 
+  a, p, span {
+    font-family: $fontFamilyPrim;
+  }
   // .minicart__list
   &__list {
     max-height: 350px;
@@ -33,7 +42,7 @@
     margin: 0;
     padding: 15px 15px 15px 70px;
     position: relative;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid $boder-color-submenu;
     overflow: hidden;
   }
 
@@ -43,14 +52,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 16px;
+
     line-height: 22px;
     padding: 12px 15px 0;
     position: relative;
     overflow: hidden;
+    font-size: 16px;
+    font-weight: $font-Regular;
   }
 
-  // .minicart__action
+// .minicart__action
 
   &__action {
     display: flex;
@@ -61,7 +72,9 @@
     overflow: hidden;
   }
 }
-
+/***************************
+// .item-minicart
+****************************/
 .item-minicart {
   display: flex;
   flex-direction: column;
@@ -78,14 +91,14 @@
     right: 15px;
     left: auto;
     top: 15px;
-
   }
 
   // .item-minicart__image
-
   &__image {
     text-align: left;
     padding-right: 15px;
+    font-weight: $font-Bold;
+    font-size: 1.2em;
     &>img{
       width: 40px;
       height: 65px;
@@ -99,11 +112,9 @@
   }
 
   // .item-minicart__quantity
-
   &__quantity {
-    font-family: 'OpenSans';
-    font-size: 14px;
-    font-weight: $font-Thin;
+    font-size: 1.2em;
+    font-weight: $font-Regular;
     display: block;
     text-align: left;
     position: relative;
@@ -117,11 +128,11 @@
   }
 
   // .item-minicart__amount
-
   &__amount {
     color: #888888;
     white-space: nowrap;
     font-weight:$font-Bold;
+    letter-spacing: .05em;
 
     span {
       display: inline-block;
@@ -133,7 +144,8 @@
   &__curency-symbol {}
 }
 
-.btn-mk{
+.btn.btn-mk{
   padding: 10px 0;
   width: 120px;
+
 }
