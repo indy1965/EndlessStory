@@ -8,16 +8,18 @@
   }
 }
 
-@mixin submenu($backgr,$boxShadow){
+@mixin submenu($right){
   display: flex;
   flex-direction: column;
   position: absolute;
-  margin: 0;
-  padding: 0;
-  background: $backgr; //rgb(68, 65, 65);
   visibility: hidden;
   opacity: 0;
   z-index: 99;
-  box-shadow: $boxShadow;
   transition:all .3s ease;
+  margin: 0;
+  padding: 0;
+  left: auto;
+  right: $right;
+  top: 130%;
+  border: 1px solid $boder-color-submenu;
 }
