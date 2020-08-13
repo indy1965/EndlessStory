@@ -258,9 +258,9 @@ function cb(){
 
 /* Прописываем стили в файл _fonts.scss  */
 gulp.task( 'fontsStyle',async () => {
-  let file_content = fs.readFileSync(path.src.css.dir +'/_fonts.scss');
+  let file_content = fs.readFileSync(path.src.css.dir +'/basic/_fonts.scss');
   if (file_content == '') {
-    fs.writeFile(path.src.css.dir +'/_fonts.scss', '', cb);
+    fs.writeFile(path.src.css.dir +'/basic/_fonts.scss', '', cb);
     return fs.readdir(path.build.fonts,  (err, items) => {
       if (items) {
         let c_fontname;
@@ -269,7 +269,7 @@ gulp.task( 'fontsStyle',async () => {
           fontname = fontname[0];
 
           if (c_fontname != fontname) {
-            fs.appendFile(path.src.css.dir +'/_fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
+            fs.appendFile(path.src.css.dir +'/basic/_fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
           }
           c_fontname = fontname;
         }
