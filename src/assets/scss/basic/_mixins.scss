@@ -23,3 +23,83 @@
   top: 130%;
   border: 1px solid $boder-color-submenu;
 }
+
+// Заголовок секций и страниц
+@mixin title_page {
+
+  font: $font_title_weight $font_title_size/1.5 $font_title_section;
+  font-size: $font_title_size;
+  color: $color_title_section;
+}
+
+// Отображение цены со знаком '₽'
+@mixin price_ru ($font_name, $font_weight,$font_size, $color_tex) {
+
+  font: $font_weight $font_size/1.5 $font_name;
+  font-size: $font_size;
+  color: $color_tex;
+
+  &:before {
+    content: '₽';
+    margin-right: 5px;
+  }
+}
+// Позиции меню с анимацией
+@mixin item_menu($font_family,$font_weight,$font_size,$color,$hover_color ){
+  position: relative;
+
+  font: $font_weight $font_size/1.5 $font_family;
+  font-size: $font_size;
+  letter-spacing: 0.15em;
+  color: $color;
+  transition: .5s;
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $hover_color;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
+
+  &:hover {
+    color: $hoverColor;
+
+    &:after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
+
+// Анимация 1 кнопки меню
+@mixin animation_btn($_color_hover_bg, $_color_hover_fnt) {
+
+  transition: .5s ease-in-out;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: -220%;
+    top: -500%;
+    width: 140%;
+    height: 1000%;
+    transform: rotate(45deg);
+    background: $_color_hover_bg;
+    z-index: -1;
+    transition: .7s ease-in-out;
+  }
+
+  &:hover {
+    color: $_color_hover_fnt;
+
+    &:after {
+      left: 0%;
+    }
+  }
+}
