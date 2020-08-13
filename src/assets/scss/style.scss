@@ -25,7 +25,7 @@ $fontFamilySecond: 'SFProDisplay', Arial, Helvetica, sans-serif;
 
 // <СБРОС НАСТРОЕК> ========================================================
 @import './basic/_reset';
-@import './basic/normalize';
+// @import './basic/normalize';
 // </СБРОС НАСТРОЕК> ========================================================
 
 // <ГОТОВЫЕ КЛАССЫ> ========================================================
@@ -44,4 +44,4 @@ $fontFamilySecond: 'SFProDisplay', Arial, Helvetica, sans-serif;
 @import './blocks/header/minicart';
 
 /******* main *************/
-@import './blocks/main/secton-baner';
+@import './blocks/main/secton-slider';
