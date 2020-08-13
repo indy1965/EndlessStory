@@ -12,24 +12,24 @@ body {
 }
 
 ._container {
-  width: 100%;
+  max-width: $containerMaxWidth;
   padding: 0 15px;
   margin: 0 auto;
 
-  @media (max-width: $md4) {
-    max-width: $container-md4;
+  @media (max-width: $md1) {
+    max-width: $container-md1;
   }
 
-  @media (min-width: $md3) {
-    max-width: $container-md3;
-  }
-
-  @media (min-width: $md2) {
+  @media (max-width: $md2) {
     max-width: $container-md2;
   }
 
-  @media (min-width: $md1) {
-    max-width: $container-md1;
+  @media (max-width: $md3) {
+    max-width: $container-md3;
+  }
+
+  @media (max-width: $md4) {
+    max-width: $container-md4;
   }
 }
 
