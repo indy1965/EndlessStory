@@ -1,7 +1,43 @@
+body {
+  font-size: 12px;
+  font-weight: normal;
+  font-family: $fontFamilyPrim;
+  background: #ffffff;
+  line-height: 21px;
+}
+
+.page_content {
+  width: 100%;
+  overflow: hidden;
+}
+
+._container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (max-width: $md4) {
+    max-width: $container-md4;
+  }
+
+  @media (min-width: $md3) {
+    max-width: $container-md3;
+  }
+
+  @media (min-width: $md2) {
+    max-width: $container-md2;
+  }
+
+  @media (min-width: $md1) {
+    max-width: $container-md1;
+  }
+}
+
+
 .btn {
   display: inline-block;
   color: #333;
-  border: 1px solid #6e6e6e ; //$color_brd_btn;
+  border: 1px solid #6e6e6e; //$color_brd_btn;
   background: 0 0;
   font-family: 'SFProDisplay';
   text-transform: uppercase;
