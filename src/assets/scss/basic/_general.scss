@@ -15,7 +15,6 @@ body {
   max-width: $containerMaxWidth;
   padding: 0 15px;
   margin: 0 auto;
-  border: 1px solid red;
 
   @media (max-width: 1200px) {
     max-width: 960px;
