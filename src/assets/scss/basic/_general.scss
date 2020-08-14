@@ -16,20 +16,21 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 
-  @media (max-width: $md1) {
-    max-width: $container-md1;
+  @media (max-width: 1200px) {
+    max-width: 960px;
   }
 
-  @media (max-width: $md2) {
-    max-width: $container-md2;
+  @media (max-width: 992px) {
+    max-width: 720px;
   }
 
-  @media (max-width: $md3) {
-    max-width: $container-md3;
+  @media (max-width: 768px) {
+    max-width: 540px;
   }
 
-  @media (max-width: $md4) {
-    max-width: $container-md4;
+  @media (max-width: 576px) {
+    max-width: 90%;
+    //padding: 0;
   }
 }
 
