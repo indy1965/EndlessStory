@@ -24,14 +24,17 @@
   border: 1px solid $boder-color-submenu;
 }
 
-// Заголовок секций и страниц
-@mixin title_page {
-
-  font: $font_title_weight $font_title_size/1.5 $font_title_section;
-  font-size: $font_title_size;
-  color: $color_title_section;
+//Центровка объектов с позицией absolute
+@mixin center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
+// // Заголовок секций и страниц
 // Отображение цены со знаком '₽'
 @mixin price_ru ($font_name, $font_weight,$font_size, $color_tex) {
 
@@ -87,7 +90,7 @@
     position: absolute;
     left: -220%;
     top: -500%;
-    width: 140%;
+    width: 150%;
     height: 1000%;
     transform: rotate(45deg);
     background: $_color_hover_bg;

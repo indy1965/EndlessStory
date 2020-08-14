@@ -28,7 +28,7 @@ $black: #000;
 
 $defTextColor: #000;
 $hoverColor: #6098C6;
-$bg_head: rgba(73, 64, 87, 0.9); // #2F2B35;
+$bg_head: rgba(73, 64, 87, 0.95); // #2F2B35;
 $bg_footer: $bg-head;
 
 $selection: #e6ae48;
@@ -48,7 +48,7 @@ $brd_btn: 1px solid $color_brd_btn;
 // title
 $color_title_section: #2F2B35;
 $font_title_section: 'SFProDisplay';
-$font_title_weight: 200;
+$font_title_weight: $font-Thin;
 $font_title_size: 4em; // размер шрифта в em
 
 //submenu
