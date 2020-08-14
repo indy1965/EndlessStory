@@ -1,20 +1,6 @@
 /*
   local vars
 */
-$font-family_logo-text: $fontFamilySecond;
-$font-weight_logo-text: $font-Thin;
-$font-size_logo-text: 2em;
-
-$font-family_nav-menu: $fontFamilySecond;
-$font-weight_nav-menu: $font-Light;
-$font-size_nav-menu: 1.2em;
-
-$font-family_account: $fontFamilySecond;
-$font-weight_account: $font-Light;
-$font-size_account: 1.2em;
-
-$font-size_icon_sm: 1.2em;
-$font-size_icon_lg: 2em;
 
 //**************************
 
@@ -26,42 +12,36 @@ $font-size_icon_lg: 2em;
   width: 100%;
   background: $bg_head;
   z-index: 10;
-  // .header__row
 
   &__row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: stretch;
     width: 100%;
     height: 80px;
+
+    @media (max-width: 768px) {
+      height: 65px;
+    }
   }
 
   &__logo {
-    display: block;
-    flex: 0 1 35%;
-
-    @media (max-width: 992px){
-      flex: 0 1 auto;
-    }
-
-    @media(max-width: 768px){
-      flex: 0 1 auto;
-    }
+    display: inline-block;
   }
 
   // .header__logo-container
   &__logo-container {
+    flex: 0 1 auto;
     display: flex;
     align-items: center;
-    height: 63px;
+    height: 100%;
   }
 
   // .header__navbar
   &__navbar {
+    flex: 1 1 auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex: 0 1 auto;
   }
 }
 
@@ -69,43 +49,76 @@ $font-size_icon_lg: 2em;
     Logo
 */
 .logo {
+
+  @media(max-width: 430px) {
+    max-width: 80px;
+  }
+
   // .logo__img
   &__img {
     width: 63px;
     height: 63px;
     margin-right: 10px;
 
-    @media(max-width: 768px){
-      display: none;
+    &>img {
+      max-width: 100%;
+    }
+
+    @media(max-width: 992px) {
+      width: 45px;
+      height: 45px;
+    }
+
+    @media(max-width: 576px) {
+      width: 35px;
+      height: 35px;
+    }
+
+    @media(max-width: 430px) {
+      margin-right: 0px;
     }
   }
 
   h2 {
     display: inline-block;
     color: $white;
-    font-family: $font-family_logo-text;
-    font-weight: $font-weight_logo-text;
-    font-size: $font-size_logo-text;
+    font-family: $fontFamilySecond;
+    font-weight: $font-Thin;
+    font-size: 2em;
+
+    @media (max-width: 992px) {
+      font-size: 1.6em;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 1.4em;
+    }
+
+    @media (max-width: 430px) {
+      display: none;
+    }
   }
 }
 
 /*********************************
-    navbar
+   Блок меню
 *********************************/
 .navbar-head {
 
   // .navbar_head__menu
   &__list-menu {
+    flex: 1 1 auto;
     display: flex;
     text-align: center;
+    justify-content: center;
 
     &>li {
       display: inline-block;
 
       &>a {
-        font-family: $font-family_nav-menu;
-        font-weight: $font-weight_nav-menu;
-        font-size: $font-size_nav-menu;
+        font-family: $fontFamilySecond;
+        font-weight: $font-Light;
+        font-size: 1.2em;
         text-transform: uppercase;
 
         color: $white;
@@ -116,10 +129,14 @@ $font-size_icon_lg: 2em;
         &:hover {
           color: $hoverColor;
         }
+
+        @media (max-width: 992px) {
+          padding: 10px;
+        }
       }
     }
 
-    @media (max-width: 992px){
+    @media (max-width: 768px) {
       display: none;
     }
   }
@@ -127,43 +144,58 @@ $font-size_icon_lg: 2em;
   &__action {
     display: flex;
     text-align: center;
-    margin-left: 60px;
-
-    &>li {
-      display: inline-block;
-      text-align: center;
-    }
-    @media(max-width: 992px){
-      margin: 0;
-      margin-right: 30px;
-    }
-    // @media (max-width: 576px ){
-    //   margin: 0;
-    //   margin-right: 30px;
-    // }
   }
 
   // .navbar-head__burger
   &__burger {
     display: none;
-    // font-size: $font-size_icon_lg;
-    // color: $white;
-    // transition: all .3s ease;
+    width: 40px;
+    height: 40px;
+    position: relative;
 
-    // &:hover {
-    //   color: $hoverColor;
-    // }
 
-    @media(max-width: 992px){
+    &:hover {
+      color: $hoverColor;
+    }
+
+    @media(max-width: 768px) {
       display: block;
+      flex: 0 1 auto;
     }
   }
 }
 
 /*********************************
-    Block icons
+    Бок иконок
 *********************************/
-.action-icons {
+.action-icon {
+
+  @media(max-width: 1200px) and (min-width: 993px) {
+    margin-right: 20px;
+  }
+
+  @media(max-width: 768px) {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &>li {
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    @media(max-width: 992px) {
+      margin-right: 5px;
+    }
+  }
+
   &__user, &__cart, &__instagram {
     display: inline-block;
     position: relative;
@@ -177,39 +209,29 @@ $font-size_icon_lg: 2em;
     position: relative;
     width: 25px;
     height: 80px;
-    margin: 0 10px;
     transition: color 0.3s ease;
     color: $white;
 
-    &>i{
-      font-size: 1.2em;
+    &>i {
+      font-size: 1.8em;
     }
-
 
     &:hover i {
-        color: $hoverColor;
+      color: $hoverColor;
     }
 
-    @media (max-width: 992px ){
-
-      &>i{
-        font-size: 1.6em;
-      }
-
-      margin: 0 15px;
+    @media (max-width: 992px) {
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
-    @media (max-width: 576px ){
-
-      &>i{
-        font-size: 1.8em;
-      }
-
-      margin: 0 15px;
+    @media (max-width: 768px) {
+      height: 65px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
-
-
   }
+
 }
 
 /*********************************
@@ -238,9 +260,9 @@ $font-size_icon_lg: 2em;
       margin: 0;
       display: block;
       border-bottom: solid 1px $boder-color-submenu;
-      font-family: $font-family_account;
-      font-size: $font-size_account;
-      font-weight: $font-weight_account;
+      font-family: $fontFamilySecond;
+      font-size: 1.2em;
+      font-weight: $font-Light;
       line-height: 40px;
       color: #504e4e;
       letter-spacing: .1em;
@@ -253,7 +275,7 @@ $font-size_icon_lg: 2em;
       }
 
       i {
-        font-size: $font-size_icon_sm;
+        font-size: 1.2em;
         margin-right: 10px;
       }
     }
@@ -268,22 +290,8 @@ $font-size_icon_lg: 2em;
  Cart Icon
 *********************************/
 .cart-icon {
-  &>a {
-    &::before {
-      position: absolute;
-      content: '';
-      z-index: -1;
-      top: 25%;
-      left: -7px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #636363; //#285755;
 
-      @media(max-width: 576px){
-        top: 24%;
-      }
-    }
+  &>a {
 
     span {
       display: flex;
@@ -291,51 +299,65 @@ $font-size_icon_lg: 2em;
       justify-content: center;
       align-items: center;
       position: absolute;
-      top: 12px;
-      left: 20px;
-      width: 20px;
-      height: 20px;
+      top: 10px;
+      left: 18px;
+      width: 21px;
+      height: 21px;
       border-radius: 50%;
       background: $red; //#fe4c50;
       color: #ffffff;
+      font-size: 1em;
 
-      @media(max-width: 576px){
-        font-size: 1em;
+      @media(max-width: 1200px) {
+        font-size: .8em;
+        width: 18px;
+        height: 18px;
+        left: 18px;
+        top: 17px;
+      }
+
+      @media(max-width: 992px) {
+        left: 33px;
+      }
+
+      @media(max-width: 768px) {
+        top: 10px;
       }
     }
   }
 }
 
-@media(max-width:992px){
-  .head-burger{
+@media(max-width:768px) {
+  .head-burger {
     display: block;
     position: absolute;
-    right:35px;
-    top: 40px ;
+    right: 4px;
+    top: 19px;
     width: 30px;
     height: 2px;
     background-color: #fff;
-    border:none;
+    border: none;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       position: absolute;
       left: 0;
-      top: 0 ;
+      top: 0;
       width: 30px;
       height: 2px;
       background-color: #fff;
       margin-top: -7px;
+      z-index: 99;
       transition: transform 0.3s ease;
     }
 
-    &:after{
+    &:after {
       content: '';
       display: block;
       position: absolute;
       left: 0;
-      top: 0 ;
+      top: 0;
       width: 30px;
       height: 2px;
       background-color: #fff;
@@ -343,16 +365,16 @@ $font-size_icon_lg: 2em;
       transition: transform 0.3s ease;
     }
 
-    &__active{
+    &__active {
       height: 0;
     }
 
-    &__active:before{
+    &__active:before {
       transform: rotate(45deg);
       margin-top: 0;
     }
 
-    &__active::after{
+    &__active::after {
       transform: rotate(-45deg);
       margin-top: 0;
     }
