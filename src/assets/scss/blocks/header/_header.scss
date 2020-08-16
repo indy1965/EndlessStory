@@ -126,37 +126,9 @@
 
       &>a {
         display: inline-block;
-        position: relative;
-        font-family: $fontFamilySecond;
-        font-weight: $font-Light;
-        font-size: 1.2em;
         text-transform: uppercase;
 
-        color: $white;
-        letter-spacing: .1em;
-        transition: color 0.3s ease;
-
-        &:after {
-          position: absolute;
-          content: "";
-          top: 100%;
-          left: 0;
-          width: 100%;
-          height: 3px;
-          background: $hoverColor;
-          transform: scaleX(0);
-          transform-origin: right;
-          transition: transform 0.5s;
-        }
-
-        &:hover {
-          color: $hoverColor;
-
-          &:after {
-            transform: scaleX(1);
-            transform-origin: left;
-          }
-        }
+        @include item_menu($fontFamilySecond,$font-Light,1.2em, $white, $hoverColor);
       }
     }
 

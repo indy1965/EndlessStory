@@ -55,7 +55,7 @@
   font-size: $font_size;
   letter-spacing: 0.15em;
   color: $color;
-  transition: .5s;
+  transition: all .5s ease;
 
   &:after {
     position: absolute;

@@ -7,6 +7,7 @@ fonts
   Poppins
 $font-Regular
 $font-Bold;
+$font-Light
 
   SFProDisplay
 $font-Light
