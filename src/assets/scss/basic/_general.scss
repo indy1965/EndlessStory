@@ -1,3 +1,5 @@
+
+//***************************/
 body {
   font-size: 12px;
   font-weight: normal;
@@ -51,4 +53,32 @@ body {
   color: #fff;
   background-color: #ffa200;
   border-color: #ffa200;
+}
+
+.counter-control{
+  &__btn--desc, &__btn--inc {
+    height: 40px;
+    width: 25px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 24px;
+    transition:  all .5s ease;
+
+    &:hover{
+      background: $color_brd_btn;
+    }
+  }
+
+  &__fieldCount{
+    border: 0;
+    padding: 5px 0;
+    font-family: 'OpenSans';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    width: 40px;
+  }
 }

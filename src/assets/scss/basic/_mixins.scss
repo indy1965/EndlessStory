@@ -37,7 +37,6 @@
 // // Заголовок секций и страниц
 // Отображение цены со знаком '₽'
 @mixin price_ru ($font_name, $font_weight,$font_size, $color_tex) {
-
   font: $font_weight $font_size/1.5 $font_name;
   font-size: $font_size;
   color: $color_tex;
@@ -105,4 +104,11 @@
       left: 0%;
     }
   }
+}
+
+// Заголовок секций и страниц
+@mixin title_page {
+  font: $font_title_weight $font_title_size/1.5 $fontFamilySecond;
+  font-size: $font_title_size;
+  color: $color_title_section;
 }

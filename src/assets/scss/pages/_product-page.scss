@@ -1,0 +1,170 @@
+$__bg_wrapper: #F9F9F9;
+
+//****************
+.product-card {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  // .product-card__column
+  &__wrapper{
+    background: $__bg_wrapper;
+    display: flex;
+  }
+
+  &__column {
+    flex: 0 1 50%;
+  }
+}
+
+.product-img {
+  overflow: hidden;
+  width: 430px;
+
+  img{
+    width:  80%;
+  }
+}
+
+.product-info {
+  padding-top: 20px;
+  padding-left: 60px;
+
+  // .product-info__title
+  &__title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    h1{
+      @include title_page;
+      text-align: center;
+    }
+  }
+
+  // .product-info__body
+  &__body {
+    flex-direction: column;
+  }
+
+  // .product-info__price
+  &__price {
+    margin-bottom: 45px;
+    &>span{
+      font: $font-SemiBold 2.5em/1.5 'Poppins' ;
+      font-size: 2.5em;
+      color: $black;
+
+      .currency{
+        font-size: 1em;
+      }
+    }
+  }
+
+  // .product-info__cart
+  &__form {
+    margin-bottom: 50px;
+    display: flex;
+  }
+}
+
+.body-info {
+  margin-bottom: 50px;
+
+  // .descr-info__row
+  &__row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+
+  &__descr{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  &__balance{
+    font-size: 16px;
+  }
+
+}
+
+.row-info{
+  // .descr-info__name
+  &__name {
+    display: inline-block;
+    flex: 0 1 30%;
+    font-family: $fontFamilyPrim;
+    font-weight: $font-Regular;
+    font-size: 2em;
+    line-height: 33px;
+
+  }
+
+  // .descr-info__value
+  &__value {
+    display: inline-block;
+    flex: 0 1 auto;
+    font-family: $fontFamilySecond;
+    font-weight: $font-Thin;
+    font-size: 2em;
+    line-height: 33px;
+    color:$defTextColor;
+  }
+}
+
+.descr-info{
+  &__title{
+    margin-bottom: 10px;
+    font-family: $fontFamilyPrim;
+    font-weight: $font-Regular;
+    font-size: 2em;
+    line-height: 33px;
+  }
+
+  &__info{
+    overflow: hidden;
+    height: 180px;
+    &>p{
+      padding-right: 20px;
+    line-height: 135%;
+    font-size: 1.4em;
+    font-weight: 300;
+    text-indent: 15px;
+    }
+  }
+}
+
+._form{
+  &__add_to_cart_button{
+    margin-left: 15px;
+
+    color: $color_font_btn;
+    font-family: 'SFProDisplay';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    align-items: center;
+    text-align: center;
+
+    padding: 0 15px;
+    border: $brd_btn;
+    background-color: transparent;
+    transition:  all .5s ease;
+
+    &:hover{
+      background: $color_text_price;
+      color:white;
+    }
+  }
+}
+
+/* counter */
+.quantity-form{
+  &__counter{
+    border: $brd_btn;
+  }
+}
+

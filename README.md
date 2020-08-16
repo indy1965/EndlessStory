@@ -8,6 +8,7 @@ fonts
 $font-Regular
 $font-Bold;
 $font-Light
+$font-SemiBold
 
   SFProDisplay
 $font-Light
