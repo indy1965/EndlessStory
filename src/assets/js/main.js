@@ -61,7 +61,7 @@ $(document).ready(function(){
     });
   };
 
-  catalogItemCounter('.fieldCount');
+  catalogItemCounter('.counter-control__fieldCount');
 
 })
 
