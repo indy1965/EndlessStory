@@ -13,6 +13,7 @@
 
 //* <ПЕРЕМЕННЫЕ> ========================================================
 @import './general/vars';
+@import './general/core';
 
 //* <СБРОС НАСТРОЕК> ====================================================
 @import './general/normalize';
@@ -41,3 +42,6 @@
 @import './common/main/products/_product-item';
 @import './common/footer/footer';
 @import './pages/product-page';
+@import './pages/deliv-page';
+@import './pages/payment-page';
+@import './pages/about-page';

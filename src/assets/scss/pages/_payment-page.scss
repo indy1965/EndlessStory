@@ -1,0 +1,5 @@
+.section-payment{
+  &__content{
+    @extend %section-content;
+  }
+}

@@ -110,7 +110,7 @@
 
 // Заголовок секций и страниц
 @mixin title_page {
-  font: $font_title_weight $font_title_size/1.5 $fontFamilySecond;
+  font: $font_title_weight $font_title_size/1.5 'SFProDisplay';
   font-size: $font_title_size;
   color: $color_title_section;
 }
