@@ -1,5 +1,20 @@
 .section-about{
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img{
+    flex: 1 1 50%;
+  }
+
   &__descr{
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    padding:0 40px;
     @extend %section-content;
   }
 }

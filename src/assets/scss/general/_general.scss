@@ -16,6 +16,7 @@ img{
 
 a{
   text-decoration: none;
+  outline: none;
 }
 
 //***************************/
@@ -66,13 +67,15 @@ body {
   font-size: 12px;
   padding: 10px 25px;
   letter-spacing: 1px;
+
+  .btn-primary {
+    color: #fff;
+    background-color: #ffa200;
+    border-color: #ffa200;
+  }
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #ffa200;
-  border-color: #ffa200;
-}
+
 
 .counter-control{
   &__btn--desc, &__btn--inc {
