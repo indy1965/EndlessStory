@@ -1,29 +1,21 @@
 //* <МИКСИНЫ> ===========================================================
-@import './basic/mixins';
+@import './mixins/mixins';
 
 //* <ШРИФТЫ> ============================================================
 // <Подключаем шрифты> ==================================================
 //&display=swap&subset=cyrillic-ext
-@import './basic/fonts';
+@import './general/fonts';
 
 
 // <Иконочные шрифты> ===================================================
 //@import = 'icons'
 @import './vendor/fontello';
 
-
-// <Шрифты по умолчанию> ================================================
-$fontFamilyPrim: 'Poppins', Arial, Helvetica, sans-serif;
-$fontFamilySecond: 'SFProDisplay', Arial, Helvetica, sans-serif;
-
-//* </ШРИФТЫ> ===========================================================
-
 //* <ПЕРЕМЕННЫЕ> ========================================================
-@import './basic/vars';
-
+@import './general/vars';
 
 //* <СБРОС НАСТРОЕК> ====================================================
-@import './basic/_reset';
+@import './general/normalize';
 // @import './basic/normalize';
 
 
@@ -31,21 +23,21 @@ $fontFamilySecond: 'SFProDisplay', Arial, Helvetica, sans-serif;
 // .rub:after {
 //   content: '₽';
 // }
-//* =====================================================================
+//* =================================================
 
-//* <Основные> ==========================================================
-@import './basic/general';
+//* <Основные> =====================================================
+@import './general/general';
 
-//* =====================================================================
+//* =================================================
 
 
 /*******  header  *********/
-@import './blocks/header/header';
-@import './blocks/header/minicart';
+@import './common/header/header';
+@import './common/header/minicart';
 
 /******* main *************/
-@import './blocks/main/secton-slider';
-@import './blocks/main/products/section-product-list';
-@import './blocks/main/products/_product-item';
-@import './blocks/footer/footer';
+@import './common/main/secton-slider';
+@import './common/main/products/section-product-list';
+@import './common/main/products/_product-item';
+@import './common/footer/footer';
 @import './pages/product-page';

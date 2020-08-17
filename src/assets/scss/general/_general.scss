@@ -1,3 +1,22 @@
+*,  *::before, *::after{
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+img{
+  max-width: 100%;
+}
+
+a{
+  text-decoration: none;
+}
 
 //***************************/
 body {
@@ -82,3 +101,8 @@ body {
     width: 40px;
   }
 }
+
+// <ГОТОВЫЕ КЛАССЫ> =====================================================
+// .rub:after {
+//   content: '₽';
+// }

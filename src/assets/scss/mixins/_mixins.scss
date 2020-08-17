@@ -1,3 +1,5 @@
+@import './general/vars';
+
 @mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
     font-family: $font_name;

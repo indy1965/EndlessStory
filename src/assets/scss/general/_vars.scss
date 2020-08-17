@@ -1,9 +1,18 @@
-// Размеры контейнеров и экранов.
+
+// <Шрифты по умолчанию> ================================================
+$fontFamilyPrim: 'Poppins', Arial, Helvetica, sans-serif;
+$fontFamilySecond: 'SFProDisplay', Arial, Helvetica, sans-serif;
+
+//* </ШРИФТЫ> ===========================================================
+
+//============= Размеры контейнеров.
 $containerMaxWidth: 1140px;
 $container-md1: 960px;
 $container-md2: 720px;
 $container-md3: 540px;
 $container-md4: 100%;
+
+//============= Размеры экранов.
 $md1: 1200px;
 $md2: 992px;
 $md3: 768px;
