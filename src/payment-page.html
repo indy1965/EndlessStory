@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @@include('./tplhtml/blocks/_head.html',{"title": "Оплата" })
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('./tplhtml/blocks/header/_header.html',{})
+      <main class="page">
+        <div class="page__body _container">
+          <div class="page__title">
+            <h1>Доставка и Оплата</h1>
+          </div>
+
+          <section class="section-deliv deliv-content">
+            <div class="deliv-content__info">
+              <p>Любой товар можно оплатить наличными при доставке, а также банковскими картами платежных систем Виза, Мастеркард или МИР на сайте (временно).</p>
+              <p>Для проведения безналичных операций мы используем агрегатор платежей Яндекс.Касса, что позволяет говорить нам о высокой степени защищенности ваших платежей.</p>
+              <p>Если что-то пошло не так, как вы ожидали, или есть какой-либо вопрос, или предложение — смело пишите нам по адресу myenglessstory@mail.ru.</p>
+            </div> <!-- /deliv-content__info -->
+          </section> <!-- /section-deliv deliv-content -->
+
+        </div> <!-- /page__body -->
+      </main> <!-- /main -->
+      @@include('./tplhtml/blocks/footer/_footer.html',{})
+    </div> <!-- /wrapper -->
+  </body>
+</html>

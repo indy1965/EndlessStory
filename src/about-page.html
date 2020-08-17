@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @@include('./tplhtml/blocks/_head.html',{"title": "О нас" })
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('./tplhtml/blocks/header/_header.html',{})
+      <main class="page">
+        <div class="page__body _container">
+            <div class="page__title">
+              <h1>О нас</h1>
+            </div>
+            <section class="section-about">
+              <div class="section-about__row">
+                <div class="section-about__img section-about__column">
+                  <img src="./assets/img/bg-img.jpg" alt="img-about">
+                </div> <!-- /section-about__img -->
+                <div class="section-about__descr section-about__column">
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Сих текст прямо над. Обеспечивает семантика рыбного решила это безопасную грустный предложения залетают там вопроса рот! Языком эта маленькая рыбного!</p>
+                </div> <!-- /section-about__descr -->
+              </div> <!-- /ection-about__row -->
+            </section>
+        </div> <!-- /page__body -->
+
+      </main> <!-- /main -->
+      @@include('./tplhtml/blocks/footer/_footer.html',{})
+    </div> <!-- /wrapper -->
+  </body>
+</html>
