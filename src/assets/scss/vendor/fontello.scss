@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?32930567');
-  src: url('../font/fontello.eot?32930567#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?32930567') format('woff2'),
-       url('../font/fontello.woff?32930567') format('woff'),
-       url('../font/fontello.ttf?32930567') format('truetype'),
-       url('../font/fontello.svg?32930567#fontello') format('svg');
+  src: url('../font/fontello.eot?4522760');
+  src: url('../font/fontello.eot?4522760#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?4522760') format('woff2'),
+       url('../font/fontello.woff?4522760') format('woff'),
+       url('../font/fontello.ttf?4522760') format('truetype'),
+       url('../font/fontello.svg?4522760#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?32930567#fontello') format('svg');
+    src: url('../font/fontello.svg?4522760#fontello') format('svg');
   }
 }
 */
@@ -56,46 +56,35 @@
 }
  
 .icon-login:before { content: '\e800'; } /* '' */
-.icon-cancel-circled2:before { content: '\e801'; } /* '' */
+.icon-glyph-3:before { content: '\e801'; } /* '' */
 .icon-truck:before { content: '\e802'; } /* '' */
-.icon-user:before { content: '\e803'; } /* '' */
-.icon-cancel-circled:before { content: '\e804'; } /* '' */
+.icon-right:before { content: '\e803'; } /* '' */
+.icon-vk:before { content: '\e804'; } /* '' */
 .icon-cancel:before { content: '\e805'; } /* '' */
-.icon-mail:before { content: '\e806'; } /* '' */
+.icon-youtube:before { content: '\e806'; } /* '' */
 .icon-basket:before { content: '\e807'; } /* '' */
 .icon-logout:before { content: '\e808'; } /* '' */
-.icon-clock:before { content: '\e809'; } /* '' */
-.icon-ccw:before { content: '\e80a'; } /* '' */
-.icon-arrows-cw:before { content: '\e80b'; } /* '' */
-.icon-truck-1:before { content: '\e80c'; } /* '' */
+.icon-skype:before { content: '\e809'; } /* '' */
 .icon-eye:before { content: '\e80d'; } /* '' */
-.icon-th-large:before { content: '\e80e'; } /* '' */
-.icon-th-list:before { content: '\e80f'; } /* '' */
-.icon-trash-empty:before { content: '\e810'; } /* '' */
 .icon-phone:before { content: '\e811'; } /* '' */
-.icon-right-big:before { content: '\e812'; } /* '' */
 .icon-basket-1:before { content: '\e813'; } /* '' */
 .icon-basket-2:before { content: '\e814'; } /* '' */
-.icon-basket-alt:before { content: '\e815'; } /* '' */
-.icon-mail-1:before { content: '\e816'; } /* '' */
-.icon-mail-2:before { content: '\e817'; } /* '' */
 .icon-user-1:before { content: '\e818'; } /* '' */
 .icon-eye-1:before { content: '\e819'; } /* '' */
+.icon-glyph:before { content: '\e81a'; } /* '' */
+.icon-glyph-1:before { content: '\e81b'; } /* '' */
+.icon-glyph-2:before { content: '\e81c'; } /* '' */
 .icon-spin3:before { content: '\e832'; } /* '' */
 .icon-spin4:before { content: '\e834'; } /* '' */
 .icon-spin5:before { content: '\e838'; } /* '' */
-.icon-money:before { content: '\f0d6'; } /* '' */
-.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-ei-close-o:before { content: '\eadf'; } /* '' */
+.icon-uniF100:before { content: '\f100'; } /* '' */
+.icon-uniF102:before { content: '\f102'; } /* '' */
+.icon-uniF106:before { content: '\f106'; } /* '' */
 .icon-spinner:before { content: '\f110'; } /* '' */
 .icon-reply:before { content: '\f112'; } /* '' */
-.icon-help:before { content: '\f128'; } /* '' */
-.icon-info:before { content: '\f129'; } /* '' */
-.icon-attention-alt:before { content: '\f12a'; } /* '' */
 .icon-youtube-squared:before { content: '\f166'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
 .icon-vkontakte:before { content: '\f189'; } /* '' */
-.icon-cab:before { content: '\f1b9'; } /* '' */
-.icon-cart-plus:before { content: '\f217'; } /* '' */
 .icon-user-plus:before { content: '\f234'; } /* '' */
 .icon-shopping-basket:before { content: '\f291'; } /* '' */
-.icon-user-o:before { content: '\f2c0'; } /* '' */
