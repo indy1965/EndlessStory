@@ -1,329 +1,396 @@
-<div class="page-content-wrapper sp-y">
-  <div class="cart-page-content-wrap">
-    <div class="container container-wide">
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="shopping-cart-list-area">
-            <div class="shopping-cart-table table-responsive">
-              <table class="table table-bordered text-center mb-0">
-                <thead>
-                  <tr>
-                    <th>Products</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="product-list">
-                      <div class="cart-product-item d-flex align-items-center">
-                        <div class="remove-icon">
-                          <button><i class="fa fa-trash-o"></i></button>
-                        </div>
-                        <a href="single-product.html" class="product-thumb"
-                          ><img
-                            src="assets/img/product/product-1.png"
-                            alt="Product"
-                          /> </a
-                        ><a href="single-product.html" class="product-name"
-                          >Metallic cotton dress</a
-                        >
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @@include('./tplhtml/blocks/_head.html',{"title": "Главная" })
+  </head>
+  <body>
+    <div class="page__content">
+      <!-- Header -->
+      @@include('./tplhtml/blocks/header/_header.html',{})
+      <!-- Main -->
+      <main class="main">
+        <div class="page-content-wrapper sp-y">
+          <div class="cart-page-content-wrap">
+            <div class="container container-wide">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="shopping-cart-list-area">
+                    <div class="shopping-cart-table table-responsive">
+                      <table class="table table-bordered text-center mb-0">
+                        <thead>
+                          <tr>
+                            <th>Товар</th>
+                            <th>Прайс</th>
+                            <th>Количество</th>
+                            <th>Итог</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="product-list">
+                              <div
+                                class="cart-product-item d-flex align-items-center"
+                              >
+                                <div class="remove-icon">
+                                  <button><i class="fa fa-trash-o"></i></button>
+                                </div>
+                                <a
+                                  href="single-product.html"
+                                  class="product-thumb"
+                                  ><img
+                                    src="assets/img/product/product-1.png"
+                                    alt="Product"
+                                  /> </a
+                                ><a
+                                  href="single-product.html"
+                                  class="product-name"
+                                  >Metallic cotton dress</a
+                                >
+                              </div>
+                            </td>
+                            <td><span class="price">$29.99</span></td>
+                            <td>
+                              <div class="pro-qty">
+                                <input
+                                  type="text"
+                                  class="quantity"
+                                  title="Quantity"
+                                  value="1"
+                                /><a href="#" class="inc qty-btn">+</a
+                                ><a href="#" class="dec qty-btn">-</a>
+                              </div>
+                            </td>
+                            <td><span class="price">$29.99</span></td>
+                          </tr>
+                          <tr>
+                            <td class="product-list">
+                              <div
+                                class="cart-product-item d-flex align-items-center"
+                              >
+                                <div class="remove-icon">
+                                  <button><i class="fa fa-trash-o"></i></button>
+                                </div>
+                                <a
+                                  href="single-product.html"
+                                  class="product-thumb"
+                                  ><img
+                                    src="assets/img/product/product-2.png"
+                                    alt="Product"
+                                  /> </a
+                                ><a
+                                  href="single-product.html"
+                                  class="product-name"
+                                  >Open-knit sweater</a
+                                >
+                              </div>
+                            </td>
+                            <td><span class="price">$39.99</span></td>
+                            <td>
+                              <div class="pro-qty">
+                                <input
+                                  type="text"
+                                  class="quantity"
+                                  title="Quantity"
+                                  value="3"
+                                /><a href="#" class="inc qty-btn">+</a
+                                ><a href="#" class="dec qty-btn">-</a>
+                              </div>
+                            </td>
+                            <td><span class="price">$39.99</span></td>
+                          </tr>
+                          <tr>
+                            <td class="product-list">
+                              <div
+                                class="cart-product-item d-flex align-items-center"
+                              >
+                                <div class="remove-icon">
+                                  <button><i class="fa fa-trash-o"></i></button>
+                                </div>
+                                <a
+                                  href="single-product.html"
+                                  class="product-thumb"
+                                  ><img
+                                    src="assets/img/product/product-3.png"
+                                    alt="Product"
+                                  /> </a
+                                ><a
+                                  href="single-product.html"
+                                  class="product-name"
+                                  >Metallic cotton dress</a
+                                >
+                              </div>
+                            </td>
+                            <td><span class="price">$29.99</span></td>
+                            <td>
+                              <div class="pro-qty">
+                                <input
+                                  type="text"
+                                  class="quantity"
+                                  title="Quantity"
+                                  value="2"
+                                /><a href="#" class="inc qty-btn">+</a
+                                ><a href="#" class="dec qty-btn">-</a>
+                              </div>
+                            </td>
+                            <td><span class="price">$29.99</span></td>
+                          </tr>
+                          <tr>
+                            <td class="product-list">
+                              <div
+                                class="cart-product-item d-flex align-items-center"
+                              >
+                                <div class="remove-icon">
+                                  <button><i class="fa fa-trash-o"></i></button>
+                                </div>
+                                <a
+                                  href="single-product.html"
+                                  class="product-thumb"
+                                  ><img
+                                    src="assets/img/product/product-4.png"
+                                    alt="Product"
+                                  /> </a
+                                ><a
+                                  href="single-product.html"
+                                  class="product-name"
+                                  >Open-knit sweater</a
+                                >
+                              </div>
+                            </td>
+                            <td><span class="price">$39.99</span></td>
+                            <td>
+                              <div class="pro-qty">
+                                <input
+                                  type="text"
+                                  class="quantity"
+                                  title="Quantity"
+                                  value="5"
+                                /><a href="#" class="inc qty-btn">+</a
+                                ><a href="#" class="dec qty-btn">-</a>
+                              </div>
+                            </td>
+                            <td><span class="price">$39.99</span></td>
+                          </tr>
+                          <tr>
+                            <td class="product-list">
+                              <div
+                                class="cart-product-item d-flex align-items-center"
+                              >
+                                <div class="remove-icon">
+                                  <button><i class="fa fa-trash-o"></i></button>
+                                </div>
+                                <a
+                                  href="single-product.html"
+                                  class="product-thumb"
+                                  ><img
+                                    src="assets/img/product/product-5.png"
+                                    alt="Product"
+                                  /> </a
+                                ><a
+                                  href="single-product.html"
+                                  class="product-name"
+                                  >Metallic cotton dress</a
+                                >
+                              </div>
+                            </td>
+                            <td><span class="price">$29.99</span></td>
+                            <td>
+                              <div class="pro-qty">
+                                <input
+                                  type="text"
+                                  class="quantity"
+                                  title="Quantity"
+                                  value="3"
+                                /><a href="#" class="inc qty-btn">+</a
+                                ><a href="#" class="dec qty-btn">-</a>
+                              </div>
+                            </td>
+                            <td><span class="price">$29.99</span></td>
+                          </tr>
+                          <tr>
+                            <td class="product-list">
+                              <div
+                                class="cart-product-item d-flex align-items-center"
+                              >
+                                <div class="remove-icon">
+                                  <button><i class="fa fa-trash-o"></i></button>
+                                </div>
+                                <a
+                                  href="single-product.html"
+                                  class="product-thumb"
+                                  ><img
+                                    src="assets/img/product/product-6.png"
+                                    alt="Product"
+                                  /> </a
+                                ><a
+                                  href="single-product.html"
+                                  class="product-name"
+                                  >Open-knit sweater</a
+                                >
+                              </div>
+                            </td>
+                            <td><span class="price">$39.99</span></td>
+                            <td>
+                              <div class="pro-qty">
+                                <input
+                                  type="text"
+                                  class="quantity"
+                                  title="Quantity"
+                                  value="1"
+                                /><a href="#" class="inc qty-btn">+</a
+                                ><a href="#" class="dec qty-btn">-</a>
+                              </div>
+                            </td>
+                            <td><span class="price">$39.99</span></td>
+                          </tr>
+                          <tr>
+                            <td class="product-list">
+                              <div
+                                class="cart-product-item d-flex align-items-center"
+                              >
+                                <div class="remove-icon">
+                                  <button><i class="fa fa-trash-o"></i></button>
+                                </div>
+                                <a
+                                  href="single-product.html"
+                                  class="product-thumb"
+                                  ><img
+                                    src="assets/img/product/product-7.png"
+                                    alt="Product"
+                                  /> </a
+                                ><a
+                                  href="single-product.html"
+                                  class="product-name"
+                                  >Open-knit sweater</a
+                                >
+                              </div>
+                            </td>
+                            <td><span class="price">$39.99</span></td>
+                            <td>
+                              <div class="pro-qty">
+                                <input
+                                  type="text"
+                                  class="quantity"
+                                  title="Quantity"
+                                  value="1"
+                                /><a href="#" class="inc qty-btn">+</a
+                                ><a href="#" class="dec qty-btn">-</a>
+                              </div>
+                            </td>
+                            <td><span class="price">$39.99</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div
+                      class="cart-coupon-update-area d-sm-flex justify-content-between align-items-center"
+                    >
+                      <div class="coupon-form-wrap">
+                        <form action="#" method="post">
+                          <label for="coupon" class="sr-only"
+                            >Код купона</label
+                          >
+                          <input
+                            type="text"
+                            id="coupon"
+                            placeholder="Coupon Code"
+                          />
+                          <button class="btn-apply">Кнопка Применить</button>
+                        </form>
                       </div>
-                    </td>
-                    <td><span class="price">$29.99</span></td>
-                    <td>
-                      <div class="pro-qty">
-                        <input
-                          type="text"
-                          class="quantity"
-                          title="Quantity"
-                          value="1"
-                        /><a href="#" class="inc qty-btn">+</a
-                        ><a href="#" class="dec qty-btn">-</a>
+                      <div class="cart-update-buttons mt-15 mt-sm-0">
+                        <button class="btn-clear-cart">Очистить карзину</button>
+                        <button class="btn-update-cart">Обновить карзину</button>
                       </div>
-                    </td>
-                    <td><span class="price">$29.99</span></td>
-                  </tr>
-                  <tr>
-                    <td class="product-list">
-                      <div class="cart-product-item d-flex align-items-center">
-                        <div class="remove-icon">
-                          <button><i class="fa fa-trash-o"></i></button>
-                        </div>
-                        <a href="single-product.html" class="product-thumb"
-                          ><img
-                            src="assets/img/product/product-2.png"
-                            alt="Product"
-                          /> </a
-                        ><a href="single-product.html" class="product-name"
-                          >Open-knit sweater</a
-                        >
-                      </div>
-                    </td>
-                    <td><span class="price">$39.99</span></td>
-                    <td>
-                      <div class="pro-qty">
-                        <input
-                          type="text"
-                          class="quantity"
-                          title="Quantity"
-                          value="3"
-                        /><a href="#" class="inc qty-btn">+</a
-                        ><a href="#" class="dec qty-btn">-</a>
-                      </div>
-                    </td>
-                    <td><span class="price">$39.99</span></td>
-                  </tr>
-                  <tr>
-                    <td class="product-list">
-                      <div class="cart-product-item d-flex align-items-center">
-                        <div class="remove-icon">
-                          <button><i class="fa fa-trash-o"></i></button>
-                        </div>
-                        <a href="single-product.html" class="product-thumb"
-                          ><img
-                            src="assets/img/product/product-3.png"
-                            alt="Product"
-                          /> </a
-                        ><a href="single-product.html" class="product-name"
-                          >Metallic cotton dress</a
-                        >
-                      </div>
-                    </td>
-                    <td><span class="price">$29.99</span></td>
-                    <td>
-                      <div class="pro-qty">
-                        <input
-                          type="text"
-                          class="quantity"
-                          title="Quantity"
-                          value="2"
-                        /><a href="#" class="inc qty-btn">+</a
-                        ><a href="#" class="dec qty-btn">-</a>
-                      </div>
-                    </td>
-                    <td><span class="price">$29.99</span></td>
-                  </tr>
-                  <tr>
-                    <td class="product-list">
-                      <div class="cart-product-item d-flex align-items-center">
-                        <div class="remove-icon">
-                          <button><i class="fa fa-trash-o"></i></button>
-                        </div>
-                        <a href="single-product.html" class="product-thumb"
-                          ><img
-                            src="assets/img/product/product-4.png"
-                            alt="Product"
-                          /> </a
-                        ><a href="single-product.html" class="product-name"
-                          >Open-knit sweater</a
-                        >
-                      </div>
-                    </td>
-                    <td><span class="price">$39.99</span></td>
-                    <td>
-                      <div class="pro-qty">
-                        <input
-                          type="text"
-                          class="quantity"
-                          title="Quantity"
-                          value="5"
-                        /><a href="#" class="inc qty-btn">+</a
-                        ><a href="#" class="dec qty-btn">-</a>
-                      </div>
-                    </td>
-                    <td><span class="price">$39.99</span></td>
-                  </tr>
-                  <tr>
-                    <td class="product-list">
-                      <div class="cart-product-item d-flex align-items-center">
-                        <div class="remove-icon">
-                          <button><i class="fa fa-trash-o"></i></button>
-                        </div>
-                        <a href="single-product.html" class="product-thumb"
-                          ><img
-                            src="assets/img/product/product-5.png"
-                            alt="Product"
-                          /> </a
-                        ><a href="single-product.html" class="product-name"
-                          >Metallic cotton dress</a
-                        >
-                      </div>
-                    </td>
-                    <td><span class="price">$29.99</span></td>
-                    <td>
-                      <div class="pro-qty">
-                        <input
-                          type="text"
-                          class="quantity"
-                          title="Quantity"
-                          value="3"
-                        /><a href="#" class="inc qty-btn">+</a
-                        ><a href="#" class="dec qty-btn">-</a>
-                      </div>
-                    </td>
-                    <td><span class="price">$29.99</span></td>
-                  </tr>
-                  <tr>
-                    <td class="product-list">
-                      <div class="cart-product-item d-flex align-items-center">
-                        <div class="remove-icon">
-                          <button><i class="fa fa-trash-o"></i></button>
-                        </div>
-                        <a href="single-product.html" class="product-thumb"
-                          ><img
-                            src="assets/img/product/product-6.png"
-                            alt="Product"
-                          /> </a
-                        ><a href="single-product.html" class="product-name"
-                          >Open-knit sweater</a
-                        >
-                      </div>
-                    </td>
-                    <td><span class="price">$39.99</span></td>
-                    <td>
-                      <div class="pro-qty">
-                        <input
-                          type="text"
-                          class="quantity"
-                          title="Quantity"
-                          value="1"
-                        /><a href="#" class="inc qty-btn">+</a
-                        ><a href="#" class="dec qty-btn">-</a>
-                      </div>
-                    </td>
-                    <td><span class="price">$39.99</span></td>
-                  </tr>
-                  <tr>
-                    <td class="product-list">
-                      <div class="cart-product-item d-flex align-items-center">
-                        <div class="remove-icon">
-                          <button><i class="fa fa-trash-o"></i></button>
-                        </div>
-                        <a href="single-product.html" class="product-thumb"
-                          ><img
-                            src="assets/img/product/product-7.png"
-                            alt="Product"
-                          /> </a
-                        ><a href="single-product.html" class="product-name"
-                          >Open-knit sweater</a
-                        >
-                      </div>
-                    </td>
-                    <td><span class="price">$39.99</span></td>
-                    <td>
-                      <div class="pro-qty">
-                        <input
-                          type="text"
-                          class="quantity"
-                          title="Quantity"
-                          value="1"
-                        /><a href="#" class="inc qty-btn">+</a
-                        ><a href="#" class="dec qty-btn">-</a>
-                      </div>
-                    </td>
-                    <td><span class="price">$39.99</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div
-              class="cart-coupon-update-area d-sm-flex justify-content-between align-items-center"
-            >
-              <div class="coupon-form-wrap">
-                <form action="#" method="post">
-                  <label for="coupon" class="sr-only">Coupon Code</label>
-                  <input type="text" id="coupon" placeholder="Coupon Code" />
-                  <button class="btn-apply">Apply Button</button>
-                </form>
-              </div>
-              <div class="cart-update-buttons mt-15 mt-sm-0">
-                <button class="btn-clear-cart">Clear Cart</button>
-                <button class="btn-update-cart">Update Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <!-- Cart Calculate Area -->
+                  <div class="cart-calculate-area mt-sm-40 mt-md-60">
+                    <h5 class="cal-title">Всего</h5>
+                    <div class="cart-cal-table table-responsive">
+                      <table class="table table-borderless">
+                        <tbody>
+                          <tr class="cart-sub-total">
+                            <th>Промежуточный итог</th>
+                            <td>$289.89</td>
+                          </tr>
+                          <tr class="shipping">
+                            <th>Доставка</th>
+                            <td>
+                              <ul class="shipping-method">
+                                <li>
+                                  <div class="custom-control custom-radio">
+                                    <input
+                                      type="radio"
+                                      id="flat_shipping"
+                                      name="shipping_method"
+                                      class="custom-control-input"
+                                      checked="checked"
+                                    />
+                                    <label
+                                      class="custom-control-label"
+                                      for="flat_shipping"
+                                      >Единая ставка : $10</label
+                                    >
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="custom-control custom-radio">
+                                    <input
+                                      type="radio"
+                                      id="free_shipping"
+                                      name="shipping_method"
+                                      class="custom-control-input"
+                                    />
+                                    <label
+                                      class="custom-control-label"
+                                      for="free_shipping"
+                                      >Фиксированная ставка</label
+                                    >
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="custom-control custom-radio">
+                                    <input
+                                      type="radio"
+                                      id="cod_shipping"
+                                      name="shipping_method"
+                                      class="custom-control-input"
+                                    />
+                                    <label
+                                      class="custom-control-label"
+                                      for="cod_shipping"
+                                      >Оплата при доставке</label
+                                    >
+                                  </div>
+                                </li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr class="order-total">
+                            <th>Общее количество</th>
+                            <td><b>$299.93</b></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="proceed-checkout-btn">
+                      <a href="checkout.html" class="btn btn-brand d-block"
+                        >Перейти к оформлению заказа</a
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
-          <!-- Cart Calculate Area -->
-          <div class="cart-calculate-area mt-sm-40 mt-md-60">
-            <h5 class="cal-title">Cart Totals</h5>
-            <div class="cart-cal-table table-responsive">
-              <table class="table table-borderless">
-                <tbody>
-                  <tr class="cart-sub-total">
-                    <th>Subtotal</th>
-                    <td>$289.89</td>
-                  </tr>
-                  <tr class="shipping">
-                    <th>Shipping</th>
-                    <td>
-                      <ul class="shipping-method">
-                        <li>
-                          <div class="custom-control custom-radio">
-                            <input
-                              type="radio"
-                              id="flat_shipping"
-                              name="shipping_method"
-                              class="custom-control-input"
-                              checked="checked"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="flat_shipping"
-                              >Flat Rate : $10</label
-                            >
-                          </div>
-                        </li>
-                        <li>
-                          <div class="custom-control custom-radio">
-                            <input
-                              type="radio"
-                              id="free_shipping"
-                              name="shipping_method"
-                              class="custom-control-input"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="free_shipping"
-                              >Free Shipping</label
-                            >
-                          </div>
-                        </li>
-                        <li>
-                          <div class="custom-control custom-radio">
-                            <input
-                              type="radio"
-                              id="cod_shipping"
-                              name="shipping_method"
-                              class="custom-control-input"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="cod_shipping"
-                              >Cash on Delivery</label
-                            >
-                          </div>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr class="order-total">
-                    <th>Total</th>
-                    <td><b>$299.93</b></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="proceed-checkout-btn">
-              <a href="checkout.html" class="btn btn-brand d-block"
-                >Proceed to Checkout</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
+      </main>
+      <!-- Footer -->
+      @@include('./tplhtml/blocks/footer/_footer.html',{})
     </div>
-  </div>
-</div>
+    <!-- /page_content -->
+    @@include('./tplhtml/blocks/_scripts-js.html',{})
+  </body>
+</html>
