@@ -17,6 +17,7 @@
     right: 15px;
     left: auto;
     top: 15px;
+    transition: all 250ms ease-out;
 
     &:hover {
       color: $alizarin;
