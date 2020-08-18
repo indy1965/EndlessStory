@@ -2,9 +2,10 @@ $__bg_wrapper: #F9F9F9;
 
 //****************
 .product-card {
+
   // .product-card__column
-  &__wrapper{
-    background: $__bg_wrapper;
+  &__wrapper {
+    background: $light-gray; //$__bg_wrapper;
     display: flex;
   }
 
@@ -17,8 +18,8 @@ $__bg_wrapper: #F9F9F9;
   overflow: hidden;
   width: 430px;
 
-  img{
-    width:  80%;
+  img {
+    width: 80%;
   }
 }
 
@@ -31,8 +32,9 @@ $__bg_wrapper: #F9F9F9;
     text-align: center;
     width: 100%;
     margin-bottom: 30px;
-    h1{
-      @include title_page;
+
+    h1 {
+      @extend %title-page;
       text-align: center;
     }
   }
@@ -45,12 +47,13 @@ $__bg_wrapper: #F9F9F9;
   // .product-info__price
   &__price {
     margin-bottom: 45px;
-    &>span{
-      font: $font-SemiBold 2.5em/1.5 'Poppins' ;
+
+    &>span {
+      @include font_sett ($fontFamilyPrim, $font-SemiBold, 2.5em);
       font-size: 2.5em;
       color: $black;
 
-      .currency{
+      .currency {
         font-size: 1em;
       }
     }
@@ -73,19 +76,20 @@ $__bg_wrapper: #F9F9F9;
     margin-bottom: 20px;
   }
 
-  &__descr{
+  &__descr {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
   }
 
-  &__balance{
+  &__balance {
     font-size: 16px;
   }
 
 }
 
-.row-info{
+.row-info {
+
   // .descr-info__name
   &__name {
     display: inline-block;
@@ -105,12 +109,12 @@ $__bg_wrapper: #F9F9F9;
     font-weight: $font-Thin;
     font-size: 2em;
     line-height: 33px;
-    color:$defTextColor;
+    color: $black;
   }
 }
 
-.descr-info{
-  &__title{
+.descr-info {
+  &__title {
     margin-bottom: 10px;
     font-family: $fontFamilyPrim;
     font-weight: $font-Regular;
@@ -118,50 +122,35 @@ $__bg_wrapper: #F9F9F9;
     line-height: 33px;
   }
 
-  &__info{
+  &__info {
     overflow: hidden;
     height: 180px;
-    &>p{
+
+    &>p {
       padding-right: 20px;
-    line-height: 135%;
-    font-size: 1.4em;
-    font-weight: 300;
-    text-indent: 15px;
+      line-height: 135%;
+      font-size: 1.4em;
+      font-weight: 300;
+      text-indent: 15px;
     }
   }
 }
 
-._form{
-  &__add_to_cart_button{
+._form {
+  &__add_to_cart_button {
     margin-left: 15px;
 
-    color: $color_font_btn;
-    font-family: 'SFProDisplay';
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-
-    align-items: center;
-    text-align: center;
-
-    padding: 0 15px;
-    border: $brd_btn;
-    background-color: transparent;
-    transition:  all .5s ease;
-
-    &:hover{
-      background: $color_text_price;
-      color:white;
+    &:hover {
+      background: $pumpkin;
+      border-color: $pumpkin;
+      color: white;
     }
   }
 }
 
 /* counter */
-.quantity-form{
-  &__counter{
+.quantity-form {
+  &__counter {
     border: $brd_btn;
   }
 }
-

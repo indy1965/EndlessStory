@@ -1,29 +1,42 @@
-*,  *::before, *::after{
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
-html{
+html {
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
-a{
+a {
   text-decoration: none;
-  outline: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+a:active, a:hover, a:focus, a::selection, a::focus {
+  outline: 0;
+  border: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 //***************************/
+
 body {
   font-size: 12px;
   font-weight: normal;
-  font-family: $fontFamilyPrim;
+  font-family: 'OpenSans', Arial, Helvetica, sans-serif;
   background: #ffffff;
   line-height: 21px;
 }
@@ -59,49 +72,66 @@ body {
 
 .btn {
   display: inline-block;
-  color: #333;
-  border: 1px solid #6e6e6e; //$color_brd_btn;
-  background: 0 0;
-  font-family: 'SFProDisplay';
+
+  color: $color_font_btn;
+  border: $border_btn;
+  background-color: transparent;
+  @include font_sett ($fontFamilySecond, $font-Bold, 1.1em);
   text-transform: uppercase;
-  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   padding: 10px 25px;
-  letter-spacing: 1px;
+  transition: all 0.25s ease;
 
   .btn-primary {
     color: #fff;
-    background-color: #ffa200;
-    border-color: #ffa200;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    ;
+  }
+
+  &:hover {
+    background-color: $wet-asphalt;
+    border-color: $wet-asphalt;
+    color: #fff;
   }
 }
 
 
 
-.counter-control{
+.counter-control {
+  display: flex;
+
   &__btn--desc, &__btn--inc {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $fontFamilyPrim;
+    font-size: 2em;
     height: 40px;
     width: 25px;
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 24px;
-    transition:  all .5s ease;
+    user-select: none;
+    transition: all .5s ease;
 
-    &:hover{
-      background: $color_brd_btn;
+    &:hover {
+      background: $silver;
     }
   }
 
-  &__fieldCount{
+  &__fieldCount {
     border: 0;
     padding: 5px 0;
-    font-family: 'OpenSans';
+    font-family: $fontFamilyPrim;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1.5em;
+    line-height: 2em;
     align-items: center;
     text-align: center;
     width: 40px;
+    outline: none;
   }
 }
 
@@ -110,14 +140,15 @@ body {
 //   content: '₽';
 // }
 
-.page-section{
+// Заголовок страниц
+.page-section {
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 160px;
+  padding-top: 60px;
 
-  &__title{
+  &__title {
     text-align: center;
     margin-bottom: 60px;
-    @include title_page;
+    @extend %title-page;
   }
 }
-
