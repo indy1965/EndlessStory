@@ -4,12 +4,13 @@ fa fa-shopping-cart
 fa fa-bars
 
 fonts
-  Poppins
+Poppins
 $font-Regular
 $font-Bold;
 $font-Light
 $font-SemiBold
 
-  SFProDisplay
+SFProDisplay
 $font-Light
 $font-Thin
+\$font-Medium

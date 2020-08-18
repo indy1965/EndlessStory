@@ -1,3 +1,9 @@
+//product-item
+$brd-card_shdow: 3px 5px 10px rgba(154, 154, 154, 0.25);
+$color_title_card: $black-blue;
+$color_text_price: $midnight-blue;
+
+//*****************************/
 .product-item {
   position: relative;
   max-width: 250px;
@@ -7,20 +13,20 @@
   margin: 0 10px 40px 10px;
   transition: 0.5s ease;
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     max-width: 230px;
   }
 
-  @media (max-width: 576px){
+  @media (max-width: 576px) {
     max-width: 225px;
   }
 
-  @media (max-width: 480px){
+  @media (max-width: 480px) {
     max-width: 100%;
   }
 
-  @media(min-width: 993px){
-    &::after{
+  @media(min-width: 993px) {
+    &::after {
       content: '';
       position: absolute;
       top: 0;
@@ -32,9 +38,9 @@
     }
 
     &:hover {
-      &::after{
+      &::after {
         //border: 2px solid red; //$brd_card_hover
-        box-shadow:         0px 0px 22px 4px rgba(119, 114, 114, 0.33);
+        box-shadow: 0px 0px 22px 4px rgba(119, 114, 114, 0.33);
       }
     }
 
@@ -45,7 +51,7 @@
 
 
 
-  &__wrapper{
+  &__wrapper {
     width: 100%;
     position: relative;
     margin-bottom: 10px;
@@ -55,7 +61,7 @@
   &__img {
     position: relative;
 
-    img{
+    img {
       display: block;
       border: 0;
       max-width: 100%;
@@ -63,7 +69,7 @@
 
     &:after {
       content: '';
-      background:  rgba(73, 64, 87, .7);  // rgba(73, 102, 162, 0.75);
+      background: rgba(73, 64, 87, .7); // rgba(73, 102, 162, 0.75);
       @include center();
       transform: scale(0);
       transition: 0.2s ease-in-out;
@@ -73,12 +79,13 @@
 
   &:hover &__img:after {
 
-    @media (min-width:993px){
+    @media (min-width:993px) {
       opacity: 1;
       transform: scale(1);
     }
   }
 }
+
 // Кнопки
 .product-btn {
 
@@ -110,14 +117,14 @@
     transition: all .6s ease;
 
     // @include animation_btn(white, $black);
-    &:hover{
+    &:hover {
       background: #fff;
       color: #000;
     }
   }
 }
 
-.product-btn-icon{
+.product-btn-icon {
   position: absolute;
   left: 0;
   bottom: 44px;
@@ -126,7 +133,7 @@
   justify-content: space-around;
   align-items: center;
 
-  &>a{
+  &>a {
     margin: 0;
     padding: 0;
     display: flex;
@@ -140,12 +147,13 @@
     font-size: 2.5em;
   }
 
-  @media (min-width: 993px){
+  @media (min-width: 993px) {
     display: none;
   }
 }
 
 .info-product {
+
   // .info-product__title
   &__title {
     /* font-title-card */
@@ -165,4 +173,3 @@
     @include price_ru('OpenSans', 700, 2em, $color_text_price);
   }
 }
-

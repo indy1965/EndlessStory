@@ -1,11 +1,11 @@
-$__color_foot_svg: #5e5e5e;
-$__color_foot_placehold: #5e5e5e;
-$__brd_foot_input: 1px solid #EAEAEA;
+$__color_foot_svg: $asbestos;
+$__color_foot_placehold: $asbestos;
+$__brd_foot_input: 1px solid $asbestos;
 
 .footer {
   background: $bg_footer;
   color: $white;
-  padding-top: 80px;
+  padding-top: 55px;
   padding-bottom: 30px;
   font-size: 16px;
   font-family: $fontFamilySecond;
@@ -24,13 +24,13 @@ $__brd_foot_input: 1px solid #EAEAEA;
 
   // .footer__column
   &__column {
-    flex:1 0 50%;
+    flex: 1 0 50%;
   }
 }
 
 .menu-footer {
-  &__list{
-    li{
+  &__list {
+    li {
       padding-bottom: 5px;
     }
   }
@@ -44,7 +44,7 @@ $__brd_foot_input: 1px solid #EAEAEA;
 }
 
 .form-footer {
-  &__group{
+  &__group {
     display: flex;
     align-items: center;
   }
@@ -56,17 +56,17 @@ $__brd_foot_input: 1px solid #EAEAEA;
     background-color: transparent;
     width: 320px;
     padding: 10px 30px 10px 0;
-    font-size: 16px;
+    font-size: 1em;
     color: white;
     font-family: $fontFamilyPrim;
     font-weight: $font-Light;
 
-    &::placeholder{
-      font-size: 16px;
+    &::placeholder {
+      font-size: 1em;
       color: $__color_foot_placehold;
     }
 
-    &:focus{
+    &:focus {
       outline: none;
     }
   }
@@ -78,7 +78,7 @@ $__brd_foot_input: 1px solid #EAEAEA;
     letter-spacing: 0.05em;
   }
 
-  &__submit{
+  &__submit {
     border: 0;
     padding: 0;
     margin: 0;
@@ -86,34 +86,44 @@ $__brd_foot_input: 1px solid #EAEAEA;
     background-color: transparent;
     color: $__color_foot_svg;
 
-    &:hover{
-      &>i{
+    &:hover {
+      &>i {
         color: $hoverColor;
       }
     }
   }
 
-  &:focus{
+  &:focus {
     background: $bg_footer;
   }
 }
 
-.footer__content{
-  a{
+.footer__content {
+  a {
     color: $white;
     font-family: $fontFamilySecond;
     font-weight: $font-Thin;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 30px;
     letter-spacing: 0.1em;
   }
 }
 
-.footer-info{
-  margin-bottom: 45px;
+.footer-info {
+  margin-bottom: 25px;
 }
 
-.footer-social{
-  margin-bottom: 80px;
+.footer-social {
+  margin-bottom: 35px;
 }
 
+.footer-bottom {
+
+  span {
+    font-size: .8rem;
+  }
+
+  a {
+    font-size: .8rem;
+  }
+}

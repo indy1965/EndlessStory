@@ -1,7 +1,6 @@
-
 // <Шрифты по умолчанию> ================================================
-$fontFamilyPrim: 'Poppins', Arial, Helvetica, sans-serif;
-$fontFamilySecond: 'SFProDisplay', Arial, Helvetica, sans-serif;
+$fontFamilyPrim: 'OpenSans';
+$fontFamilySecond: 'SFProDisplay';
 
 //* </ШРИФТЫ> ===========================================================
 
@@ -30,36 +29,47 @@ $font-Bold: 700;
 
 // Цвета
 $white: #fff;
-$red: #FA4E5E;
+$red: #e74c3c; //#FA4E5E;
+$alizarin: #e74c3c;
 $black: #000;
+$midnight-blue-r: rgba(44, 62, 80, 0.95);
+$midnight-blue: #2c3e50;
+$midnight-blue-lite: #364c62;
+$black-blue: #1f2b38;
+$wet-asphalt:#5a7ea3;
+$asbestos:#7f8c8d;
+$concrete: #95a5a6; //$defTextColor: #000;
+$silver: #bdc3c7;
+$light-gray: #ecf0f1;
+$pumpkin: #d35400;
 
-$defTextColor: #000;
-$hoverColor: #6098C6;
-$bg_head: rgba(73, 64, 87, 0.95); // #2F2B35;
-$bg_footer: $bg-head;
+//
 
-$selection: #e6ae48;
 
-//product-item
-$brd-card_shdow: 3px 5px 10px rgba(154, 154, 154, 0.25);
-$brd_card: 1px solid #CFCFCF;
-$brd_card_hover: 1px solid #d649cf;
-$color_title_card: #1E1E1E;
-$color_text_price: #BCA480;
+$hoverColor: $wet-asphalt; // Цвет ховера
+$bg_head: $midnight-blue-r; //Цвет шапки
+$bg_footer: $midnight-blue-r; // Цвет подвала
 
-// button
-$color_font_btn: #5D5E62;
-$color_brd_btn: #D5D5D5;
-$brd_btn: 1px solid $color_brd_btn;
+// Кнопки
+$color_font_btn: $midnight-blue;
+$border_btn: 1px solid $silver;
+$font_btn: $fontFamilySecond, $font-Medium, 1em;
+$brd_btn: 1px solid $silver;
 
-// title
-$color_title_section: #2F2B35;
-$font_title_section: 'SFProDisplay';
-$font_title_weight: $font-Thin;
-$font_title_size: 4em; // размер шрифта в em
+// Заголвок секции, категории
+$font-family_title_section: $fontFamilySecond;
+$font-weight_title_section: $font-Thin;
+$font-size_title_section: 4em; // размер шрифта в em
+$color_title_section: $black-blue;
+
+// Заголвок категории
+$font-family_title_category: $fontFamilySecond;
+$font-weight_title_category: $font-Thin;
+$font-size_title_category: 4em;
+$color_title_category: $black-blue;
 
 //submenu
-$boder-color-submenu: #e0e0e0;
+$bg-color-submenu: $light-gray;
+$boder-color-submenu: $silver;
 $shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
-
-
+$border-submenu: 1px solid $silver;

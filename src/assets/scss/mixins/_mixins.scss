@@ -10,20 +10,21 @@
   }
 }
 
-@mixin submenu($right){
+@mixin submenu($right) {
   display: flex;
   flex-direction: column;
   position: absolute;
   visibility: hidden;
   opacity: 0;
   z-index: 99;
-  transition:all .3s ease;
+  transition: all .3s ease;
   margin: 0;
   padding: 0;
   left: auto;
   right: $right;
   top: 130%;
-  border: 1px solid $boder-color-submenu;
+  border: $border-submenu;
+  background: $bg-color-submenu;
 }
 
 //Центровка объектов с позицией absolute
@@ -38,7 +39,7 @@
 
 // // Заголовок секций и страниц
 // Отображение цены со знаком '₽'
-@mixin price_ru ($font_name, $font_weight,$font_size, $color_tex) {
+@mixin price_ru ($font_name, $font_weight, $font_size, $color_tex) {
   font: $font_weight $font_size/1.5 $font_name;
   font-size: $font_size;
   color: $color_tex;
@@ -48,8 +49,9 @@
     margin-right: 5px;
   }
 }
+
 // Позиции меню с анимацией
-@mixin item_menu($font_family,$font_weight,$font_size,$color,$hover_color ){
+@mixin item_menu($font_family, $font_weight, $font_size, $color, $hover_color) {
   position: relative;
 
   font: $font_weight $font_size/1.5 $font_family;
@@ -108,9 +110,13 @@
   }
 }
 
-// Заголовок секций и страниц
-@mixin title_page {
-  font: $font_title_weight $font_title_size/1.5 'SFProDisplay';
-  font-size: $font_title_size;
-  color: $color_title_section;
+@mixin font_sett ($ff, $fw, $fz) {
+  font: $fw $fz/1.5 $ff;
+  font-size: $fz;
 }
+
+// // Заголовок секций и страниц
+// @mixin title_page {
+//   @include font_sett ($fontFamilySecond, $font-Thin, 4em);
+//   color: $black-blue;
+// }
