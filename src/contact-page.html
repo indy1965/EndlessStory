@@ -5,7 +5,7 @@
   </head>
   <body>
     <div class="wrapper">
-      @@include('./tplhtml/blocks/header/_header.html',{})
+      @@include('./tplhtml/blocks/header/_header.html',{"fixed":false})
       <main class="page">
         <div class="page__body _container page__section">
           <div class="page__title">
@@ -14,15 +14,28 @@
 
           <section class="section-deliv deliv-content">
             <div class="deliv-content__info">
-              <p>Для связи с нами напишите письмо на электронную почту store@urbanbooks.ru. Мы отвечаем оперативно.</p>
-              <p>У нас нет телефона. Поэтому позвонить нам не получится. По этой же причине мы никому не звоним для подтверждения заказа.</p>
-              <p>Представительство в Фейсбуке: https://www.facebook.com/UrbanBooks/.</p>
-            </div> <!-- /deliv-content__info -->
-          </section> <!-- /section-deliv deliv-content -->
-
-        </div> <!-- /page__body -->
-      </main> <!-- /main -->
+              <p>
+                Для связи с нами напишите письмо на электронную почту
+                store@urbanbooks.ru. Мы отвечаем оперативно.
+              </p>
+              <p>
+                У нас нет телефона. Поэтому позвонить нам не получится. По этой
+                же причине мы никому не звоним для подтверждения заказа.
+              </p>
+              <p>
+                Представительство в Фейсбуке:
+                https://www.facebook.com/UrbanBooks/.
+              </p>
+            </div>
+            <!-- /deliv-content__info -->
+          </section>
+          <!-- /section-deliv deliv-content -->
+        </div>
+        <!-- /page__body -->
+      </main>
+      <!-- /main -->
       @@include('./tplhtml/blocks/footer/_footer.html',{})
-    </div> <!-- /wrapper -->
+    </div>
+    <!-- /wrapper -->
   </body>
 </html>

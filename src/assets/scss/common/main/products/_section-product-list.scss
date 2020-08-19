@@ -5,6 +5,10 @@
     padding: 40px 0;
   }
 
+  @media (max-width: 445px) {
+    padding-top: 80px;
+  }
+
   // .section__content
   &__content {
     text-align: center;

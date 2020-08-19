@@ -117,7 +117,7 @@
       display: inline-block;
       margin-right: 40px;
 
-      &:last-child{
+      &:last-child {
         margin-right: 0px;
       }
 
@@ -129,7 +129,7 @@
         display: inline-block;
         text-transform: uppercase;
 
-        @include item_menu($fontFamilySecond,$font-Light,1.2em, $white, $hoverColor);
+        @include item_menu($fontFamilySecond, $font-Light, 1.2em, $white, $hoverColor);
       }
     }
 
@@ -189,7 +189,7 @@
     }
 
     @media(max-width: 992px) {
-      margin-right: 5px;
+      margin-right: 12px;
     }
   }
 
@@ -296,7 +296,7 @@
       justify-content: center;
       align-items: center;
       position: absolute;
-      top: 10px;
+      top: 16px;
       left: 18px;
       width: 21px;
       height: 21px;
@@ -310,12 +310,12 @@
         font-size: .8em;
         width: 18px;
         height: 18px;
-        left: 18px;
-        top: 17px;
+        top: 18px;
+        //left: 20px;
       }
 
       @media(max-width: 992px) {
-        left: 33px;
+        left: 20px;
       }
 
       @media(max-width: 768px) {
