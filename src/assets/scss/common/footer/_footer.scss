@@ -20,12 +20,37 @@ $__brd_foot_input: 1px solid $asbestos;
   // .footer__row
   &__row {
     display: flex;
+
+    @include media-max($md6) {
+      flex-direction: column;
+    }
   }
 
   // .footer__column
   &__column {
     flex: 1 0 50%;
+    display: flex;
+
+    @include media-max($md4) {
+      justify-content: center;
+
+      &.nav-menu {
+        display: none;
+      }
+    }
+
+    @include media-max($md6) {
+      flex: 0 0 100%;
+    }
   }
+
+  &__form {
+    display: block;
+  }
+}
+
+.footer-info {
+  margin-bottom: 25px;
 }
 
 .menu-footer {
@@ -44,9 +69,19 @@ $__brd_foot_input: 1px solid $asbestos;
 }
 
 .form-footer {
+
+  @include media-max($md4) {
+    max-width: 320px;
+  }
+
+  @include media-max($md6) {
+    width: 100%;
+  }
+
   &__group {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
+    position: relative;
   }
 
   // .form-footer_input
@@ -54,8 +89,8 @@ $__brd_foot_input: 1px solid $asbestos;
     border: 0;
     border-bottom: $__brd_foot_input;
     background-color: transparent;
-    width: 320px;
-    padding: 10px 30px 10px 0;
+    width: 100%;
+    padding: 10px 10px 10px 5px;
     font-size: 1em;
     color: white;
     font-family: $fontFamilyPrim;
@@ -79,10 +114,14 @@ $__brd_foot_input: 1px solid $asbestos;
   }
 
   &__submit {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    top: 0px;
+    right: -11px;
     border: 0;
     padding: 0;
     margin: 0;
-    margin-left: -28px;
     background-color: transparent;
     color: $__color_foot_svg;
 
@@ -107,10 +146,6 @@ $__brd_foot_input: 1px solid $asbestos;
     line-height: 30px;
     letter-spacing: 0.1em;
   }
-}
-
-.footer-info {
-  margin-bottom: 25px;
 }
 
 .footer-social {

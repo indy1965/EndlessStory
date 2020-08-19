@@ -1,7 +1,7 @@
 .section-prod {
   padding: 90px 0;
 
-  @media (max-width: 576px) {
+  @include media-max($md4) {
     padding: 40px 0;
   }
 
@@ -27,12 +27,12 @@
     letter-spacing: 0.08em;
     margin-bottom: 60px;
 
-    @media (max-width: 576px) {
+    @include media-max($md4) {
       font-size: 3em;
       margin-bottom: 24px;
     }
 
-    @media (max-width: 480px) {
+    @include media-max($md5) {
       font-size: 2em;
       margin-bottom: 18px;
     }

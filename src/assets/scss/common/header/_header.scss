@@ -20,7 +20,7 @@
     width: 100%;
     height: 80px;
 
-    @media (max-width: 768px) {
+    @include media-max($md3) {
       height: 65px;
     }
   }
@@ -51,7 +51,7 @@
 */
 .logo {
 
-  @media(max-width: 430px) {
+  @include media-max($md5) {
     max-width: 80px;
   }
 
@@ -65,17 +65,17 @@
       max-width: 100%;
     }
 
-    @media(max-width: 992px) {
+    @include media-max($md2) {
       width: 45px;
       height: 45px;
     }
 
-    @media(max-width: 576px) {
+    @include media-max($md4) {
       width: 35px;
       height: 35px;
     }
 
-    @media(max-width: 430px) {
+    @include media-max($md5) {
       margin-right: 0px;
     }
   }
@@ -87,15 +87,15 @@
     font-weight: $font-Thin;
     font-size: 2em;
 
-    @media (max-width: 992px) {
+    @include media-max($md2) {
       font-size: 1.6em;
     }
 
-    @media (max-width: 576px) {
+    @include media-max($md4) {
       font-size: 1.4em;
     }
 
-    @media (max-width: 430px) {
+    @include media-max($md5) {
       display: none;
     }
   }
@@ -121,7 +121,7 @@
         margin-right: 0px;
       }
 
-      @media (max-width: 992px) {
+      @include media-max($md2) {
         margin-right: 20px;
       }
 
@@ -133,7 +133,7 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @include media-max($md3) {
       display: none;
     }
   }
@@ -155,7 +155,7 @@
       color: $hoverColor;
     }
 
-    @media(max-width: 768px) {
+    @include media-max($md3) {
       display: block;
       flex: 0 1 auto;
     }
@@ -167,11 +167,12 @@
 *********************************/
 .action-icon {
 
-  @media(max-width: 1200px) and (min-width: 993px) {
+  @include media-max_min($md1, $md2+1) {
     margin-right: 20px;
   }
 
-  @media(max-width: 768px) {
+
+  @include media-max($md3) {
     flex: 1 1 auto;
     display: flex;
     justify-content: center;
@@ -188,7 +189,7 @@
       margin-right: 0px;
     }
 
-    @media(max-width: 992px) {
+    @include media-max($md2) {
       margin-right: 12px;
     }
   }
@@ -217,15 +218,13 @@
       color: $hoverColor;
     }
 
-    @media (max-width: 992px) {
+    @include media-max($md2) {
       padding-left: 15px;
       padding-right: 15px;
     }
 
-    @media (max-width: 768px) {
+    @include media-max($md3) {
       height: 65px;
-      padding-left: 15px;
-      padding-right: 15px;
     }
   }
 
@@ -289,7 +288,6 @@
 .cart-icon {
 
   &>a {
-
     span {
       display: inline-flex;
       flex-direction: column;
@@ -301,31 +299,31 @@
       width: 21px;
       height: 21px;
       border-radius: 50%;
-      background: $red; //#fe4c50;
+      background: $red;
       color: #ffffff;
       font-size: 1em;
       padding-top: 1px;
 
-      @media(max-width: 1200px) {
+      @include media-max($md1) {
         font-size: .8em;
         width: 18px;
         height: 18px;
         top: 18px;
-        //left: 20px;
       }
 
-      @media(max-width: 992px) {
+      @include media-max($md2) {
         left: 20px;
       }
 
-      @media(max-width: 768px) {
+      @include media-max($md3) {
         top: 10px;
       }
     }
   }
 }
 
-@media(max-width:768px) {
+// Меню Бургер.
+@include media-max($md3) {
   .head-burger {
     display: block;
     position: absolute;
