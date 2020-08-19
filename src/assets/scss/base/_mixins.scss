@@ -1,0 +1,337 @@
+@import './general/vars';
+
+// Шрифты
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+// Абсолютный центр
+@mixin absCenter {
+  @extend %posabsolute;
+  left: 50%;
+  top: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+// Прсевдо До и После
+@mixin textBoxCenter($measure) {
+  width: ($measure)#{px};
+  height: ($measure)#{px};
+  line-height: ($measure)#{px};
+  text-align: center;
+}
+
+@mixin borderIconCenter($measure, $border: 1) {
+  width: ($measure)#{px};
+  height: ($measure)#{px};
+  line-height: (($measure) - ($border) * 2)#{px};
+  text-align: center;
+}
+
+// Круг
+@mixin circle($measure) {
+  width: ($measure)#{px};
+  height: ($measure)#{px};
+  line-height: ($measure)#{px};
+  border-radius: 50%;
+}
+
+//Заполнитель CSS
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+
+@mixin submenu($right) {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+  transition: all .3s ease;
+  margin: 0;
+  padding: 0;
+  left: auto;
+  right: $right;
+  top: 130%;
+  border: $border-submenu;
+  background: $bg-color-submenu;
+  box-shadow: 0px 7px 15px 3px rgba(50, 50, 50, 0.7);
+}
+
+//Центровка объектов с позицией absolute
+@mixin center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+// // Заголовок секций и страниц
+// Отображение цены со знаком '₽'
+@mixin price_ru ($font_name, $font_weight, $font_size, $color_tex) {
+  font: $font_weight $font_size/1.5 $font_name;
+  font-size: $font_size;
+  color: $color_tex;
+
+  &:before {
+    content: '₽';
+    margin-right: 5px;
+  }
+}
+
+// Позиции меню с анимацией
+@mixin item_menu($font_family, $font_weight, $font_size, $color, $hover_color) {
+  position: relative;
+
+  font: $font_weight $font_size/1.5 $font_family;
+  font-size: $font_size;
+  letter-spacing: 0.15em;
+  color: $color;
+  transition: all .5s ease;
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $hover_color;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
+
+  &:hover {
+    color: $hoverColor;
+
+    &:after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
+
+// Анимация 1 кнопки меню
+@mixin animation_btn($_color_hover_bg, $_color_hover_fnt) {
+
+  transition: .5s ease-in-out;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: -220%;
+    top: -500%;
+    width: 150%;
+    height: 1000%;
+    transform: rotate(45deg);
+    background: $_color_hover_bg;
+    z-index: -1;
+    transition: .7s ease-in-out;
+  }
+
+  &:hover {
+    color: $_color_hover_fnt;
+
+    &:after {
+      left: 0%;
+    }
+  }
+}
+
+@mixin font_sett ($ff, $fw, $fz) {
+  font: $fw $fz/1.5 $ff;
+  font-size: $fz;
+}
+
+// // Заголовок секций и страниц
+// @mixin title_page {
+//   @include font_sett ($fontFamilySecond, $font-Thin, 4em);
+//   color: $black-blue;
+// }
+
+
+//*****************
+//*  Медиа запросы
+//*****************
+
+@mixin media-min($width) {
+  @media(min-width: $width+px) {
+    @content;
+  }
+}
+
+@mixin media-max($width) {
+  @media(max-width: $width+px) {
+    @content;
+  }
+}
+
+@mixin media-max_min($width1, $width2) {
+  @media(max-width: $width1+px) and (min-width: $width2+px) {
+    @content;
+  }
+}
+
+// BREAKPOINTS
+
+@mixin breakpoint($point) {
+
+  // 767 to Upper
+  @if $point==smalltoupper {
+    @media (min-width: 47.94em) {
+      @content ;
+    }
+  }
+
+  // 992 to Upper
+  @if $point==largeonly {
+    @media (min-width: 62em) {
+      @content ;
+    }
+  }
+
+  // 1200 to Upper
+  @if $point==xlargeonly {
+    @media (min-width: 75em) {
+      @content ;
+    }
+  }
+
+  // 1400 to Upper
+  @if $point==xxblargeonly {
+    @media (min-width: 87.5em) {
+      @content ;
+    }
+  }
+
+  // 1500 to Upper
+  @if $point==xxlargeonly {
+    @media (min-width: 93.75em) {
+      @content ;
+    }
+  }
+
+  // 1600 to Upper
+  @if $point==xxalargeonly {
+    @media (min-width: 100em) {
+      @content ;
+    }
+  }
+
+  // 1840 to Upper
+  @if $point==xxlupper {
+    @media (min-width: 115em) {
+      @content ;
+    }
+  }
+
+  // 1920
+  @if $point==xxlarge {
+    @media (max-width: 120em) {
+      @content ;
+    }
+  }
+
+  // 1699
+  @if $point==xxalarge {
+    @media (max-width: 106.1875em) {
+      @content ;
+    }
+  }
+
+  // 1599
+  @if $point==xxblarge {
+    @media (max-width: 99.9375em) {
+      @content ;
+    }
+  }
+
+  // 1499
+  @if $point==xlarge {
+    @media (max-width: 93.6875em) {
+      @content ;
+    }
+  }
+
+  // 1399
+  @if $point==xblarge {
+    @media (max-width: 87.4375em) {
+      @content ;
+    }
+  }
+
+  // 1299
+  @if $point==xclarge {
+    @media (max-width: 81.1875em) {
+      @content ;
+    }
+  }
+
+  // 1200
+  @else if $point==large {
+    @media (max-width: 74.9375em) {
+      @content ;
+    }
+  }
+
+  // 1055
+  @else if $point==blarge {
+    @media (max-width: 65.9375em) {
+      @content ;
+    }
+  }
+
+  // 991
+  @else if $point==medium {
+    @media (max-width: 61.94em) {
+      @content ;
+    }
+  }
+
+  // 767
+  @else if $point==small {
+    @media (max-width: 47.94em) {
+      @content ;
+    }
+  }
+
+  // 575
+  @else if $point==xsmall {
+    @media (max-width: 35.94em) {
+      @content ;
+    }
+  }
+
+  // 450
+  @else if $point==xxsmall {
+    @media (max-width: 28.125em) {
+      @content ;
+    }
+  }
+
+}

@@ -1,8 +1,31 @@
-// <Шрифты по умолчанию> ================================================
+/*****************************
+00. Global CSS
+*****************************/
+//*===== Colors =====*//
+
+// $body-color: #666666;
+// $primary-color: #c2080f;
+// $heading-color: #111111;
+
+//*===== Font Family =====*//
+
 $fontFamilyPrim: 'OpenSans';
 $fontFamilySecond: 'SFProDisplay';
+// $body-font: 'Poppins', sans-serif;
+// $font-2: 'Roboto', sans-serif;
+// $font-3: 'Open Sans', sans-serif;
 
-//* </ШРИФТЫ> ===========================================================
+//*==== Font size =====*//
+$body-font-size: 16px;
+
+//*==== Line height ====*//
+$line-height: 1.75;
+
+//*==== Border Color ====*//
+$border-color: #eeeeee;
+
+//*==== Color =====*//
+
 
 //============= Размеры контейнеров.
 $containerMaxWidth: 1140px;

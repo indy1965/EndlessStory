@@ -1,0 +1,43 @@
+//* Основные
+@import './base/fonts';
+@import './base/variables';
+@import './base/mixins';
+@import './base/typography';
+
+
+//* <ШРИФТЫ> ============================================================
+// <Подключаем шрифты> ==================================================
+//&display=swap&subset=cyrillic-ext
+
+
+
+// <Иконочные шрифты> ===================================================
+//@import = 'icons'
+@import './vendor/fontello';
+
+//* <СБРОС НАСТРОЕК> ====================================================
+@import './general/normalize';
+
+//*  Расположение
+//--------------------------
+@import './layout/header';
+@import './layout/footer';
+
+//* Компоненты
+//--------------------------
+@import './common/main/secton-slider';
+@import './common/header/minicart';
+@import './common/header/minicart-item';
+@import './common/main/products/section-product-list';
+@import './common/main/products/_product-item';
+
+//* Страницы
+//--------------------------
+@import './pages/product-page';
+@import './pages/deliv-page';
+@import './pages/payment-page';
+@import './pages/about-page';
+@import './pages/_cart-page';
+
+//* Утилиты
+@import './utilites/helper';
