@@ -195,8 +195,34 @@
   }
 }
 
-// BREAKPOINTS
+//*-------------------*//
+//*    BREAKPOINTS
+//*-------------------*//
+/*
+----- to Upper -----
+smalltoupper  767
+largeonly     992
+xlargeonly    1200
+xxblargeonly  1400
+xxlargeonly   1500
+xxalargeonly  1600
+xxlupper      1840
+------------------
+xxlarge     1920
+xxalarge    1699
+xxblarge    1599
+xlarge      1499
+xblarge     1399
+xclarge     1299
+large       1200  - md1
+blarge      1055
+medium      991     md2
+small       767     md3
+xsmall      575     md4
+xxsmall     450     md5
 
+
+*/
 @mixin breakpoint($point) {
 
   // 767 to Upper
@@ -331,5 +357,4 @@
       @content ;
     }
   }
-
 }
