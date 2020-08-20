@@ -1,26 +1,26 @@
-
-
+//
+//
+//
 $(document).ready(function(){
+
+  /**********************
+	*Функция нажатия на гамбургер
+	***********************/
   $('.hamburger-icon').click(function(){
     $('.hamburger-icon').toggleClass('close');
   })
 
+  /**********************
+	*Функция нажатия на кнопки счетчика
+	***********************/
   const catalogItemCounter = function (field) {
 
     var fieldCount = function(el) {
 
-      var
-        // Мин. значение
-        min = el.data('min') || false,
-
-        // Макс. значение
-        max = el.data('max') || false,
-
-        // Кнопка уменьшения кол-ва
-        dec = el.prev('#dec'),
-
-        // Кнопка увеличения кол-ва
-        inc = el.next('#inc');
+      var min = el.data('min') || false, // Мин. значение
+         max = el.data('max') || false,  // Макс. значение
+        dec = el.prev('#dec'),  // Кнопка уменьшения кол-ва
+        inc = el.next('#inc'); // Кнопка увеличения кол-ва
 
       function init(el) {
         if(!el.attr('disabled')){
@@ -48,7 +48,6 @@ $(document).ready(function(){
             el[0].value = value++;
           }
         };
-
       }
 
       el.each(function() {
@@ -61,7 +60,29 @@ $(document).ready(function(){
     });
   };
 
+  // Вызов функции обработки счетчика
   catalogItemCounter('.counter-control__fieldCount');
+
+  /**********************
+	* Липкий Заголовок
+  ***********************/
+
+ $(window).on('scroll', function(){
+  if ($(window).scrollTop() >= $headerTotalHeight) {
+      $('.fixed-header').addClass('sticky-header');
+  }
+  else {
+      $('.fixed-header').removeClass('sticky-header');
+  }
+});
+
+  /**********************
+	*Preloader
+	***********************/
+
+	$(window).on('load', function(){
+		$('.zakas-preloader').removeClass("active");
+	});
 
 })
 
