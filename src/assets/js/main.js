@@ -1,8 +1,8 @@
 
 
 $(document).ready(function(){
-  $('.head-burger').click(function(){
-    $('.head-burger').toggleClass('head-burger__active');
+  $('.hamburger-icon').click(function(){
+    $('.hamburger-icon').toggleClass('close');
   })
 
   const catalogItemCounter = function (field) {

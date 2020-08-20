@@ -103,21 +103,21 @@
 
 // Позиции меню с анимацией
 @mixin item_menu($font_family, $font_weight, $font_size, $color, $hover_color) {
-  position: relative;
 
+  position: relative;
   font: $font_weight $font_size/1.5 $font_family;
   font-size: $font_size;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.3rem;
   color: $color;
-  transition: all .5s ease;
+  transition: $base-tranzition;
 
   &:after {
     position: absolute;
     content: "";
-    top: 100%;
+    top: 120%;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 0.3rem;
     background: $hover_color;
     transform: scaleX(0);
     transform-origin: right;
@@ -189,7 +189,7 @@
 //   }
 // }
 
-@mixin breakpoint_min($width1, $width2) {
+@mixin media-max_min($width1, $width2) {
   @media(max-width: $width1+px) and (min-width: $width2+px) {
     @content;
   }

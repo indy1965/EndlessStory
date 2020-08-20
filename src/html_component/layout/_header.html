@@ -2,25 +2,25 @@
   <div class="header__row container">
     <!-- Logo -->
     <a class="header__logo" href="#">
-      <div class="header__logo-container logo">
+      <div class="header__logo--wrapper logo">
         <div class="logo__img">
           <img src="./assets/img/logo.png" alt="logo" />
         </div>
         <h2>Endless Story</h2>
       </div>
     </a>
-
+    <!--  Блок меню -->
     <nav class="header__navbar navbar-head">
-      <!-- navbar -->
-      <ul class="navbar-head__list-menu  ">
+      <!-- Меню -->
+      <ul class="navbar-head__list-menu menu-list">
         <li><a href="/">Магазин</a></li>
         <li><a href="payment-page.html">Оплата</a></li>
         <li><a href="deliv-page.html">Доставка</a></li>
         <li><a href="about-page.html">О нас</a></li>
       </ul>
-      <!-- /.header__navbar navbar-head -->
+      <!-- /navbar-head__list-menu menu-list -->
 
-      <!-- block icons -->
+      <!-- Блок иконок -->
       <ul class="navbar-head__action action-icon">
         <li class="action-icon__instagram instagram-icons">
           <a href="#">
@@ -29,11 +29,11 @@
         </li>
         <!-- icon user -->
         <li class="action-icon__user user-icon">
-          <a href="#">
+           <a href="#">
             <i class="icon icon-uniF102" aria-hidden="true"></i>
           </a>
 
-          <ul class="user-icon__selection">
+        <!--  <ul class="user-icon__selection">
             <li>
               <a href="#">
                 <i class="icon icon-login" aria-hidden="true"></i>
@@ -46,7 +46,7 @@
                 Регистрация</a
               >
             </li>
-          </ul>
+          </ul> -->
           <!-- /user-icon__selection -->
         </li>
           <!-- /action-icons__user user-icon -->
@@ -57,12 +57,12 @@
             <i class="icon icon-uniF100" aria-hidden="true"></i>
             <span class="cart-items" id="cartitems">22</span>
           </a>
-          @@include('../components/carts/_minicart.html',{})
+
         </li>
       </ul>
       <!-- /.navbar_head__action action-head -->
       <div class="navbar-head__burger">
-        <span class="head-burger"></span>
+        <span class="hamburger-icon"></span>
       </div>
       <!-- /.navbar-head__burger -->
     </nav>

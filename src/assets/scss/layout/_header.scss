@@ -14,65 +14,44 @@
     display: flex;
     align-items: stretch;
     width: 100%;
-    height: 80px;
+    height: 8rem;
 
-    @include breakpoint(small) {
-      height: 65px;
-    }
   }
 
   &__logo {
     display: inline-block;
-  }
 
-  // .header__logo-container
-  &__logo-container {
-    flex: 0 1 auto;
-    display: flex;
-    align-items: center;
-    height: 100%;
+    &--wrapper{
+      display: flex;
+      flex: 0 1 auto;
+      align-items: center;
+      height: 100%;
+    }
   }
 
   // .header__navbar
   &__navbar {
     flex: 1 1 auto;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
   }
 }
 
-/*
-    Logo
-*/
+/*==============
+    Логотип
+================*/
 .logo {
 
-  @include breakpoint(xxsmall) {
-    max-width: 80px;
-  }
+  // @include breakpoint(xxsmall) {
+  //   max-width: 8rem;
+  // }
 
   // .logo__img
   &__img {
-    width: 63px;
-    height: 63px;
-    margin-right: 10px;
-
-    &>img {
-      max-width: 100%;
-    }
-
-    @include breakpoint(medium) {
-      width: 45px;
-      height: 45px;
-    }
-
-    @include breakpoint(xsmall) {
-      width: 35px;
-      height: 35px;
-    }
+    width: 6.3rem;
+    height: 6.3rem;
+    margin-right: 1rem;
 
     @include breakpoint(xxsmall) {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 
@@ -81,15 +60,7 @@
     color: $color-white;
     font-family: $font-2;
     font-weight: $font-Thin;
-    font-size: 2em;
-
-    @include breakpoint(medium) {
-      font-size: 1.6em;
-    }
-
-    @include breakpoint(xsmall) {
-      font-size: 1.4em;
-    }
+    font-size: 2.4rem;
 
     @include breakpoint(xxsmall) {
       display: none;
@@ -98,52 +69,26 @@
 }
 
 /*********************************
-   Блок меню
+   Блок меню Хедера
 *********************************/
 .navbar-head {
-
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   // .navbar_head__menu
   &__list-menu {
     flex: 1 1 auto;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
-    &>li {
-      display: inline-block;
-      margin-right: 40px;
-
-      &:last-child {
-        margin-right: 0px;
-      }
-
-      @include breakpoint(medium) {
-        margin-right: 20px;
-      }
-
-      &>a {
-        display: inline-block;
-        text-transform: uppercase;
-
-        @include item_menu($font-2, $font-Light, 1.2em, $color-white, $color-hover);
-      }
-    }
-
-    @include breakpoint(small) {
-      display: none;
-    }
   }
 
   &__action {
-    display: flex;
-    text-align: center;
+
   }
 
   // .navbar-head__burger
   &__burger {
     display: none;
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     position: relative;
 
 
@@ -152,78 +97,97 @@
     }
 
     @include breakpoint(small) {
-      display: block;
-      flex: 0 1 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
 
 /*********************************
-    Бок иконок
+    Блок пунктов меню меню
+*********************************/
+.menu-list{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  & li {
+    display: inline-block;
+    margin-right: 4rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    & a {
+      display: inline-block;
+      text-transform: uppercase;
+
+      @include item_menu($font-2, $font-Light, 1.6rem, $color-white, $color-hover);
+    }
+  }
+  // на маленьком экране прячем меню
+  @include breakpoint(small) {
+    display: none;
+  }
+}
+
+/*********************************
+    Блок иконок
 *********************************/
 .action-icon {
-
-  @include breakpoint_min($md1, $md2+1) {
-    margin-right: 20px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  // @include media-max_min($md1, $md2+1) {
+  //   margin-right: 2rem;
+  // }
 
 
   @include breakpoint(small) {
     flex: 1 1 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    //align-items: center;
   }
 
   &>li {
-    display: inline-block;
-    text-align: center;
-    margin-right: 20px;
-
+    display: inline-flex;
+    align-items: stretch;
+    margin-right: 1.2rem;
 
     &:last-child {
-      margin-right: 0px;
+      margin-right: 0;
     }
 
-    @include breakpoint(medium) {
-      margin-right: 12px;
-    }
-  }
+    &>a{
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 2.5em;
+      //height: 8rem;
+      transition:$base-tranzition;
+      color: $color-white;
 
-  &__user, &__cart, &__instagram {
-    display: inline-block;
-    position: relative;
-  }
+      &>i {
+        font-size: 2.6rem;
 
-  &__user>a, &__cart>a, &__instagram>a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 25px;
-    height: 80px;
-    transition: color 0.3s ease;
-    color: $color-white;
+        @include breakpoint(medium) {
+          font-size: 3rem;
+        }
+      }
 
-    &>i {
-      font-size: 1.8em;
-    }
-
-    &:hover i {
-      color: $color-hover;
-    }
-
-    @include breakpoint(medium) {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    @include breakpoint(small) {
-      height: 65px;
+      &:hover i {
+        color: $color-hover;
+      }
     }
   }
-
 }
 
 /*********************************
@@ -244,31 +208,31 @@
 
   &__selection {
     @include submenu(-100%);
-    width: 210px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 21rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     & a {
       margin: 0;
       display: block;
       border-bottom: solid 1px $color-submenu-boder;
       font-family: $font-2;
-      font-size: 1.2em;
+      font-size: 1.4rem;
       font-weight: $font-Light;
-      line-height: 40px;
+      line-height: 4rem;
       color: #504e4e;
       letter-spacing: .1em;
       text-align: left;
       width: 100%;
-      transition: all 0.3s ease;
+      transition: $base-tranzition;
 
       &:hover {
         color: $color-hover;
       }
 
       i {
-        font-size: 1.2em;
-        margin-right: 10px;
+        font-size: 1.4rem;
+        margin-right: 1rem;
       }
     }
 
@@ -282,7 +246,6 @@
  Cart Icon
 *********************************/
 .cart-icon {
-
   &>a {
     span {
       display: inline-flex;
@@ -290,86 +253,26 @@
       justify-content: center;
       align-items: center;
       position: absolute;
-      top: 16px;
-      left: 18px;
-      width: 21px;
-      height: 21px;
+      top: 1.4rem;
+      right: -0.8rem;
+      width: 2rem;
+      height: 2rem;
       border-radius: 50%;
       background: $color-red;
       color: #ffffff;
-      font-size: 1em;
-      padding-top: 1px;
+      font-size: 1.1rem;
 
-      @include breakpoint(large) {
-        font-size: .8em;
-        width: 18px;
-        height: 18px;
-        top: 18px;
-      }
 
       @include breakpoint(medium) {
-        left: 20px;
-      }
-
-      @include breakpoint(small) {
-        top: 10px;
+        top: 0.6rem;
+        right: -0.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.3rem;
       }
     }
   }
 }
 
-// Меню Бургер.
-@include breakpoint(small) {
-  .head-burger {
-    display: block;
-    position: absolute;
-    right: 4px;
-    top: 19px;
-    width: 24px;
-    height: 2px;
-    background-color: #fff;
-    border: none;
-    transition: transform 0.5s ease;
 
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 24px;
-      height: 2px;
-      background-color: #fff;
-      margin-top: -7px;
-      z-index: 99;
-      transition: transform 0.3s ease;
-    }
 
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 24px;
-      height: 2px;
-      background-color: #fff;
-      margin-top: 7px;
-      transition: transform 0.3s ease;
-    }
-
-    &__active {
-      height: 0;
-    }
-
-    &__active:before {
-      transform: rotate(45deg);
-      margin-top: 0;
-    }
-
-    &__active::after {
-      transform: rotate(-45deg);
-      margin-top: 0;
-    }
-  }
-}
