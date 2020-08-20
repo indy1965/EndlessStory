@@ -61,9 +61,10 @@
 
 
 @mixin submenu($right) {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  position: absolute;
+
   visibility: hidden;
   opacity: 0;
   z-index: 99;

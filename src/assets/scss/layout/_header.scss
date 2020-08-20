@@ -128,136 +128,149 @@
 /*********************************
     Блок иконок
 *********************************/
-.action-icon {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-
-  @include breakpoint(small) {
-    flex: 1 1 auto;
+.header{
+  &-toolbar {
     display: flex;
     justify-content: center;
-  }
+    align-items: center;
+    margin: 0;
+    padding: 0;
 
-  &>li {
-    display: inline-flex;
-    align-items: stretch;
-    margin-right: 1.2rem;
 
-    &:last-child {
-      margin-right: 0;
+    @include breakpoint(small) {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: center;
     }
 
-    &>a{
-      display: inline-flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    &__item {
+      display: inline-block;
       position: relative;
-      width: 2.5em;
+      margin-right: 12px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__btn{
+      position: relative;
+      font-size: 23px;
+			line-height: 1;
       color: $color-white;
       transition:$base-tranzition;
 
-      &>i {
-        font-size: 2.6rem;
-
-        @include breakpoint(medium) {
-          font-size: 3rem;
-        }
+      i {
+        font-size: 23px;
       }
 
       &:hover i {
         color: $color-hover;
       }
+
+      &.mini-cart-btn{
+        .mini-cart-count{
+          position: absolute;
+          right: -13px;
+          top: -13px;
+          font-size: 14px;
+          text-align: center;
+          @include circle(22);
+          color: $color-white;
+          background: $color-red;
+        }
+      }
     }
   }
 }
-
 /*********************************
  User Account
 *********************************/
-.user-icon {
-  &:hover &::selection {
-    visibility: visible;
-    opacity: 1;
-    top: 100%;
-  }
+.user-info {
+  &:after{
+    position: absolute;
+    content: '';
+		left: 0;
+		top: 100%;
+		width: 100%;
+		height: 120%;
+	}
 
-  &:hover &__selection {
-    visibility: visible;
-    opacity: 1;
-    top: 100%;
-  }
+  &__menu {
+    position: absolute;
+    left: -50%;
+    top: 150%;
+    min-width: 200px;
+    margin-top: 30px;
+    background:$color-submenu-bg;
+    padding: 15px 10px;
+    pointer-events: none;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    box-shadow: $shadow-1;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 111;
+    transition: $base-tranzition;
 
-  &__selection {
-    @include submenu(-100%);
-    width: 21rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    & a {
-      margin: 0;
-      display: block;
-      border-bottom: solid 1px $color-submenu-boder;
-      font-family: $font-2;
-      font-size: 1.4rem;
-      font-weight: $font-Light;
-      line-height: 4rem;
-      color: #504e4e;
-      letter-spacing: .1em;
-      text-align: left;
-      width: 100%;
-      transition: $base-tranzition;
-
-      &:hover {
-        color: $color-hover;
-      }
-
-      i {
-        font-size: 1.4rem;
-        margin-right: 1rem;
-      }
+    @include breakpoint(xblarge){
+      transform:translateX(-67%);
+    }
+    @include breakpoint(xsmall){
+      transform: translateX(-50%);
     }
 
-    li:last-child a {
-      border-bottom: none;
+    li{
+      a {
+        margin: 0;
+        display: block;
+        border-bottom: solid 1px $color-submenu-boder;
+        font-family: $font-2;
+        font-size: 16px;
+        font-weight: $font-Light;
+        line-height: 40px;
+        color: #504e4e;
+        letter-spacing: .1em;
+        text-align: left;
+        width: 100%;
+        transition: $base-tranzition;
+
+        i{
+          font-size: 23px;
+        }
+
+        &:hover{
+          color: $color-hover;
+        }
+      }
+
+      &:last-child a {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &:hover{
+    .user-info__menu{
+        top: 90%;
+        pointer-events: visible;
+        visibility: visible;
+        opacity: 1;
     }
   }
 }
 
 /*********************************
- Cart Icon
+ mini-cart-info
 *********************************/
-.cart-icon {
-  &>a {
-    span {
-      display: inline-flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 1.4rem;
-      right: -0.8rem;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      background: $color-red;
-      color: #ffffff;
-      font-size: 1.1rem;
-
-
-      @include breakpoint(medium) {
-        top: 0.6rem;
-        right: -0.5rem;
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.3rem;
-      }
-    }
-  }
+.mini-cart-info {
+  &:after{
+    position: absolute;
+    content: '';
+		left: 0;
+		top: 100%;
+		width: 100%;
+		height: 120%;
+	}
 }
 
 

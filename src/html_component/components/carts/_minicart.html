@@ -1,13 +1,13 @@
-<div class="cart-icon__minicart minicart cart-icon">
-  <ul class="minicart__list">
+<div class="mini-cart-info__wrapper mini-cart">
+  <ul class="mini-cart__list">
     <!-- Товары -->
     @@for (var i = 0; i < 5; i++){ @@include('./_minicart-item.html',{}) }
   </ul>
-  <div class="minicart__total">
+  <div class="mini-cart__total">
     <span>Итог:</span>
     <span class="item-minicart__amount"><span>₽</span>125</span>
   </div>
-  <div class="minicart__action">
+  <div class="mini-cart__action">
     <a href="#" class="btn btn-mk">Карзина</a>
     <a href="#" class="btn btn-mk">Оформить</a>
   </div>
