@@ -1,14 +1,11 @@
-/*
-  local vars
-*/
-
-//**************************
+/*****************************
+10 - Layout - Header
+*****************************/
 
 // Стили заголовка
 .header {
   width: 100%;
   background: $color-head-bg;
-
 
   &__row {
     display: flex;
@@ -80,17 +77,12 @@
     flex: 1 1 auto;
   }
 
-  &__action {
-
-  }
-
   // .navbar-head__burger
   &__burger {
     display: none;
     width: 4rem;
     height: 4rem;
     position: relative;
-
 
     &:hover {
       color: $color-hover;
@@ -143,16 +135,11 @@
   margin: 0;
   padding: 0;
   height: 100%;
-  // @include media-max_min($md1, $md2+1) {
-  //   margin-right: 2rem;
-  // }
-
 
   @include breakpoint(small) {
     flex: 1 1 auto;
     display: flex;
     justify-content: center;
-    //align-items: center;
   }
 
   &>li {
@@ -171,9 +158,8 @@
       align-items: center;
       position: relative;
       width: 2.5em;
-      //height: 8rem;
-      transition:$base-tranzition;
       color: $color-white;
+      transition:$base-tranzition;
 
       &>i {
         font-size: 2.6rem;
