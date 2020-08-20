@@ -37,27 +37,21 @@ html {
 
 
 body {
-  font-size: 12px;
-  font-weight: normal;
-  font-family: 'OpenSans', Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  line-height: 21px;
-  // font-size: $body-font-size;
-  // font-family: $body-font;
-  // color: $body-color;
-  // line-height: $line-height;
+  font-size: $body-font-size;
+  font-family: $body-font;
+  color: $body-color;
+  line-height: $line-height;
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
-
   padding: 0;
   margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   // font-weight: 700;
-  // font-family: $body-font;
-  // color: $heading-color;
+  font-family: $body-font;
+  color: $heading-color;
 
   margin: 0;
   padding: 0;
@@ -96,7 +90,7 @@ figure {
 }
 
 a, button {
-  transition: all 250ms ease-out;
+  transition: $base-tranzition;
 }
 
 input::-webkit-outer-spin-button,
@@ -180,87 +174,86 @@ a:active, a:hover, a:focus, a::selection, a:focus {
   padding: 0 15px;
   margin: 0 auto;
 
-  @media (max-width: 1200px) {
+  @include breakpoint(large) {
     max-width: 960px;
   }
 
-  @media (max-width: 992px) {
+  @include breakpoint(medium) {
     max-width: 720px;
   }
 
-  @media (max-width: 768px) {
+  @include breakpoint(small) {
     max-width: 540px;
   }
 
-  @media (max-width: 576px) {
+  @include breakpoint(xsmall) {
     max-width: 90%;
-    //padding: 0;
   }
 }
 
 
-.btn {
-  display: inline-block;
+// .btn {
+//   display: inline-block;
 
-  color: $color_font_btn;
-  border: $border_btn;
-  background-color: transparent;
-  @include font_sett ($fontFamilySecond, $font-Bold, 1.1em);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 10px 25px;
-  transition: all 0.25s ease;
+//   color: $color_font_btn;
+//   border: $border_btn;
+//   background-color: transparent;
+//   @include font_sett ($fontFamilySecond, $font-Bold, 1.1em);
+//   text-transform: uppercase;
+//   letter-spacing: 0.05em;
+//   text-transform: uppercase;
+//   padding: 10px 25px;
+//   transition: all 0.25s ease;
 
-  .btn-primary {
-    color: #fff;
-    background-color: #f39c12;
-    border-color: #f39c12;
-    ;
-  }
+//   .btn-primary {
+//     color: #fff;
+//     background-color: #f39c12;
+//     border-color: #f39c12;
+//     ;
+//   }
 
-  &:hover {
-    background-color: $wet-asphalt;
-    border-color: $wet-asphalt;
-    color: #fff;
-  }
-}
+//   &:hover {
+//     background-color: $wet-asphalt;
+//     border-color: $wet-asphalt;
+//     color: #fff;
+//   }
+// }
 
-.counter-control {
-  display: flex;
+// .counter-control {
+//   display: flex;
 
-  &__btn--desc, &__btn--inc {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-family: $fontFamilyPrim;
-    font-size: 2em;
-    height: 40px;
-    width: 25px;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    user-select: none;
-    transition: all .5s ease;
+//   &__btn--desc, &__btn--inc {
+//     display: inline-flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-family: $fontFamilyPrim;
+//     font-size: 2em;
+//     height: 40px;
+//     width: 25px;
+//     margin: 0;
+//     padding: 0;
+//     border: 0;
+//     user-select: none;
+//     transition: all .5s ease;
 
-    &:hover {
-      background: $silver;
-    }
-  }
+//     &:hover {
+//       background: $silver;
+//     }
+//   }
 
-  &__fieldCount {
-    border: 0;
-    padding: 5px 0;
-    font-family: $fontFamilyPrim;
-    font-weight: 300;
-    font-size: 1.5em;
-    line-height: 2em;
-    align-items: center;
-    text-align: center;
-    width: 40px;
-    outline: none;
-  }
-}
+//   &__fieldCount {
+//     border: 0;
+//     padding: 5px 0;
+//     font-family: $fontFamilyPrim;
+//     font-weight: 300;
+//     font-size: 1.5em;
+//     line-height: 2em;
+//     align-items: center;
+//     text-align: center;
+//     width: 40px;
+//     outline: none;
+//   }
+// }
 
 // <ГОТОВЫЕ КЛАССЫ> =====================================================
 // .rub:after {

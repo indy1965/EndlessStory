@@ -1,19 +1,13 @@
 /*****************************
 00. Global CSS
 *****************************/
-//*===== Colors =====*//
-
-// $body-color: #666666;
-// $primary-color: #c2080f;
-// $heading-color: #111111;
-
 //*===== Font Family =====*//
 
-$fontFamilyPrim: 'OpenSans';
-$fontFamilySecond: 'SFProDisplay';
-// $body-font: 'Poppins', sans-serif;
-// $font-2: 'Roboto', sans-serif;
-// $font-3: 'Open Sans', sans-serif;
+// $fontFamilyPrim: 'OpenSans';
+// $fontFamilySecond: 'SFProDisplay';
+$body-font: 'Poppins', sans-serif;
+$font-2: 'SFProDisplay', sans-serif;
+$font-3: 'Roboto', sans-serif;
 
 //*==== Font size =====*//
 $body-font-size: 16px;
@@ -53,49 +47,71 @@ $font-SemiBold: 600;
 $font-Bold: 700;
 
 
-// Цвета
-$white: #fff;
-$red: #e74c3c; //#FA4E5E;
-$alizarin: #e74c3c;
-$black: #000;
-$midnight-blue-r: rgba(44, 62, 80, 0.95);
-$midnight-blue: #2c3e50;
-$midnight-blue-lite: #364c62;
-$black-blue: #1f2b38;
-$wet-asphalt:#5a7ea3;
-$asbestos:#7f8c8d;
-$concrete: #95a5a6; //$defTextColor: #000;
-$silver: #bdc3c7;
-$light-gray: #ecf0f1;
-$pumpkin: #d35400;
+//*------ Основные Цвета ---------*//
+$color-white:               #fff;
+$color-black:               #000;
+$color-red:                 #e74c3c; //#FA4E5E;
+$color-alizarin:            #e74c3c;
+$color-pumpkin:             #d35400;
+$color-black-blue:          #1f2b38;
+$color-midnight-blue-r:     rgba(44, 62, 80, 0.95);
+$color-midnight-blue:       #2c3e50;
+$color-midnight-blue-lite:  #364c62;
+$color-wet-asphalt:         #5a7ea3;
+$color-asbestos:            #7f8c8d;
+$color-concrete:            #95a5a6; //$defTextColor: #000;
+$color-silver:              #bdc3c7;
+$color-light-gray:          #ecf0f1;
+$color-sand:                #f6f6f6;
 
-//
+//*===== Colors =====*//
+
+$body-color:    #666666;
+$primary-color: $color-wet-asphalt;
+$heading-color: #111111;
+
+//*==== Border Color ====*//
+$border-color: #eeeeee;
+
+//*==== Color =====*//
+$color-head-bg:         $color-midnight-blue-r; //Цвет шапки
+$color-footer-bg:       $color-midnight-blue-r; // Цвет подвала
+$color-hover:           $color-wet-asphalt;     // Цвет ховера
+$color-submenu-bg:      $color-light-gray;
+$color-submenu-boder:   $color-silver;
+$color_title_section:   $color-black-blue;
+$color_title_category:  $color-black-blue;
+
+//*=====  borders ======*//
+$border-submenu: 1px solid $color-silver;
+$border_btn: 1px solid $color-silver;
 
 
-$hoverColor: $wet-asphalt; // Цвет ховера
-$bg_head: $midnight-blue-r; //Цвет шапки
-$bg_footer: $midnight-blue-r; // Цвет подвала
+//*=====  shadows ======*//
+$shadow-1: 0 0 25px rgba(63, 78, 100, 0.15);
 
-// Кнопки
-$color_font_btn: $midnight-blue;
-$border_btn: 1px solid $silver;
-$font_btn: $fontFamilySecond, $font-Medium, 1em;
-$brd_btn: 1px solid $silver;
+//*====== gradient ======*//
 
-// Заголвок секции, категории
-$font-family_title_section: $fontFamilySecond;
-$font-weight_title_section: $font-Thin;
-$font-size_title_section: 4em; // размер шрифта в em
-$color_title_section: $black-blue;
 
-// Заголвок категории
-$font-family_title_category: $fontFamilySecond;
-$font-weight_title_category: $font-Thin;
-$font-size_title_category: 4em;
-$color_title_category: $black-blue;
+//*======= transition ======//
+$base-tranzition: all 250ms ease-out;
 
-//submenu
-$bg-color-submenu: $light-gray;
-$boder-color-submenu: $silver;
-$shadow-sub-menu: 0 0 25px rgba(63, 78, 100, 0.15);
-$border-submenu: 1px solid $silver;
+
+// // Кнопки
+// $color_font_btn: $midnight-blue;
+// $font_btn: $fontFamilySecond, $font-Medium, 1em;
+
+
+// // Заголвок секции, категории
+// $font-family_title_section: $font-2;
+// $font-weight_title_section: $font-Thin;
+// $font-size_title_section: 4em; // размер шрифта в em
+
+
+// // Заголвок категории
+// $font-family_title_category: $font-2;
+// $font-weight_title_category: $font-Thin;
+// $font-size_title_category: 4em;
+
+
+
