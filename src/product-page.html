@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    @@include('./tplhtml/blocks/_head.html',{"title":"Каточка товара" })
+    @@include('./html_component/layout/_head.html',{"title":"Каточка товара" })
   </head>
   <body>
     <div class="wrapper">
-      @@include('./tplhtml/blocks/header/_header.html',{"fixed":false})
+      @@include('./html_component/layout/_header.html',{"fixed":false})
       <main class="page">
         <section class="product-card _container page-section">
           <div class="product-card__wrapper">
@@ -86,13 +86,13 @@
         <!-- /product-card _container -->
 
         <!-- Секция с продукцией -->
-        @@include('./tplhtml/blocks/main/products/_section-product-list.html',
+        @@include('./html_component/components/products/_section-product-list.html',
         {"title":"Возможно вам понравится"})
       </main>
       <!-- /main -->
-      @@include('./tplhtml/blocks/footer/_footer.html',{})
+      @@include('./html_component/layout/_footer.html',{})
     </div>
     <!-- /wrapper -->
-    @@include('./tplhtml/blocks/_scripts-js.html',{})
+    @@include('./html_component/layout/_scripts-js.html',{})
   </body>
 </html>

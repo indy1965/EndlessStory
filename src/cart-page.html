@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    @@include('./tplhtml/blocks/_head.html',{"title": "Карзина" })
+    @@include('./html_component/layout/_head.html',{"title": "Карзина" })
   </head>
   <body>
     <div class="page__content">
       <!-- Header -->
-      @@include('./tplhtml/blocks/header/_header.html',{"fixed":false})
+      @@include('./html_component/layout/_header.html',{"fixed":false})
       <!-- Main -->
       <main class="main">
         <div class="page__body _container page-section">
@@ -191,9 +191,9 @@
         </div>
       </main>
       <!-- Footer -->
-      @@include('./tplhtml/blocks/footer/_footer.html',{})
+      @@include('./html_component/layout/_footer.html',{})
     </div>
     <!-- /page_content -->
-    @@include('./tplhtml/blocks/_scripts-js.html',{})
+    @@include('./html_component/layout/_scripts-js.html',{})
   </body>
 </html>

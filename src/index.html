@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    @@include('./tplhtml/blocks/_head.html',{"title": "Главная" })
+    @@include('./html_component/layout/_head.html',{"title": "Главная" })
   </head>
   <body>
     <div class="page__content">
       <!-- Header -->
-      @@include('./tplhtml/blocks/header/_header.html',{"fixed":true})
+      @@include('./html_component/layout/_header.html',{"fixed":true})
       <!-- Main -->
       <main class="main">
-        @@include('./tplhtml/blocks/main/_section-slider.html',{})
-        @@include('./tplhtml/blocks/main/products/_section-product-list.html',{"title":"Открытки"})
+        @@include('./html_component/blocks/_section-slider.html',{})
+        @@include('./html_component/components/products/_section-product-list.html',{"title":"Открытки"})
       </main>
       <!-- Footer -->
-      @@include('./tplhtml/blocks/footer/_footer.html',{})
+      @@include('./html_component/layout/_footer.html',{})
     </div>
     <!-- /page_content -->
-    @@include('./tplhtml/blocks/_scripts-js.html',{})
+    @@include('./html_component/layout/_scripts-js.html',{})
   </body>
 </html>
