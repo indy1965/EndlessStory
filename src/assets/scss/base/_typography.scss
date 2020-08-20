@@ -9,7 +9,7 @@
 html {
   // Default
   height: 100%;
-  // font-size: 62.5%; // 1rem = 10px
+  font-size: 62.5%; // 1rem = 10px
 
   // Extra Large Device >1199 to <1499
   @include breakpoint(xlarge) {
@@ -198,7 +198,7 @@ a:active, a:hover, a:focus, a::selection, a:focus {
 //   color: $color_font_btn;
 //   border: $border_btn;
 //   background-color: transparent;
-//   @include font_sett ($fontFamilySecond, $font-Bold, 1.1em);
+//   @include font_sett ($font-2, $font-Bold, 1.1em);
 //   text-transform: uppercase;
 //   letter-spacing: 0.05em;
 //   text-transform: uppercase;
@@ -226,7 +226,7 @@ a:active, a:hover, a:focus, a::selection, a:focus {
 //     display: inline-flex;
 //     justify-content: center;
 //     align-items: center;
-//     font-family: $fontFamilyPrim;
+//     font-family: $body-font;
 //     font-size: 2em;
 //     height: 40px;
 //     width: 25px;
@@ -237,14 +237,14 @@ a:active, a:hover, a:focus, a::selection, a:focus {
 //     transition: all .5s ease;
 
 //     &:hover {
-//       background: $silver;
+//       background: $color-silver;
 //     }
 //   }
 
 //   &__fieldCount {
 //     border: 0;
 //     padding: 5px 0;
-//     font-family: $fontFamilyPrim;
+//     font-family: $body-font;
 //     font-weight: 300;
 //     font-size: 1.5em;
 //     line-height: 2em;

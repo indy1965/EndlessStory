@@ -20,10 +20,10 @@
 }
 
 .minicart {
-  background: $bg-color-submenu;
+  background: $color-submenu-bg;
 
   a, p, span {
-    font-family: $fontFamilyPrim;
+    font-family: $body-font;
   }
 
   // .minicart__list
@@ -43,7 +43,7 @@
     margin: 0;
     padding: 15px 15px 15px 70px;
     position: relative;
-    border-bottom: 1px solid $boder-color-submenu;
+    border-bottom: 1px solid $color-submenu-boder;
     overflow: hidden;
   }
 

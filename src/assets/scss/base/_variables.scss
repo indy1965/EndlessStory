@@ -3,8 +3,8 @@
 *****************************/
 //*===== Font Family =====*//
 
-// $fontFamilyPrim: 'OpenSans';
-// $fontFamilySecond: 'SFProDisplay';
+// $body-font: 'OpenSans';
+// $font-2: 'SFProDisplay';
 $body-font: 'Poppins', sans-serif;
 $font-2: 'SFProDisplay', sans-serif;
 $font-3: 'Roboto', sans-serif;
@@ -91,27 +91,31 @@ $border_btn: 1px solid $color-silver;
 $shadow-1: 0 0 25px rgba(63, 78, 100, 0.15);
 
 //*====== gradient ======*//
-
+$linear-gradient:linear-gradient(90deg,rgba(47, 43, 53, 0.44) 46.35%, rgba(255, 255, 255, 0) 100%);
 
 //*======= transition ======//
 $base-tranzition: all 250ms ease-out;
 
 
+//*==========  fonts  ===========*//
+$font-family_title_section: $font-2;
+$font-weight_title_section: $font-Thin;
+$font-size_title_section: 4em; // размер шрифта в em
+
+$font-family_title_category: $font-2;
+$font-weight_title_category: $font-Thin;
+$font-size_title_category: 4em;
 // // Кнопки
-// $color_font_btn: $midnight-blue;
-// $font_btn: $fontFamilySecond, $font-Medium, 1em;
+// $color_font_btn: $color-midnight-blue;
+// $font_btn: $font-2, $font-Medium, 1em;
 
 
 // // Заголвок секции, категории
-// $font-family_title_section: $font-2;
-// $font-weight_title_section: $font-Thin;
-// $font-size_title_section: 4em; // размер шрифта в em
+
 
 
 // // Заголвок категории
-// $font-family_title_category: $font-2;
-// $font-weight_title_category: $font-Thin;
-// $font-size_title_category: 4em;
+
 
 
 

@@ -1,14 +1,14 @@
-$__color_foot_svg: $asbestos;
-$__color_foot_placehold: $asbestos;
-$__brd_foot_input: 1px solid $asbestos;
+$__color_foot_svg: $color-asbestos;
+$__color_foot_placehold: $color-asbestos;
+$__brd_foot_input: 1px solid $color-asbestos;
 
 .footer {
-  background: $bg_footer;
-  color: $white;
+  background: $color-footer-bg;
+  color: $color-white;
   padding-top: 55px;
   padding-bottom: 30px;
   font-size: 16px;
-  font-family: $fontFamilySecond;
+  font-family: $font-2;
   font-weight: $font-Thin;
 
   // .footer__content
@@ -21,7 +21,7 @@ $__brd_foot_input: 1px solid $asbestos;
   &__row {
     display: flex;
 
-    @include media-max($md6) {
+    @include breakpoint($md6) {
       flex-direction: column;
     }
   }
@@ -31,7 +31,7 @@ $__brd_foot_input: 1px solid $asbestos;
     flex: 1 0 50%;
     display: flex;
 
-    @include media-max($md4) {
+    @include breakpoint(xsmall) {
       justify-content: center;
 
       &.nav-menu {
@@ -39,7 +39,7 @@ $__brd_foot_input: 1px solid $asbestos;
       }
     }
 
-    @include media-max($md6) {
+    @include breakpoint($md6) {
       flex: 0 0 100%;
     }
   }
@@ -64,17 +64,17 @@ $__brd_foot_input: 1px solid $asbestos;
   &__link {
     display: inline-block;
 
-    @include item_menu ($fontFamilySecond, $font-Thin, 16px, $white, $hoverColor);
+    @include item_menu ($font-2, $font-Thin, 16px, $color-white, $color-hover);
   }
 }
 
 .form-footer {
 
-  @include media-max($md4) {
+  @include breakpoint(xsmall) {
     max-width: 320px;
   }
 
-  @include media-max($md6) {
+  @include breakpoint($md6) {
     width: 100%;
   }
 
@@ -93,7 +93,7 @@ $__brd_foot_input: 1px solid $asbestos;
     padding: 10px 10px 10px 5px;
     font-size: 1em;
     color: white;
-    font-family: $fontFamilyPrim;
+    font-family: $body-font;
     font-weight: $font-Light;
 
     &::placeholder {
@@ -127,20 +127,20 @@ $__brd_foot_input: 1px solid $asbestos;
 
     &:hover {
       &>i {
-        color: $hoverColor;
+        color: $color-hover;
       }
     }
   }
 
   &:focus {
-    background: $bg_footer;
+    background: $color-footer-bg;
   }
 }
 
 .footer__content {
   a {
-    color: $white;
-    font-family: $fontFamilySecond;
+    color: $color-white;
+    font-family: $font-2;
     font-weight: $font-Thin;
     font-size: 1em;
     line-height: 30px;

@@ -5,7 +5,7 @@ $__bg_wrapper: #F9F9F9;
 
   // .product-card__column
   &__wrapper {
-    background: $light-gray; //$__bg_wrapper;
+    background: $color-light-gray; //$__bg_wrapper;
     display: flex;
   }
 
@@ -49,9 +49,9 @@ $__bg_wrapper: #F9F9F9;
     margin-bottom: 45px;
 
     &>span {
-      @include font_sett ($fontFamilyPrim, $font-SemiBold, 2.5em);
+      @include font_sett ($body-font, $font-SemiBold, 2.5em);
       font-size: 2.5em;
-      color: $black;
+      color: $color-black;
 
       .currency {
         font-size: 1em;
@@ -94,7 +94,7 @@ $__bg_wrapper: #F9F9F9;
   &__name {
     display: inline-block;
     flex: 0 1 30%;
-    font-family: $fontFamilyPrim;
+    font-family: $body-font;
     font-weight: $font-Regular;
     font-size: 2em;
     line-height: 33px;
@@ -105,18 +105,18 @@ $__bg_wrapper: #F9F9F9;
   &__value {
     display: inline-block;
     flex: 0 1 auto;
-    font-family: $fontFamilySecond;
+    font-family: $font-2;
     font-weight: $font-Thin;
     font-size: 2em;
     line-height: 33px;
-    color: $black;
+    color: $color-black;
   }
 }
 
 .descr-info {
   &__title {
     margin-bottom: 10px;
-    font-family: $fontFamilyPrim;
+    font-family: $body-font;
     font-weight: $font-Regular;
     font-size: 2em;
     line-height: 33px;
@@ -141,16 +141,16 @@ $__bg_wrapper: #F9F9F9;
     margin-left: 15px;
 
     &:hover {
-      background: $pumpkin;
-      border-color: $pumpkin;
+      background: $color-pumpkin;
+      border-color: $color-pumpkin;
       color: white;
     }
   }
 }
 
 /* counter */
-.quantity-form {
-  &__counter {
-    border: $brd_btn;
-  }
-}
+// .quantity-form {
+//   &__counter {
+//     border: $brd_btn;
+//   }
+// }

@@ -9,7 +9,7 @@
 
   &__remove {
     font-size: 1.8em;
-    color: $silver;
+    color: $color-silver;
     background-color: trnsparent;
     // width: 1em;
     // height: 1em;
@@ -20,7 +20,7 @@
     transition: all 250ms ease-out;
 
     &:hover {
-      color: $alizarin;
+      color: $color-alizarin;
     }
   }
 
@@ -31,7 +31,7 @@
     font-weight: $font-Bold;
     font-size: 1.2em;
 
-    color: $black-blue;
+    color: $color-black-blue;
 
     &>img {
       width: 40px;
@@ -63,7 +63,7 @@
 
   // .item-minicart__amount
   &__amount {
-    color: $midnight-blue-lite;
+    color: $color-midnight-blue-lite;
     white-space: nowrap;
     font-weight: $font-Bold;
     letter-spacing: .05em;

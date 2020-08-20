@@ -1,7 +1,7 @@
 //product-item
 $brd-card_shdow: 3px 5px 10px rgba(154, 154, 154, 0.25);
-$color_title_card: $black-blue;
-$color_text_price: $midnight-blue;
+$color_title_card: $color-black-blue;
+$color_text_price: $color-midnight-blue;
 
 //*****************************/
 .product-item {
@@ -13,19 +13,19 @@ $color_text_price: $midnight-blue;
   margin: 0 10px 40px 10px;
   transition: 0.5s ease;
 
-  @include media-max($md3) {
+  @include breakpoint(small) {
     max-width: 230px;
   }
 
-  @include media-max($md4) {
+  @include breakpoint(xsmall) {
     max-width: 225px;
   }
 
-  @include media-max($md5+50) {
+  @include breakpoint(xxsmall+50) {
     max-width: 100%;
   }
 
-  @include media-min($md2+1) {
+  @include breakpoint(largeonly) {
     &::after {
       content: '';
       position: absolute;
@@ -79,7 +79,7 @@ $color_text_price: $midnight-blue;
 
   &:hover &__img:after {
 
-    @include media-min($md2 + 1) {
+    @include breakpoint(largeonly) {
       opacity: 1;
       transform: scale(1);
     }
@@ -116,7 +116,7 @@ $color_text_price: $midnight-blue;
     margin: 1.5rem auto;
     transition: all .6s ease;
 
-    // @include animation_btn(white, $black);
+    // @include animation_btn(white, $color-black);
     &:hover {
       background: #fff;
       color: #000;
@@ -147,7 +147,7 @@ $color_text_price: $midnight-blue;
     font-size: 2.5em;
   }
 
-  @include media-min($md2 + 1) {
+  @include breakpoint(largeonly) {
     display: none;
   }
 }

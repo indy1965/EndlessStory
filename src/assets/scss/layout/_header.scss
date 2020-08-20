@@ -6,12 +6,8 @@
 
 // Стили заголовка
 .header {
-  //position: fixed;
-  //top: 0;
-  //left: 0;
-  //z-index: 0;
   width: 100%;
-  background: $bg_head;
+  background: $color-head-bg;
 
 
   &__row {
@@ -20,7 +16,7 @@
     width: 100%;
     height: 80px;
 
-    @include media-max($md3) {
+    @include breakpoint(small) {
       height: 65px;
     }
   }
@@ -51,7 +47,7 @@
 */
 .logo {
 
-  @include media-max($md5) {
+  @include breakpoint(xxsmall) {
     max-width: 80px;
   }
 
@@ -65,37 +61,37 @@
       max-width: 100%;
     }
 
-    @include media-max($md2) {
+    @include breakpoint(medium) {
       width: 45px;
       height: 45px;
     }
 
-    @include media-max($md4) {
+    @include breakpoint(xsmall) {
       width: 35px;
       height: 35px;
     }
 
-    @include media-max($md5) {
+    @include breakpoint(xxsmall) {
       margin-right: 0px;
     }
   }
 
   h2 {
     display: inline-block;
-    color: $white;
-    font-family: $fontFamilySecond;
+    color: $color-white;
+    font-family: $font-2;
     font-weight: $font-Thin;
     font-size: 2em;
 
-    @include media-max($md2) {
+    @include breakpoint(medium) {
       font-size: 1.6em;
     }
 
-    @include media-max($md4) {
+    @include breakpoint(xsmall) {
       font-size: 1.4em;
     }
 
-    @include media-max($md5) {
+    @include breakpoint(xxsmall) {
       display: none;
     }
   }
@@ -121,7 +117,7 @@
         margin-right: 0px;
       }
 
-      @include media-max($md2) {
+      @include breakpoint(medium) {
         margin-right: 20px;
       }
 
@@ -129,11 +125,11 @@
         display: inline-block;
         text-transform: uppercase;
 
-        @include item_menu($fontFamilySecond, $font-Light, 1.2em, $white, $hoverColor);
+        @include item_menu($font-2, $font-Light, 1.2em, $color-white, $color-hover);
       }
     }
 
-    @include media-max($md3) {
+    @include breakpoint(small) {
       display: none;
     }
   }
@@ -152,10 +148,10 @@
 
 
     &:hover {
-      color: $hoverColor;
+      color: $color-hover;
     }
 
-    @include media-max($md3) {
+    @include breakpoint(small) {
       display: block;
       flex: 0 1 auto;
     }
@@ -167,12 +163,12 @@
 *********************************/
 .action-icon {
 
-  @include media-max_min($md1, $md2+1) {
+  @include breakpoint_min($md1, $md2+1) {
     margin-right: 20px;
   }
 
 
-  @include media-max($md3) {
+  @include breakpoint(small) {
     flex: 1 1 auto;
     display: flex;
     justify-content: center;
@@ -189,7 +185,7 @@
       margin-right: 0px;
     }
 
-    @include media-max($md2) {
+    @include breakpoint(medium) {
       margin-right: 12px;
     }
   }
@@ -208,22 +204,22 @@
     width: 25px;
     height: 80px;
     transition: color 0.3s ease;
-    color: $white;
+    color: $color-white;
 
     &>i {
       font-size: 1.8em;
     }
 
     &:hover i {
-      color: $hoverColor;
+      color: $color-hover;
     }
 
-    @include media-max($md2) {
+    @include breakpoint(medium) {
       padding-left: 15px;
       padding-right: 15px;
     }
 
-    @include media-max($md3) {
+    @include breakpoint(small) {
       height: 65px;
     }
   }
@@ -255,8 +251,8 @@
     & a {
       margin: 0;
       display: block;
-      border-bottom: solid 1px $boder-color-submenu;
-      font-family: $fontFamilySecond;
+      border-bottom: solid 1px $color-submenu-boder;
+      font-family: $font-2;
       font-size: 1.2em;
       font-weight: $font-Light;
       line-height: 40px;
@@ -267,7 +263,7 @@
       transition: all 0.3s ease;
 
       &:hover {
-        color: $hoverColor;
+        color: $color-hover;
       }
 
       i {
@@ -299,23 +295,23 @@
       width: 21px;
       height: 21px;
       border-radius: 50%;
-      background: $red;
+      background: $color-red;
       color: #ffffff;
       font-size: 1em;
       padding-top: 1px;
 
-      @include media-max($md1) {
+      @include breakpoint(large) {
         font-size: .8em;
         width: 18px;
         height: 18px;
         top: 18px;
       }
 
-      @include media-max($md2) {
+      @include breakpoint(medium) {
         left: 20px;
       }
 
-      @include media-max($md3) {
+      @include breakpoint(small) {
         top: 10px;
       }
     }
@@ -323,7 +319,7 @@
 }
 
 // Меню Бургер.
-@include media-max($md3) {
+@include breakpoint(small) {
   .head-burger {
     display: block;
     position: absolute;

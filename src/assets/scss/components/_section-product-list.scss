@@ -1,7 +1,7 @@
 .section-prod {
   padding: 90px 0;
 
-  @include media-max($md4) {
+  @include breakpoint(xsmall) {
     padding: 40px 0;
   }
 
@@ -27,12 +27,12 @@
     letter-spacing: 0.08em;
     margin-bottom: 60px;
 
-    @include media-max($md4) {
+    @include breakpoint(xsmall) {
       font-size: 3em;
       margin-bottom: 24px;
     }
 
-    @include media-max($md5) {
+    @include breakpoint(xxsmall) {
       font-size: 2em;
       margin-bottom: 18px;
     }
