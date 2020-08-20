@@ -15,6 +15,14 @@ $__brd_foot_input: 1px solid $color-asbestos;
   &__content {
     display: flex;
     flex-direction: column;
+    a {
+        color: $color-white;
+        font-family: $font-2;
+        font-weight: $font-Thin;
+        line-height: 30px;
+        letter-spacing: 0.1em;
+      }
+
   }
 
   // .footer__row
@@ -63,8 +71,10 @@ $__brd_foot_input: 1px solid $color-asbestos;
   // .menu-footer__link
   &__link {
     display: inline-block;
-
+    font-size: 16px;
+    line-height: 21px;
     @include item_menu ($font-2, $font-Thin, 16px, $color-white, $color-hover);
+
   }
 }
 
@@ -91,13 +101,13 @@ $__brd_foot_input: 1px solid $color-asbestos;
     background-color: transparent;
     width: 100%;
     padding: 10px 10px 10px 5px;
-    font-size: 1em;
+    font-size: 14px;
     color: white;
     font-family: $body-font;
     font-weight: $font-Light;
 
     &::placeholder {
-      font-size: 1em;
+      font-size: 14px;
       color: $__color_foot_placehold;
     }
 
@@ -111,6 +121,7 @@ $__brd_foot_input: 1px solid $color-asbestos;
     margin-bottom: 20px;
     line-height: 19px;
     letter-spacing: 0.05em;
+    font-size: 16px;
   }
 
   &__submit {
@@ -137,28 +148,18 @@ $__brd_foot_input: 1px solid $color-asbestos;
   }
 }
 
-.footer__content {
-  a {
-    color: $color-white;
-    font-family: $font-2;
-    font-weight: $font-Thin;
-    font-size: 1em;
-    line-height: 30px;
-    letter-spacing: 0.1em;
-  }
-}
 
 .footer-social {
   margin-bottom: 35px;
+  a{
+    font-size: 16px;
+  }
 }
 
 .footer-bottom {
 
-  span {
-    font-size: .8rem;
+  span, a {
+    font-size: 13px;
   }
 
-  a {
-    font-size: .8rem;
-  }
 }
