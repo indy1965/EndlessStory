@@ -4,8 +4,8 @@
 
 //*-- 23.00 - Global Button --*//
 .btn{
-	@extend %posrelative;
-	@include base-transition();
+	position: relative;
+	transition: $base-tranzition;
 	background-color: $color-white;
 	//color: $primary-color;
 	font-size: 16px;
@@ -31,92 +31,93 @@
 	@include breakpoint(xsmall){
 		min-width: 150px;
 	}
-	// &:after{
-	// 	@extend %pseudo !optional;
-	// 	left: 0;
-	// 	bottom: -6px;
-	// 	height: 3px;
-	// 	width: 100%;
-	// 	@extend %white-bg-color;
-	// }
-	// &:hover{
-	// 	@extend %primary-bg-color;
-	// 	@extend %white-color;
-	// 	&:after{
-	// 		@extend %primary-bg-color;
-	// 	}
-	// }
-	// i{
-	// 	padding-left: 5px;
-	// }
-	// &.icon-left{
-	// 	i{
-	// 		padding-right: 5px;
-	// 		padding-left: 0;
-	// 	}
-	// }
-	// &-fullwidth{
-	// 	width: 100%;
-	// 	display: block;
-	// }
-	// &-small{
-	// 	min-width: 147px;
-	// 	min-height: 40px;
-	// 	line-height: 40px;
-	// }
-	// &-bg{
-	// 	&-sand{
-	// 		@extend %sand-bg-color;
-	// 		&:after{
-	// 			@extend %sand-bg-color;
-	// 		}
-	// 	}
-	// 	&-red{
-	// 		@extend %primary-bg-color;
-	// 		&:after{
-	// 			@extend %primary-bg-color;
-	// 		}
-	// 	}
-	// 	&-dark{
-	// 		@extend %heading-bg-color;
-	// 		&:after{
-	// 			@extend %heading-bg-color;
-	// 		}
-	// 	}
-	// }
-	// &-no-bg{
-	// 	padding: 0;
-	// 	min-width: auto;
-	// 	min-height: auto;
-	// 	line-height: 1;
-	// 	margin-bottom: 0;
-	// 	background-color: transparent;
-	// 	&:after{
-	// 		display: none;
-	// 	}
-	// 	&:hover{
-	// 		background-color: transparent;
-	// 		@extend %primary-color;
-	// 	}
-	// }
-	// &-color{
-	// 	&-dark{
-	// 		@extend %heading-color;
-	// 	}
-	// 	&-white{
-	// 		@extend %white-color;
-	// 	}
-	// }
-	// &-hover{
-	// 	&-2{
-	// 		&:hover{
-	// 			@extend %heading-bg-color;
-	// 			&:after{
-	// 				@extend %heading-bg-color;
-	// 			}
-	// 		}
-	// 	}
-	// }
+	&:after{
+		position: absolute;
+		content: '';
+		left: 0;
+		bottom: -6px;
+		height: 3px;
+		width: 100%;
+		background: $color-white;
+	}
+	&:hover{
+		background: $primary-color;
+		color: $color-white;
+		&:after{
+			background: $primary-color;
+		}
+	}
+	i{
+		padding-left: 5px;
+	}
+	&.icon-left{
+		i{
+			padding-right: 5px;
+			padding-left: 0;
+		}
+	}
+	&-fullwidth{
+		width: 100%;
+		display: block;
+	}
+	&-small{
+		min-width: 147px;
+		min-height: 40px;
+		line-height: 40px;
+	}
+	&-bg{
+		&-sand{
+			background: $color-sand;
+			&:after{
+				background: $color-sand;
+			}
+		}
+		&-red{
+			background: $primary-color;
+			&:after{
+				background: $primary-color;
+			}
+		}
+		&-dark{
+			background: $heading-color;
+			&:after{
+				background: $heading-color;
+			}
+		}
+	}
+	&-no-bg{
+		padding: 0;
+		min-width: auto;
+		min-height: auto;
+		line-height: 1;
+		margin-bottom: 0;
+		background-color: transparent;
+		&:after{
+			display: none;
+		}
+		&:hover{
+			background-color: transparent;
+			color: $primary-color;
+		}
+	}
+	&-color{
+		&-dark{
+			color: $heading-color;
+		}
+		&-white{
+			color: $color-white;
+		}
+	}
+	&-hover{
+		&-2{
+			&:hover{
+				background-color: $heading-color;
+				&:after{
+					background-color: $heading-color;
+				}
+			}
+		}
+	}
 }
 
 //*-- 23.01 - Submit Button --*//
