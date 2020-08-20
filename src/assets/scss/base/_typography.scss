@@ -37,6 +37,11 @@ html {
 
 
 body {
+  font-size: 12px;
+  font-weight: normal;
+  font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  line-height: 21px;
   // font-size: $body-font-size;
   // font-family: $body-font;
   // color: $body-color;
@@ -75,9 +80,9 @@ p {
   }
 }
 
-a {
-  @extend %body-color;
-}
+// a {
+//   @extend %body-color;
+// }
 
 // Base
 ul, ol {
@@ -91,7 +96,7 @@ figure {
 }
 
 a, button {
-  @extend %basetransition;
+  transition: all 250ms ease-out;
 }
 
 input::-webkit-outer-spin-button,
@@ -116,7 +121,6 @@ button {
 
 button, button:focus, input, select, textarea, .slick-slide {
   outline: none;
-  border: 0;
 }
 
 a {
@@ -125,7 +129,7 @@ a {
   cursor: pointer;
 }
 
-a:active, a:hover, a:focus, a::selection, a::focus {
+a:active, a:hover, a:focus, a::selection, a:focus {
   outline: 0;
   border: 0;
 }
@@ -157,13 +161,7 @@ a:active, a:hover, a:focus, a::selection, a::focus {
 
 //***************************/
 
-body {
-  font-size: 12px;
-  font-weight: normal;
-  font-family: 'OpenSans', Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  line-height: 21px;
-}
+
 
 ._fixed {
   position: fixed;
@@ -177,7 +175,7 @@ body {
   overflow: hidden;
 }
 
-._container {
+.container {
   max-width: $containerMaxWidth;
   padding: 0 15px;
   margin: 0 auto;
@@ -271,7 +269,6 @@ body {
 
 // Заголовок страниц
 .page-section {
-  //margin-top: 100px;
   margin-bottom: 160px;
   padding-top: 60px;
 
