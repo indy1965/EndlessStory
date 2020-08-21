@@ -136,6 +136,14 @@ gulp.task( 'build-css', ()=>{
 // Копируем вендорные стили
 gulp.task( 'vendor-css', ()=>{
   return src(path.src.scss.dir + '/vendor/*.css')
+    .pipe(dest(path.build.css)) // Сохраняем не минифицированый файл стилей
+    .pipe( cleanCSS({level: { 1: { specialComments: 0 } } }) )         // Чистит и сжимает css файлы на выходе.
+    .pipe(
+      rename({                // Переименовывает файлы
+        suffix: '.min',
+        extname: '.css'
+      })
+    )
     .pipe(dest(path.build.css)) // Сохраняем минифицированый файл стилей
     .pipe(browsersync.stream()); // Обновляем браузер
 });
@@ -205,6 +213,8 @@ gulp.task("build-js", () => {
     .pipe(dest(path.build.js))
     .on("end", browsersync.reload);
 });
+
+
 // Обработка  js для продакшена
 gulp.task("build-prod-js", () => {
   return gulp.src(path.src.js.file)
@@ -238,6 +248,21 @@ gulp.task("build-prod-js", () => {
       })
     )
     .pipe(dest(path.build.js))
+});
+
+gulp.task("vendor-js", () => {
+  return gulp.src( path.src.js.dir + '/vendor/vendor.js')
+    .pipe(plumber())
+    .pipe(dest(path.build.js))
+    .pipe( uglify() )
+    .pipe(
+      rename({
+        suffix: '.min',
+        extname: '.js'
+      })
+    )
+    .pipe(dest(path.build.js))
+    .on("end", browsersync.reload);
 });
 
 // Обрабатываем Картинки
@@ -342,11 +367,11 @@ gulp.task('watch',() => {
   gulp.watch([path.watch.html], gulp.parallel( 'build-html'));
   gulp.watch([path.watch.scss],{readDelay: 2000}, gulp.parallel('build-css'));
   gulp.watch([path.watch.css], gulp.parallel('vendor-css'));
-  gulp.watch([path.watch.js], gulp.parallel('build-js'));
+  gulp.watch([path.watch.js], gulp.parallel('build-js','vendor-js'));
   gulp.watch([path.watch.img], gulp.parallel('build-images'));
 });
 
 /* -----------------------------*/
-gulp.task("build", gulp.series('clean',gulp.parallel('build-js', 'build-css','vendor-css', 'build-html', 'build-images', 'build-fonts'), 'fontsStyle' ));
+gulp.task("build", gulp.series('clean',gulp.parallel('build-js','vendor-js', 'build-css','vendor-css', 'build-html', 'build-images', 'build-fonts'), 'fontsStyle' ));
 
 gulp.task("default", gulp.parallel("watch", "build"));
