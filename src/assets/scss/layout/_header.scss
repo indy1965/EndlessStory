@@ -17,120 +17,115 @@
     width: 100%;
   }
 
-  &__logo {
-    flex: 0 1 auto;
+  &__column-main-nav {
+    display: flex;
+    align-items: center;
+    flex: 2 1 auto;
   }
 
-  // .header__navbar
-  &__navbar {
+  &__column-tool-bar {
+    flex: 0 1 auto;
+  }
+}
+
+.main-nav {
+  /*==============
+    Логотип
+  ================*/
+  &__logo {
+    flex: 0 1 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &--link {
+      display: inline-flex;
+    }
+
+    &--img {
+      position: absolute;
+      top: -32px;
+      left: 0;
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+
+    &--text {
+      display: inline-block;
+      padding-left: 70px;
+      color: $color-white;
+      font-family: $font-2;
+      font-weight: $font-Thin;
+      font-size: 2.4rem;
+      line-height: 1.5%;
+
+      @include breakpoint(xxsmall) {
+        display: none;
+      }
+    }
+  }
+
+  &__menu {
     flex: 1 1 auto;
   }
 }
 
-/*==============
-    Логотип
-================*/
-.logo-inner {
-  position: relative;
-  display: flex;
-  align-items: center;
-
-  &__link {
-    display: inline-flex;
-  }
-
-  // .logo__img
-  &__img {
-    position: absolute;
-    top: -32px;
-    left: 0;
-    width: 6.4rem;
-    height: 6.4rem;
-  }
-
-  h2 {
-    display: inline-block;
-    padding-left: 70px;
-    color: $color-white;
-    font-family: $font-2;
-    font-weight: $font-Thin;
-    font-size: 2.4rem;
-    line-height: 1.5%;
-
-    @include breakpoint(xxsmall) {
-      display: none;
-    }
-  }
-}
-
 /*********************************
-   Блок меню Хедера
+   Блок  Главного меню
 *********************************/
-.navbar-head {
+.main-navigation {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
   // .navbar_head__menu
-  &__list-menu {
-    flex: 1 1 auto;
-  }
-
-  // .navbar-head__burger
-  &__burger {
-    display: none;
-    width: 40px;
-    height: 40px;
-    position: relative;
-
-    &:hover {
-      color: $color-hover;
-    }
-
-    @include breakpoint(small) {
+  &__list {
+    .menu-list {
       display: flex;
+      text-align: center;
       justify-content: center;
-      align-items: center;
+      &__item {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 4rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          display: inline-block;
+          text-transform: uppercase;
+
+          @include item_menu(
+            $font-2,
+            $font-Light,
+            1.6rem,
+            $color-white,
+            $color-hover
+          );
+        }
+      }
     }
   }
 }
+// .navbar-head__burger
+// &__burger {
+//   display: none;
+//   width: 40px;
+//   height: 40px;
+//   position: relative;
 
-/*********************************
-    Блок пунктов меню меню
-*********************************/
-.menu-list {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+//   &:hover {
+//     color: $color-hover;
+//   }
 
-  &__item {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 4rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    a {
-      display: inline-block;
-      text-transform: uppercase;
-
-      @include item_menu(
-        $font-2,
-        $font-Light,
-        1.6rem,
-        $color-white,
-        $color-hover
-      );
-    }
-  }
-
-  // на маленьком экране прячем меню
-  @include breakpoint(small) {
-    display: none;
-  }
-}
+//   @include breakpoint(small) {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
 
 /*********************************
     Блок иконок
@@ -141,12 +136,6 @@
   align-items: center;
   margin: 0;
   padding: 0;
-
-  @include breakpoint(small) {
-    flex: 1 1 auto;
-    display: flex;
-    justify-content: center;
-  }
 
   &__item {
     display: inline-flex;

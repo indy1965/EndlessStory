@@ -1,74 +1,85 @@
 
 <header class="header ">
   <div class="header__inner fixed-header">
-    <div class="header__row container">
-      <!-- Logo -->
-      <div class="header__logo logo-inner">
-        <a class="logo-inner__link" href="#">
-            <div class="logo-inner__img">
-              <img src="./assets/img/logo.png" alt="logo" />
-            </div>
-            <h2 class="logo-inner__text">Endless Story</h2>
-        </a>
-      </div>
-      <!--  Блок меню -->
-      <nav class="header__navbar navbar-head">
-        <!-- Меню -->
-        <ul class="navbar-head__list-menu menu-list">
-          <li class="menu-list__item"><a href="/">Магазин</a></li>
-          <li class="menu-list__item"><a href="payment-page.html">Оплата</a></li>
-          <li class="menu-list__item"><a href="deliv-page.html">Доставка</a></li>
-          <li class="menu-list__item"><a href="about-page.html">О нас</a></li>
-        </ul>
-        <!-- /navbar-head__list-menu menu-list -->
+    <div class="container">
+      <div class="header__row">
+        <div class="header__column-main-nav main-nav">
+          <!-- Logo -->
+          <div class="main-nav__logo logo-inner">
+            <a class="main-nav__logo--link" href="#">
+                <div class="main-nav__logo--img">
+                  <img src="./assets/img/logo.png" alt="logo" />
+                </div>
+                <h2 class="main-nav__logo--text">Endless Story</h2>
+            </a>
+          </div>
+          <!--  Блок меню -->
+          <nav class="main-nav__menu main-navigation">
+            <!-- Меню -->
+            <ul class="main-navigation__list menu-list">
+              <li class="menu-list__item"><a href="/">Магазин</a></li>
+              <li class="menu-list__item"><a href="payment-page.html">Оплата</a></li>
+              <li class="menu-list__item"><a href="deliv-page.html">Доставка</a></li>
+              <li class="menu-list__item"><a href="about-page.html">О нас</a></li>
+            </ul>
+            <!-- /main-navigation__list menu-list -->
+          </nav>
+          <!-- /.main-nav__menu main-navigation -->
+        </div>
+        <!-- /header__column-main-nav -->
 
         <!-- Блок иконок -->
-        <ul class="navbar-head__action header-toolbar">
-          <li class="header-toolbar__item">
-            <a class="header-toolbar__btn" href="#">
-              <i class="icon icon-glyph-1" aria-hidden="true"></i>
-            </a>
-          </li>
-          <!-- icon user -->
-          <li class="header-toolbar__item user-info">
-             <a class="header-toolbar__btn" href="#">
-              <i class="icon icon-uniF102" aria-hidden="true"></i>
-            </a>
+        <div class="header__column-tool-bar">
+          <ul class="header-toolbar">
+              <li class="header-toolbar__item">
+                <a class="header-toolbar__btn" href="#">
+                  <i class="icon icon-glyph-1" aria-hidden="true"></i>
+                </a>
+              </li>
+              <!-- icon user -->
+              <li class="header-toolbar__item user-info">
+                 <a class="header-toolbar__btn" href="#">
+                  <i class="icon icon-uniF102" aria-hidden="true"></i>
+                </a>
 
-           <ul class="user-info__menu">
-              <li>
-                <a href="#">
-                  <i class="icon icon-login" aria-hidden="true"></i>
-                  Вход</a
-                >
+               <ul class="user-info__menu">
+                  <li>
+                    <a href="#">
+                      <i class="icon icon-login" aria-hidden="true"></i>
+                      Вход</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="icon icon-user-plus" aria-hidden="true"></i>
+                      Регистрация</a
+                    >
+                  </li>
+                </ul>
+              <!-- /user-icon__selection -->
               </li>
-              <li>
-                <a href="#"
-                  ><i class="icon icon-user-plus" aria-hidden="true"></i>
-                  Регистрация</a
-                >
+                <!-- /header-toolbars__user user-icon -->
+                <!-- icon cart -->
               </li>
-            </ul>
-          <!-- /user-icon__selection -->
-          </li>
-            <!-- /header-toolbars__user user-icon -->
-            <!-- icon cart -->
-          </li>
-          <li class="header-toolbar__item mini-cart-info">
-            <a class="header-toolbar__btn mini-cart-btn" href="#">
-              <i class="icon icon-uniF100" aria-hidden="true"></i>
-              <sup class="mini-cart-count" id="mini-cart-count">22</sup>
-            </a>
-            @@include('../components/carts/_minicart.html',{})
-          </li>
-        </ul>
-        <!-- /.navbar_head__action action-head -->
-        <div class="navbar-head__burger">
-          <span class="hamburger-icon"></span>
+              <li class="header-toolbar__item mini-cart-info">
+                <a class="header-toolbar__btn mini-cart-btn" href="#">
+                  <i class="icon icon-uniF100" aria-hidden="true"></i>
+                  <sup class="mini-cart-count" id="mini-cart-count">22</sup>
+                </a>
+                @@include('../components/carts/_minicart.html',{})
+              </li>
+          </ul>
         </div>
-        <!-- /.navbar-head__burger -->
-      </nav>
-      <!-- /.header__navbar navbar-head -->
+
+        <!-- <div class="navbar-head__burger">
+              <span class="hamburger-icon"></span>
+            </div> -->
+            <!-- /.navbar-head__burger -->
+      </div>
+      <!-- /header__row  -->
+      <div class="header__row">
+        <div class="mobile-menu"></div>
+      </div>
     </div>
   </div>
   <!-- /.header__row -->
