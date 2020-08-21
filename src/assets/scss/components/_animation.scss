@@ -1,0 +1,67 @@
+/*****************************
+20 - Components - Animation
+*****************************/
+
+@keyframes passing-reverse {
+  from {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(7%);
+    opacity: 0.6;
+  }
+
+  to {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes es-FadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes effect_shine {
+  100% {
+    left: 150%;
+  }
+}
+
+@-webkit-keyframes es-bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@keyframes es-bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
