@@ -52,7 +52,7 @@ const path = {
       dir: source_folder,
       file: source_folder + '/*.html',
     },
-    css: {
+    scss: {
       dir: source_folder + '/assets/scss',
       file: source_folder + '/assets/scss/main.scss',
     },
@@ -71,7 +71,8 @@ const path = {
   },
   watch: {
     html: source_folder + '/**/*.html',
-    css: source_folder + '/assets/scss/**/*.scss',
+    scss: source_folder + '/assets/scss/**/*.scss',
+    css: source_folder + '/assets/scss/vendor/*.css',
     js: source_folder + '/assets/js/**/*.js',
     img: source_folder + '/assets/img/**/*.{jpg,png,svg,gif,ico,webp}',
   },
@@ -97,7 +98,7 @@ gulp.task( 'build-html', () =>{
 
 // Обрабатываем scss
 gulp.task( 'build-css', ()=>{
-  return src(path.src.css.file)
+  return src(path.src.scss.file)
     //.pipe(sourcemaps.init())
     //.pipe(plumber())            // Предотвращает поломку таска
     .pipe(                      // Компиляция scss
@@ -132,6 +133,13 @@ gulp.task( 'build-css', ()=>{
     .pipe(browsersync.stream()); // Обновляем браузер
 });
 
+// Копируем вендорные стили
+gulp.task( 'vendor-css', ()=>{
+  return src(path.src.scss.dir + '/vendor/*.css')
+    .pipe(dest(path.build.css)) // Сохраняем минифицированый файл стилей
+    .pipe(browsersync.stream()); // Обновляем браузер
+});
+
 // Обрабатываем js
 gulp.task( 'js',() => {
   return src(path.src.js.file)
@@ -151,6 +159,12 @@ gulp.task( 'js',() => {
     )
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream());
+});
+
+gulp.task( 'vendor-js', ()=>{
+  return src(path.src.js.dir + '/vendor/*.js')
+    .pipe(dest(path.build.js)) // Сохраняем минифицированый файл стилей
+    .pipe(browsersync.stream()); // Обновляем браузер
 });
 
 // Собираем JS с помощью Webpack
@@ -326,12 +340,13 @@ gulp.task('watch',() => {
     notify: false
   });
   gulp.watch([path.watch.html], gulp.parallel( 'build-html'));
-  gulp.watch([path.watch.css],{readDelay: 2000}, gulp.parallel('build-css'));
+  gulp.watch([path.watch.scss],{readDelay: 2000}, gulp.parallel('build-css'));
+  gulp.watch([path.watch.css], gulp.parallel('vendor-css'));
   gulp.watch([path.watch.js], gulp.parallel('build-js'));
   gulp.watch([path.watch.img], gulp.parallel('build-images'));
 });
 
 /* -----------------------------*/
-gulp.task("build", gulp.series('clean',gulp.parallel('build-js', 'build-css', 'build-html', 'build-images', 'build-fonts'), 'fontsStyle' ));
+gulp.task("build", gulp.series('clean',gulp.parallel('build-js', 'build-css','vendor-css', 'build-html', 'build-images', 'build-fonts'), 'fontsStyle' ));
 
 gulp.task("default", gulp.parallel("watch", "build"));
