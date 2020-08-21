@@ -4,15 +4,14 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  margin-top: 8rem;
   position: relative;
 
   @include breakpoint(large) {
-    height: calc(100vw *.35);
+    height: calc(100vw * 0.35);
   }
 
   @include breakpoint(medium) {
-    height: calc(100vw *.25);
+    height: calc(100vw * 0.25);
   }
 
   @include breakpoint(small) {

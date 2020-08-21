@@ -4,20 +4,11 @@
     @@include('./html_component/layout/_head.html',{"title": "Главная" })
   </head>
   <body>
-    <!-- Preloader Start -->
-    <div class="es-preloader active">
-      <div class="es-preloader__inner">
-        <div class="es-preloader__child es-bounce1"></div>
-        <div class="es-preloader__child es-bounce2"></div>
-        <div class="es-preloader__child zuka-bounce3"></div>
-      </div>
-    </div>
-    <!-- Preloader End -->
-
+    @@include('./html_component/components/_preloader.html',{})
     <!-- Main Page content Start -->
     <div class="page__content">
       <!-- Header -->
-      @@include('./html_component/layout/_header.html',{"fixed":true})
+      @@include('./html_component/layout/_header.html',{})
       <!-- Main -->
       <main class="main">
         @@include('./html_component/blocks/_section-slider.html',{})
