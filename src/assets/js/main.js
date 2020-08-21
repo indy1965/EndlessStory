@@ -3,6 +3,22 @@
 //
 $(document).ready(function(){
 
+  'use strict';
+
+  // Check if element exists
+  $.fn.elExists = function() {
+      return this.length > 0;
+  };
+
+  // Variables
+  const $html = $('html'),
+    $body = $('body'),
+    $window = $(window),
+    $header = $('.header'),
+		$headerPosition = ( $header.elExists() ) ? $header.offset().top : '',
+		$mainHeaderHeight = ( $header.elExists() ) ? $header[0].getBoundingClientRect().height : 0,
+		$headerTotalHeight = $headerPosition + $mainHeaderHeight;
+
   /**********************
 	*Функция нажатия на гамбургер
 	***********************/
@@ -68,11 +84,15 @@ $(document).ready(function(){
   ***********************/
 
  $(window).on('scroll', function(){
+   console.log('scroll');
+
   if ($(window).scrollTop() >= $headerTotalHeight) {
       $('.fixed-header').addClass('sticky-header');
+      console.log('addClass');
   }
   else {
       $('.fixed-header').removeClass('sticky-header');
+      console.log('removeClass');
   }
 });
 

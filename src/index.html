@@ -4,6 +4,19 @@
     @@include('./html_component/layout/_head.html',{"title": "Главная" })
   </head>
   <body>
+    <!-- Preloader Start -->
+    <div class="es-preloader active">
+      <div
+        class="es-preloader__inner h-100 d-flex align-items-center justify-content-center"
+      >
+        <div class="es-preloader__child es-bounce1"></div>
+        <div class="es-preloader__child es-bounce2"></div>
+        <div class="es-preloader__child zuka-bounce3"></div>
+      </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Main Page content Start -->
     <div class="page__content">
       <!-- Header -->
       @@include('./html_component/layout/_header.html',{"fixed":true})

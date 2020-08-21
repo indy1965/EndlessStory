@@ -1,0 +1,47 @@
+/*****************************
+51 - Utilities - Common
+*****************************/
+
+/**-- Preloader --*/
+.es-preloader {
+  display: none;
+
+
+  &.active {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999999;
+    background: rgba(255, 255, 255, 1);
+    display: block;
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__child {
+    width: 20px;
+    height: 20px;
+    background-color: $primary-color;
+    border-radius: 100%;
+    display: inline-block;
+    @include animation(zakas-bouncedelay 1.4s ease-in-out 0s infinite both);
+  }
+
+  .es-bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+
+  .es-bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+}
