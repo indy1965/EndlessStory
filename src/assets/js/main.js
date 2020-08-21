@@ -84,15 +84,11 @@ $(document).ready(function(){
   ***********************/
 
  $(window).on('scroll', function(){
-   console.log('scroll');
-
   if ($(window).scrollTop() >= $headerTotalHeight) {
       $('.fixed-header').addClass('sticky-header');
-      console.log('addClass');
   }
   else {
       $('.fixed-header').removeClass('sticky-header');
-      console.log('removeClass');
   }
 });
 
@@ -101,7 +97,7 @@ $(document).ready(function(){
 	***********************/
 
 	$(window).on('load', function(){
-		$('.zakas-preloader').removeClass("active");
+		$('.es-preloader').removeClass("active");
 	});
 
 })
