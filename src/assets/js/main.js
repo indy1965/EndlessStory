@@ -19,6 +19,20 @@ $(document).ready(function(){
 		$mainHeaderHeight = ( $header.elExists() ) ? $header[0].getBoundingClientRect().height : 0,
 		$headerTotalHeight = $headerPosition + $mainHeaderHeight;
 
+/**********************
+	*Активация Мобильного Меню
+	***********************/
+
+	const $mainMenuNav = $('.mainmenu-nav');
+	$mainMenuNav.meanmenu({
+	    meanScreenWidth: '991',
+	    meanMenuContainer: '.mobile-menu',
+	    meanMenuClose: '<span class="menu-close"></span>',
+	    meanMenuOpen: '<span class="menu-bar"></span>',
+	    meanRevealPosition: 'right',
+	    meanMenuCloseSize: '0',
+	});
+
   /**********************
 	*Функция нажатия на гамбургер
 	***********************/
