@@ -141,7 +141,7 @@
     display: inline-flex;
     align-items: center;
     position: relative;
-    margin-right: 12px;
+    margin-right: 25px;
 
     &:last-child {
       margin-right: 0;
@@ -155,6 +155,19 @@
     color: $color-white;
     transition: $base-tranzition;
 
+    &:before{
+      font-family: 'fontello';
+    }
+    &.instagram-btn::before{
+      content: '\e81b';
+    }
+    &.user-btn::before{
+      content: '\f102';
+    }
+    &.mini-cart-btn::before{
+      content: '\f100';
+    }
+
     i {
       font-size: 23px;
     }
@@ -166,8 +179,8 @@
     &.mini-cart-btn {
       .mini-cart-count {
         position: absolute;
-        right: -13px;
-        top: -13px;
+        right: -15px;
+        top: -15px;
         font-size: 14px;
         text-align: center;
         @include circle(22);

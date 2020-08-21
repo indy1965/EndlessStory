@@ -135,11 +135,15 @@ $__brd_foot_input: 1px solid $color-asbestos;
     margin: 0;
     background-color: transparent;
     color: $__color_foot_svg;
+    z-index: 99;
+
+    &::before{
+      font-family: 'fontello';
+      content:'\e801';
+    }
 
     &:hover {
-      &>i {
-        color: $color-hover;
-      }
+      color: $color-white;
     }
   }
 
