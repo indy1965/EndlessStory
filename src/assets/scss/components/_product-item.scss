@@ -1,17 +1,16 @@
 //product-item
-$brd-card_shdow: 3px 5px 10px rgba(154, 154, 154, 0.25);
 $color_title_card: $color-black-blue;
-$color_text_price: $color-midnight-blue;
+$color_text_price-card: $color-black-blue;
 
 //*****************************/
 .product-item {
   position: relative;
   max-width: 250px;
   padding: 5px;
-  //border:  $brd_card;
-  //box-shadow: $brd-card_shdow;
-  margin: 0 10px 40px 10px;
-  transition: 0.5s ease;
+  margin: 0 0 40px 25px;
+  transition: 0.5s linear;
+
+
 
   @include breakpoint(small) {
     max-width: 230px;
@@ -52,105 +51,66 @@ $color_text_price: $color-midnight-blue;
 
 
   &__wrapper {
-    width: 100%;
     position: relative;
+    overflow: hidden;
     margin-bottom: 10px;
   }
 
-  // .product-item__img
-  &__img {
-    position: relative;
-
-    img {
-      display: block;
-      border: 0;
-      max-width: 100%;
-    }
-
-    &:after {
-      content: '';
-      background: rgba(73, 64, 87, .7); // rgba(73, 102, 162, 0.75);
-      @include center();
-      transform: scale(0);
-      transition: 0.2s ease-in-out;
-    }
-
+  &:hover .cart-product__action{
+    bottom: 0;
   }
 
-  &:hover &__img:after {
 
-    @include breakpoint(largeonly) {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
 }
 
-// Кнопки
-.product-btn {
-
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: .6s ease-in-out;
-
-
-  &>a {
-    display: block;
-    border: 1px solid white;
-    white-space: nowrap;
-    text-transform: uppercase;
-    padding: .8em 1em;
-    font-family: 'SFProDisplay';
-    font-size: 1.4em;
-    letter-spacing: .05em;
-    font-weight: 500;
-    line-height: 18px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    color: white;
-    min-width: 210px;
-    margin: 1.5rem auto;
-    transition: all .6s ease;
-
-    // @include animation_btn(white, $color-black);
-    &:hover {
-      background: #fff;
-      color: #000;
-    }
-  }
-}
-
-.product-btn-icon {
-  position: absolute;
-  left: 0;
-  bottom: 44px;
-  right: 0;
+.cart-product{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
 
-  &>a {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: rgba(73, 64, 87, 0.65);
-    font-size: 2.5em;
+  img {
+    display: block;
+    border: 0;
+    max-width: 100%;
   }
 
-  @include breakpoint(largeonly) {
-    display: none;
+
+  &__action{
+    display: flex;
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    width: 100%;
+    background: rgba(59,62,67,0.65);
+    transition: .3s linear;
+
+    .product-inner{
+      &__btn{
+        display: flex;
+        width: 50%;
+        color: $color-white;
+        font-size: 24px;
+        padding: 15px 0;
+        transition: .2s linear;
+        justify-content: center;
+
+        &:hover{
+          background: rgba(59,62,67,0.85);
+          color: $color-hover;
+        }
+
+        &::before{
+          font-family: 'fontello';
+        }
+        &.to-cart::before{
+          content: '\f291';
+        }
+        &.to-view::before{
+          content: '\e819';
+        }
+      }
+    }
   }
 }
+
 
 .info-product {
 
@@ -159,7 +119,7 @@ $color_text_price: $color-midnight-blue;
     /* font-title-card */
     font-family: 'OpenSans';
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 1.6rem;
     line-height: 24px;
     color: $color_title_card;
     text-align-last: left;
@@ -170,6 +130,6 @@ $color_text_price: $color-midnight-blue;
   // .info-product__price
   &__price {
     text-align-last: left;
-    @include price_ru('OpenSans', 700, 2em, $color_text_price);
+    @include price_ru('OpenSans', 700, 2.4rem, $color_text_price-card);
   }
 }

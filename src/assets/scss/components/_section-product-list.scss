@@ -17,14 +17,13 @@
 
 .prod-section {
 
-  text-align: center;
-
   // .content-section__title
   &__title {
     @include font_sett($font-family_title_category, $font-weight_title_category, $font-size_title_category);
     color: $color_title_category;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    text-align: center;
     margin-bottom: 60px;
 
     @include breakpoint(xsmall) {
@@ -40,9 +39,11 @@
 
   // .content-section__items
   &__items {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
+    flex: 1 1 25%;
+    margin: 0 auto;
+    // justify-content: space-around;
+    // align-content: center;
   }
 }

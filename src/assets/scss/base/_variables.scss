@@ -63,6 +63,33 @@ $color-concrete:            #95a5a6; //$defTextColor: #000;
 $color-silver:              #bdc3c7;
 $color-light-gray:          #ecf0f1;
 $color-sand:                #f6f6f6;
+$color-white-dark:     #f6f6f6;
+$color-light:    	   #999999;
+$color-dark:     	   #333333;
+$color-blue:     	   #122c57;
+$color-blue-2:     	   #3d72c9;
+$color-copper:     	   #b87333;
+$color-old-rose:   	   #c18775;
+$color-yellow:         #ffe11b;
+$color-red:            #c2080f;
+$color-red-2:          #c4181d;
+$color-pink:           #f7a4c7;
+$color-pink-2:         #f178ba;
+$color-blue:           #82b0fb;
+$color-green:          #4cbb6c;
+$color-gray:           #f5f5f5;
+$color-gray-2:         #707070;
+$color-gray-3:         #454541;
+$color-sand:           #f6f6f6;
+$color-abbey:          #52595F;
+$color-alto:           #dddddd;
+$color-brown:          #c48a72;
+$color-cholate:        #4f1310;
+$color-copper:         #e47c51;
+$color-tundor:         #404040;
+$color-persi:          #ff5951;
+$color-alabaster:      #f9f9f9;
+
 
 //*===== Colors =====*//
 
@@ -90,6 +117,7 @@ $border_btn: 1px solid $color-silver;
 //*=====  shadows ======*//
 $shadow-1: 0 0 25px rgba(63, 78, 100, 0.15);
 $shadow-2: 0px 7px 15px 3px rgba(50, 50, 50, 0.7);
+$shadow-3: 3px 5px 10px rgba(154, 154, 154, 0.25);
 
 //*====== gradient ======*//
 $linear-gradient:linear-gradient(90deg,rgba(47, 43, 53, 0.44) 46.35%, rgba(255, 255, 255, 0) 100%);
@@ -101,22 +129,9 @@ $base-tranzition: all 250ms ease-out;
 //*==========  fonts  ===========*//
 $font-family_title_section: $font-2;
 $font-weight_title_section: $font-Thin;
-$font-size_title_section: 4em; // размер шрифта в em
+$font-size_title_section: 4rem; // размер шрифта в em
 
 $font-family_title_category: $font-2;
 $font-weight_title_category: $font-Thin;
-$font-size_title_category: 4em;
-// // Кнопки
-// $color_font_btn: $color-midnight-blue;
-// $font_btn: $font-2, $font-Medium, 1em;
-
-
-// // Заголвок секции, категории
-
-
-
-// // Заголвок категории
-
-
-
+$font-size_title_category: 4rem;
 
