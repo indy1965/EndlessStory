@@ -1,0 +1,35 @@
+ <!-- Form table area -->
+ <form class="shopping-cart__form cart-form" action="#">
+  <div class="cart-form__content form-content">
+
+    <div class="form-content__row ">
+       @@include('./_table-cart__content.html',{})
+    </div>
+    <!-- /shopping-cart__row no-gutters -->
+
+    <div class="form-content__row border-top pt--20 mt--20">
+      <div class="col-sm-6">
+        <div class="coupon">
+          <input
+            type="text"
+            id="coupon"
+            name="coupon"
+            class="cart-form__input"
+            placeholder="код купона"
+          />
+          <button type="submit" class="cart-form__btn">
+            Применить купон
+          </button>
+        </div>
+      </div>
+      <div class="col-sm-6 text-sm-right">
+        <button type="submit" class="cart-form__btn">
+          Очистить корзину
+        </button>
+        <button type="submit" class="cart-form__btn">
+          Обновить корзину
+        </button>
+      </div>
+    </div>
+  </div>
+</form> <!-- form -->

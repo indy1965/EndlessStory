@@ -85,13 +85,19 @@
       &.product-remove{
         width: 30px ;
         min-width: 30px ;
-        padding-left: 15px;
+        text-align: center;
+        padding: 0 10px;
 
         a {
           color: $color-silver;
           font-size: 1.8em;
           background-color: trnsparent;
           transition: all 250ms ease-out;
+
+          &::before{
+            font-family: 'fontello';
+            content: '\eadf';
+          }
 
           &:hover{
             color: $color-alizarin;
@@ -116,7 +122,7 @@
       }
 
       &.product-name{
-        min-width: 240px;
+        min-width: 180px;
 
         h3{
           font-family: $font-2;
@@ -126,6 +132,7 @@
       }
 
       &.product-price{
+        width: 100px;
         .product-price-wrapper{
           .money{
             font-weight: 400;
@@ -135,6 +142,7 @@
       }
 
       &.product-quantity{
+        width: 100px;
         .quantity{
           margin-right: auto;
           margin-left: auto;
