@@ -128,10 +128,21 @@ a:active, a:hover, a:focus, a::selection, a:focus {
   border: 0;
 }
 
-/*****************************
-01 - Base - Typography
-*****************************/
+.table{
+  display:table;
+  border-spacing: 2px;
+  border-color: grey;
 
+  & thead th, & th{
+    text-transform: uppercase;
+    padding: 13px 0;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 11px;
+    border: 0px solid #eeeeee;
+    vertical-align: middle;
+  }
+}
 
 // thead {
 //   display: table-header-group;
@@ -153,16 +164,16 @@ a:active, a:hover, a:focus, a::selection, a:focus {
 // }
 
 
-//***************************/
 
-
-
-._fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
+/*****************************
+01 - Base - Typography
+*****************************/
+// ._fixed {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 10;
+// }
 
 .page_content {
   width: 100%;
@@ -272,12 +283,14 @@ a:active, a:hover, a:focus, a::selection, a:focus {
   }
 }
 
-.table {
-  display: table;
-  border-spacing: 2px;
-  border-color: grey;
+.txt-left{
+  text-align: left;
 }
 
-.text-left {
-  text-align: left;
+.txt-center{
+  text-align: center;
+}
+
+.txt-right{
+  text-align: right;
 }

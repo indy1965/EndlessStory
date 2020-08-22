@@ -1,0 +1,141 @@
+
+.table-cart {
+
+  // .table-cart__content
+
+  &__content {
+    width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    text-align: center;
+
+    th{
+      min-width: 100px;
+      &:first-child{
+        min-width: 30px;
+      }
+    }
+  }
+}
+
+.product-shop {
+  font-size: 14px;
+  // .product-shop__remove
+  &__remove {
+    a{
+      display: block;
+      color: $color-silver;
+      margin: 0 5px;
+      transition: $base-tranzition;
+
+      &:before{
+        font-family: 'fontello';
+        content: '\eadf';
+        font-size: 32px;
+      }
+
+      &:hover{
+        color: $color-red;
+      }
+    }
+  }
+
+  // .product-shop__thumbnail
+  &__thumbnail {
+    .product-img {
+      display: flex;
+      width: 75px;
+      min-width: 75px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+    }
+  }
+
+  // .product-shop__name
+  &__name {
+    min-width: 240px;
+    h3 {
+      line-height: 1.5;
+      font-size: 14px;
+      a{
+        color: $body-color;
+      }
+    }
+  }
+
+  // .product-shop__price
+
+  &__price {
+    padding-right: 5px;
+  }
+
+  // .product-shop__quantity
+
+  &__quantity {
+    text-align: center;
+    padding: 0;
+    .quantity{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 60px;
+      padding: 0;
+      position: relative;
+      &__qtybutton {
+        display: block;
+        position: absolute;
+        font-size: 20px;
+        line-height: 58px;
+        user-select: none;
+        cursor: pointer;
+        height: 58px;
+        width: 20px;
+        top: 0;
+        transition: $base-tranzition;
+
+        &.dec{
+          left: 5px;
+        }
+        &.inc{
+          right: 5px;
+        }
+
+        &:hover{
+          background: $color-silver;
+        }
+      }
+      &__input{
+        text-align: center;
+        font-size: 16px;
+        border: none;
+        width: 100%;
+        height: 100%;
+
+      }
+    }
+  }
+
+  // .product-shop__total-price
+
+  &__total-price {
+    padding-right: 5px;
+    .product-price{
+      &__wrapper {
+        line-height: 1.4;
+        &>span{
+          font-size: 14px;
+          font-weight: $font-SemiBold;
+        }
+      }
+    }
+  }
+}
+
+.product-price {
+  // .product-price__wrapper
+  &__wrapper {
+    line-height: 1.4;
+  }
+}

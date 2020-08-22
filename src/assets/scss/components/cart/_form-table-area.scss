@@ -1,0 +1,47 @@
+
+.cart-form {
+  width: 100%;
+  // .cart-form__wrapper
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .cart-form__row
+
+  &__row {
+    display: flex;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid $border-color;
+  }
+
+  // .cart-form__btn
+
+  &__btn {}
+}
+
+.form-content {
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.action-inner {
+  // .action-inner__column
+
+  &__column {}
+}
+.shop-coupon {
+
+  // .shop-coupon__wrapper
+
+  &__wrapper {}
+
+  // .shop-coupon__input
+
+  &__input {}
+}
+.action-column {
+}

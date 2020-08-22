@@ -11,17 +11,16 @@
       <main class="main">
         <div class="page__body container page-section">
           <h1 class="page-section__title">Карзина</h1>
+          <!-- start section cart -->
           <section class="section-cart container">
-
             <div class="section-cart__row">
-
               <!-- Левая колонка -->
-              <div class="section-cart__column shopping-cart">
+              <div class="cart__column shopping-cart">
                @@include('./html_component/components/cart/_form-table-area.html',{})
               </div>
 
               <!-- Правая колонка -->
-              <div class="col-lg-4">
+              <div class="cart__column cart-calculate">
                 @@include('./html_component/components/cart/_cart-calculate.html',{})
               </div>
 
