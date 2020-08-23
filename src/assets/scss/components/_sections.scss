@@ -69,3 +69,26 @@
     @extend %section-content;
   }
 }
+
+
+
+/*****************************
+ - Section deliv, Section payment
+*****************************/
+.deliv-content, .payment-content {
+  max-width: 800px;
+  margin: 0 auto;
+
+  h2 {
+    font-family: $body-font;
+    font-size: 2em;
+    font-weight: $font-Light;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 1.3em;
+    font-weight: $font-Light;
+  }
+}

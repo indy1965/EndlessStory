@@ -7,11 +7,11 @@
     <div class="wrapper">
       @@include('./html_component/layout/_header.html',{})
       <main class="page">
-        <div class="page__body container page-section">
-          <h1 class="page-section__title">Оплата</h1>
+        @@include('./html_component/blocks/_section-titles.html',{"title":"Оплата"})
 
-          <section class="section-payment payment-content">
-            <div class="section-payment__content">
+        <section class="section-payment">
+          <div class="container">
+            <div class="payment-content">
               <p>
                 Любой товар можно оплатить наличными при доставке, а также
                 банковскими картами платежных систем Виза, Мастеркард или МИР на
@@ -28,13 +28,14 @@
                 myenglessstory@mail.ru.
               </p>
             </div>
-            <!-- /deliv-content__info -->
-          </section>
-          <!-- /section-deliv deliv-content -->
-        </div>
-        <!-- /page__body -->
+            <!-- /deliv-content -->
+          </div>
+          <!-- /container -->
+        </section>
+        <!-- /section-paymentt -->
       </main>
       <!-- /main -->
+
       @@include('./html_component/layout/_footer.html',{})
     </div>
     <!-- /wrapper -->
