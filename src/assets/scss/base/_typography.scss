@@ -214,16 +214,16 @@ a:active, a:hover, a:focus, a::selection, a:focus {
 // }
 
 // Заголовок страниц
-.page-section {
-  margin-bottom: 160px;
-  padding-top: 60px;
+// .page-section {
+//   margin-bottom: 160px;
+//   padding-top: 60px;
 
-  &__title {
-    text-align: center;
-    margin-bottom: 60px;
-    @extend %title-page;
-  }
-}
+//   &__title {
+//     text-align: center;
+//     margin-bottom: 60px;
+//     @extend %title-page;
+//   }
+// }
 
 .txt-left{
   text-align: left;
