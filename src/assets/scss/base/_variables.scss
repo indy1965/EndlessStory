@@ -16,7 +16,7 @@ $body-font-size: 16px;
 $line-height: 1.75;
 
 //============= Размеры контейнеров.
-$containerMaxWidth: 1140px;
+$containerMaxWidth: 1170;
 $container-md1: 960px;
 $container-md2: 720px;
 $container-md3: 540px;
@@ -84,9 +84,6 @@ $color-tundor:         #404040;
 $color-persi:          #ff5951;
 $color-alabaster:      #f9f9f9;
 
-//*==== Border Color ====*//
-$border-color: #eeeeee;
-
 //*===== Colors =====*//
 
 $body-color:    #666666;
@@ -94,7 +91,7 @@ $primary-color: $color-wet-asphalt;
 $heading-color: #111111;
 
 //*==== Border Color ====*//
-$border-color: #eeeeee;
+$border-color: #dddddd; //$color-silver;   //#eeeeee;
 
 //*==== Color =====*//
 $color-head-bg:         $color-midnight-blue-r; //Цвет шапки

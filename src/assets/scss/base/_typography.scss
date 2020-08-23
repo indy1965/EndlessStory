@@ -181,7 +181,7 @@ a:active, a:hover, a:focus, a::selection, a:focus {
 }
 
 .container {
-  max-width: $containerMaxWidth;
+  max-width: $containerMaxWidth+30+px;
   padding: 0 15px;
   margin: 0 auto;
 

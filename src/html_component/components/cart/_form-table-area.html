@@ -1,35 +1,19 @@
  <!-- Form table area -->
- <form class="shopping-cart__form cart-form" action="#">
-  <div class="cart-form__wrapper">
-
-    <div class="cart-form__row form-content">
+ <div class="shopping-cart__content table-area" action="#">
+  <div class="table-area__wrapper">
+    <h5 class="calculator-inner__area--title">Корзина покупок</h5>
+    <div class="table table-area__row table-content">
        @@include('./_table-cart__content.html',{})
     </div>
     <!-- /shopping-cart__row no-gutters -->
 
-    <div class="cart-form__row action-inner">
-      <div class="shop-coupon action-inner__column">
-        <div class="shop-coupon__wrapper">
-          <input
-            type="text"
-            id="coupon"
-            name="coupon"
-            class="shop-coupon__input"
-            placeholder="код купона"
-          />
-          <button type="submit" class="cart-form__btn" id="cart-coupon-btn">
-            Применить купон
-          </button>
-        </div>
-      </div>
-      <div class="action-column action-inner__column">
-        <button type="submit" class="cart-form__btn" id="clar-cart-btn">
-          Очистить корзину
-        </button>
-        <button type="submit" class="cart-form__btn" id="refresh-cart-btn">
-          Обновить корзину
-        </button>
-      </div>
+    <div class="table-area__row action-inner">
+      <a href="#" class="btn  btn-no-bg-brd action-inner__btn-to-shop">
+        Вернуться к покупкам
+      </a>
+      <a href="#" class="btn  btn-no-bg-brd action-inner__refresh-btn">
+        Обновить корзину
+      </a>
     </div>
   </div>
-</form> <!-- form -->
+</div>

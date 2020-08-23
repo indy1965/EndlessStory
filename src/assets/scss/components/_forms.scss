@@ -1,0 +1,117 @@
+/*****************************
+26 - Components - Form
+*****************************/
+/*-- 26.01 - Footer Form --*/
+
+.form-footer {
+  @include breakpoint(xsmall) {
+    max-width: 320px;
+  }
+
+  @include breakpoint($md6) {
+    width: 100%;
+  }
+
+  &__group {
+    position: relative;
+  }
+
+  // .form-footer_input
+  &__input {
+    border: 0;
+    border-bottom: $__brd_foot_input;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+    font-size: 14px;
+    color: white;
+    font-family: $body-font;
+    font-weight: $font-Light;
+
+    &::placeholder {
+      font-size: 14px;
+      color: $__color_foot_placehold;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  // .form-footer__title
+  &__label {
+    margin-bottom: 20px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+  }
+
+  &__submit {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    top: 0px;
+    right: -11px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: $__color_foot_svg;
+    z-index: 99;
+
+    &::before{
+      font-family: 'fontello';
+      content:'\e801';
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &:focus {
+    background: $color-footer-bg;
+  }
+}
+
+/*-- 26.02 - Cart Form --*/
+
+// .cart-form{
+//   &__input{
+//       border: none;
+//       border-bottom: 1px solid $border-color;
+//       color: $heading-color;
+//       width: 100%;
+//       font-size: 12px;
+//       padding-bottom: 5px;
+//       &::placeholder {
+//         color: $heading-color;
+//       }
+//   }
+//   &__btn{
+//       font-size: 14px;
+//       font-weight: $font-Bold;
+//       color: $heading-color;
+//       background: none;
+//       border: none;
+//       &:hover{
+//         color: $primary-color;
+//       }
+//   }
+//   .coupon{
+//       position: relative;;
+//       @include breakpoint(xsmall){
+//           margin-bottom: 20px;
+//       }
+//       .cart-form{
+//           &__input{
+
+//           }
+//           &__btn{
+//               position: absolute;;
+//               right: 0;
+//               top: 0;
+//           }
+//       }
+//   }
+// }

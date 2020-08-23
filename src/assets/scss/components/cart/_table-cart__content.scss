@@ -12,7 +12,7 @@
     th{
       min-width: 100px;
       &:first-child{
-        min-width: 30px;
+        min-width: 25px;
       }
     }
   }
@@ -20,18 +20,22 @@
 
 .product-shop {
   font-size: 14px;
+
+  // &__row{
+  //   border-bottom: 1px splid red;
+  // }
   // .product-shop__remove
   &__remove {
     a{
       display: block;
       color: $color-silver;
-      margin: 0 5px;
+      margin: 0;
       transition: $base-tranzition;
 
       &:before{
         font-family: 'fontello';
         content: '\eadf';
-        font-size: 32px;
+        font-size: 23px;
       }
 
       &:hover{

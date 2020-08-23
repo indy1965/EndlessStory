@@ -4,22 +4,24 @@
 
 //*-- 23.00 - Global Button --*//
 .btn{
+	display: block;
+	text-align: center;
 	position: relative;
 	transition: $base-tranzition;
 	background-color: $color-white;
-	//color: $primary-color;
+	color: $primary-color;
 	font-size: 16px;
 	min-width: 184px;
-	min-height: 55px;
-	line-height: 55px;
-	margin-bottom: 6px;
-	padding: 0;
+	min-height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
 	border: none;
 	border-radius:(0);
+
 	@include breakpoint(medium){
 		min-width: 170px;
-		min-height: 50px;
-		line-height: 50px;
+		min-height: 35px;
+		line-height: 35px;
   }
 
 	@include breakpoint(small){
@@ -31,21 +33,10 @@
 	@include breakpoint(xsmall){
 		min-width: 150px;
 	}
-	&:after{
-		position: absolute;
-		content: '';
-		left: 0;
-		bottom: -6px;
-		height: 3px;
-		width: 100%;
-		background: $color-white;
-	}
+
 	&:hover{
 		background: $primary-color;
 		color: $color-white;
-		&:after{
-			background: $primary-color;
-		}
 	}
 	i{
 		padding-left: 5px;
@@ -68,21 +59,13 @@
 	&-bg{
 		&-sand{
 			background: $color-sand;
-			&:after{
-				background: $color-sand;
-			}
 		}
-		&-red{
+		&-primary{
 			background: $primary-color;
-			&:after{
-				background: $primary-color;
-			}
+			color: $color-white;
 		}
 		&-dark{
 			background: $heading-color;
-			&:after{
-				background: $heading-color;
-			}
 		}
 	}
 	&-no-bg{
@@ -92,14 +75,22 @@
 		line-height: 1;
 		margin-bottom: 0;
 		background-color: transparent;
-		&:after{
-			display: none;
-		}
+
 		&:hover{
 			background-color: transparent;
 			color: $primary-color;
 		}
 	}
+
+	&-no-bg-brd{
+		//@extend btn-no-bg;
+		border: 1px solid $border-color;
+
+		&:hover{
+      border: 1px solid $primary-color;
+    }
+	}
+
 	&-color{
 		&-dark{
 			color: $heading-color;
@@ -112,9 +103,6 @@
 		&-2{
 			&:hover{
 				background-color: $heading-color;
-				&:after{
-					background-color: $heading-color;
-				}
 			}
 		}
 	}
