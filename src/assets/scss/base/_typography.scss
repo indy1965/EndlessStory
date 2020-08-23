@@ -175,6 +175,10 @@ a:active, a:hover, a:focus, a::selection, a:focus {
 //   z-index: 10;
 // }
 
+.row {
+  display: flex;
+}
+
 .page_content {
   width: 100%;
   overflow: hidden;
@@ -203,68 +207,6 @@ a:active, a:hover, a:focus, a::selection, a:focus {
 }
 
 
-// .btn {
-//   display: inline-block;
-
-//   color: $color_font_btn;
-//   border: $border_btn;
-//   background-color: transparent;
-//   @include font_sett ($font-2, $font-Bold, 1.1em);
-//   text-transform: uppercase;
-//   letter-spacing: 0.05em;
-//   text-transform: uppercase;
-//   padding: 10px 25px;
-//   transition: all 0.25s ease;
-
-//   .btn-primary {
-//     color: #fff;
-//     background-color: #f39c12;
-//     border-color: #f39c12;
-//     ;
-//   }
-
-//   &:hover {
-//     background-color: $wet-asphalt;
-//     border-color: $wet-asphalt;
-//     color: #fff;
-//   }
-// }
-
-// .counter-control {
-//   display: flex;
-
-//   &__btn--desc, &__btn--inc {
-//     display: inline-flex;
-//     justify-content: center;
-//     align-items: center;
-//     font-family: $body-font;
-//     font-size: 2em;
-//     height: 40px;
-//     width: 25px;
-//     margin: 0;
-//     padding: 0;
-//     border: 0;
-//     user-select: none;
-//     transition: all .5s ease;
-
-//     &:hover {
-//       background: $color-silver;
-//     }
-//   }
-
-//   &__fieldCount {
-//     border: 0;
-//     padding: 5px 0;
-//     font-family: $body-font;
-//     font-weight: 300;
-//     font-size: 1.5em;
-//     line-height: 2em;
-//     align-items: center;
-//     text-align: center;
-//     width: 40px;
-//     outline: none;
-//   }
-// }
 
 // <ГОТОВЫЕ КЛАССЫ> =====================================================
 // .rub:after {

@@ -1,41 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    @@include('./html_component/layout/_head.html',{"title": "Карзина" })
+    @@include('./html_component/layout/_head.html',{"title": "Корзина" })
   </head>
   <body>
     <div class="page__content">
-      <!-- Header -->
       @@include('./html_component/layout/_header.html',{})
       <!-- Main -->
       <main class="main">
-        <div class="page__body container page-section">
-          <h1 class="page-section__title">Карзина</h1>
+          @@include('./html_component/blocks/_section-titles.html',{"title":"Корзина"})
 
-          <!-- start section cart -->
-          <section class="container">
-            <div class="cart-row">
-
-              <!-- Левая колонка -->
-              <div class="cart--column shopping-cart">
-               @@include('./html_component/components/cart/_form-table-area.html',{})
-              </div>
-
-              <!-- Правая колонка -->
-              <div class="cart--column calculator-inner">
-                @@include('./html_component/components/cart/_cart-calculate.html',{})
-              </div>
-
-            </div>
-            <!-- /section-cart__row -->
-          </section>
-          <!-- / section-cart container -->
-        </div>
-        <!-- / page__body container page-section -->
+          @@include('./html_component/blocks/_section-cart.html',{})
       </main>
       <!-- /main -->
 
-      <!-- Footer -->
       @@include('./html_component/layout/_footer.html',{})
     </div>
     <!-- /page_content -->
