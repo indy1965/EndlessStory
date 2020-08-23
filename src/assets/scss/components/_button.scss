@@ -11,10 +11,12 @@
 	background-color: $color-white;
 	color: $primary-color;
 	font-size: 16px;
+	cursor: pointer;
 	min-width: 184px;
 	min-height: 40px;
 	line-height: 40px;
 	padding: 0 20px;
+	margin: 0;
 	border: none;
 	border-radius:(0);
 
@@ -83,7 +85,6 @@
 	}
 
 	&-no-bg-brd{
-		//@extend btn-no-bg;
 		border: 1px solid $border-color;
 
 		&:hover{
@@ -159,6 +160,7 @@
 //     height: 40px;
 //     opacity: 1;
 //     @extend %heading-color;
+
 //     &:hover{
 //     	@extend %primary-color;
 //     }
