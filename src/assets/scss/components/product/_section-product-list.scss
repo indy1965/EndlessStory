@@ -1,5 +1,9 @@
 .section-prod {
-  padding: 90px 0;
+
+  // .section__content
+  &__content {
+    text-align: center;
+    padding: 90px 0;
 
   @include breakpoint(xsmall) {
     padding: 40px 0;
@@ -9,9 +13,6 @@
     padding-top: 80px;
   }
 
-  // .section__content
-  &__content {
-    text-align: center;
   }
 }
 

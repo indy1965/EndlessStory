@@ -1,0 +1,82 @@
+<!-- Start Section Product Card -->
+<section class="section-product-card">
+  <div class="container">
+    <div class="product-card__wrapper">
+      <div class="product-card__column product-img">
+        <img src="./assets/img/products/item-2.png" alt="item-2" />
+      </div>
+
+      <div class="product-card__column product-info">
+        <div class="product-info__title">
+          <h2>Открытка “Алая зима”</h2>
+        </div>
+
+        <div class="product-info__body body-info">
+          <div class="body-info__row row-info">
+            <span class="row-info__name">Художник:</span>
+            <a class="row-info__value" id="prod-size" href="#"
+              >Наталья Иванова</a
+            >
+          </div>
+          <div class="body-info__descr descr-info">
+            <p class="descr-info__title">Описание:</p>
+            <div class="descr-info__info" id="prod-info">
+              <p>
+                Далеко-далеко за словесными горами в стране гласных и
+                согласных живут рыбные тексты. Ipsum повстречался
+                предложения lorem. Однажды текстами за ты себя, образ свое
+                большой ведущими рыбного пустился не рукописи, ручеек
+                переписали алфавит.
+              </p>
+            </div>
+          </div>
+
+          <div class="body-info__balnce stock-balance">
+            <span class="stock-balance__title">Остаток на складе:</span>
+            <span class="tock-balance__value" id="prod-size">50 шт.</span>
+          </div>
+        </div>
+        <!-- /product-info__body body-info -->
+        <div class="product-info__price">
+          <span><span class="currency">₽ </span>100</span>
+        </div>
+
+        <form
+          class="product-info__form form-info"
+          action="#"
+          method="post"
+        >
+          <div class="form-info__quantity quantity-form">
+            <div class="quantity-form__counter counter-control">
+              <a class="counter-control__btn--desc" id="dec">
+                -
+              </a>
+              <input
+                class="counter-control__fieldCount"
+                id="fieldCount"
+                type="text"
+                value="1"
+                data-min="1"
+                data-max="20"
+              />
+              <a class="counter-control__btn--inc" id="inc">
+                +
+              </a>
+            </div>
+          </div>
+          <button
+            class="_form__add_to_cart_button btn"
+            type="submit"
+            name="add-to-cart"
+          >
+            Добавить в корзину
+          </button>
+        </form>
+      </div>
+      <!-- /product-card__column product-info -->
+    </div>
+    <!-- product-card__wrapper -->
+  </div>
+  <!-- / container -->
+</section>
+<!-- /section-product-card -->

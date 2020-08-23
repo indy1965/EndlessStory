@@ -1,6 +1,7 @@
-$__bg_wrapper: #F9F9F9;
 
-//****************
+/*****************************
+ - Section Product info
+*****************************/
 .product-card {
 
   // .product-card__column
@@ -33,8 +34,8 @@ $__bg_wrapper: #F9F9F9;
     width: 100%;
     margin-bottom: 30px;
 
-    h1 {
-      @extend %title-page;
+    h2 {
+      @include font_sett ($font-family_title_section, $font-weight_title_section, $font-size_title_section);
       text-align: center;
     }
   }
@@ -148,9 +149,3 @@ $__bg_wrapper: #F9F9F9;
   }
 }
 
-/* counter */
-// .quantity-form {
-//   &__counter {
-//     border: $brd_btn;
-//   }
-// }
