@@ -1,4 +1,6 @@
-
+/*****************************
+ - Component/cart - form-table-area
+*****************************/
 .table-area {
   // .cart-form__wrapper
   &__wrapper {
@@ -20,18 +22,15 @@
   margin-left: 0;
   margin-right: 0;
 
-  &.table{
-
-    & thead{
+  &.table {
+    & thead {
       background: lighten($border-color, 11%);
       border-top: 1px solid $border-color;
     }
-    & tr{
+    & tr {
       border-bottom: 1px solid $border-color;
     }
-
   }
-
 }
 
 // .action-inner-btn{

@@ -1,5 +1,5 @@
 /*****************************
-00. Global CSS
+01. Global CSS
 *****************************/
 //*===== Font Family =====*//
 
@@ -40,72 +40,71 @@ $font-Medium: 500;
 $font-SemiBold: 600;
 $font-Bold: 700;
 
-
 //*------ Основные Цвета ---------*//
-$color-white:               #fff;
-$color-black:               #000;
-$color-red:                 #c2080f; //#FA4E5E;
-$color-alizarin:            #e74c3c;
-$color-pumpkin:             #d35400;
-$color-black-blue:          #1f2b38;
-$color-midnight-blue-r:     rgba(44, 62, 80, 0.95);
-$color-midnight-blue:       #2c3e50;
-$color-midnight-blue-lite:  #364c62;
-$color-wet-asphalt:         #5a7ea3;
-$color-asbestos:            #7f8c8d;
-$color-concrete:            #95a5a6; //$defTextColor: #000;
-$color-silver:              #bdc3c7;
-$color-light-gray:          #ecf0f1;
-$color-sand:                #f6f6f6;
-$color-white-dark:     #f6f6f6;
-$color-light:    	   #999999;
-$color-dark:     	   #333333;
-$color-blue:     	   #122c57;
-$color-blue-2:     	   #3d72c9;
-$color-copper:     	   #b87333;
-$color-old-rose:   	   #c18775;
-$color-yellow:         #ffe11b;
-$color-red:            #c2080f;
-$color-red-2:          #c4181d;
-$color-pink:           #f7a4c7;
-$color-pink-2:         #f178ba;
-$color-blue:           #82b0fb;
-$color-green:          #4cbb6c;
-$color-gray:           #f5f5f5;
-$color-gray-2:         #707070;
-$color-gray-3:         #454541;
-$color-sand:           #f6f6f6;
-$color-abbey:          #52595F;
-$color-alto:           #dddddd;
-$color-brown:          #c48a72;
-$color-cholate:        #4f1310;
-$color-copper:         #e47c51;
-$color-tundor:         #404040;
-$color-persi:          #ff5951;
-$color-alabaster:      #f9f9f9;
+$color-white: #fff;
+$color-black: #000;
+$color-red: #c2080f; //#FA4E5E;
+$color-alizarin: #e74c3c;
+$color-pumpkin: #d35400;
+$color-black-blue: #1f2b38;
+$color-midnight-blue-r: rgba(44, 62, 80, 0.95);
+$color-midnight-blue: #2c3e50;
+$color-midnight-blue-lite: #364c62;
+$color-wet-asphalt: #5a7ea3;
+$color-asbestos: #7f8c8d;
+$color-concrete: #95a5a6; //$defTextColor: #000;
+$color-silver: #bdc3c7;
+$color-light-gray: #ecf0f1;
+$color-sand: #f6f6f6;
+$color-white-dark: #f6f6f6;
+$color-light: #999999;
+$color-dark: #333333;
+$color-blue: #122c57;
+$color-blue-2: #3d72c9;
+$color-copper: #b87333;
+$color-old-rose: #c18775;
+$color-yellow: #ffe11b;
+$color-red: #c2080f;
+$color-red-2: #c4181d;
+$color-pink: #f7a4c7;
+$color-pink-2: #f178ba;
+$color-blue: #82b0fb;
+$color-green: #4cbb6c;
+$color-gray: #f5f5f5;
+$color-gray-2: #707070;
+$color-gray-3: #454541;
+$color-sand: #f6f6f6;
+$color-abbey: #52595f;
+$color-alto: #dddddd;
+$color-brown: #c48a72;
+$color-cholate: #4f1310;
+$color-copper: #e47c51;
+$color-tundor: #404040;
+$color-persi: #ff5951;
+$color-alabaster: #f9f9f9;
 
 //*===== Colors =====*//
 
-$body-color:    #666666;
+$body-color: #666666;
 $primary-color: $color-wet-asphalt;
 $heading-color: #111111;
 
 //*==== Border Color ====*//
-$border-color: #dddddd; //$color-silver;   //#eeeeee;
+$border-color: #dddddd;
 
 //*==== Color =====*//
-$color-head-bg:         $color-midnight-blue-r; //Цвет шапки
-$color-footer-bg:       $color-midnight-blue-r; // Цвет подвала
-$color-hover:           $color-wet-asphalt;     // Цвет ховера
-$color-submenu-bg:      $color-light-gray;
-$color-submenu-boder:   $color-silver;
-$color_title_section:   $color-black-blue;
-$color_title_category:  $color-black-blue;
+$color-head-bg: rgba(44, 62, 80, 0.95); //Цвет шапки
+$color-footer-bg: rgba(44, 62, 80, 0.95); // Цвет подвала
+$color-hover: #5a7ea3; // Цвет ховера
+
+$color-submenu-bg: lighten($border-color, 10%);
+$color-submenu-boder: $border-color;
+$color_title_section: $heading-color;
+$color_title_category: $heading-color;
 
 //*=====  borders ======*//
-$border-submenu: 1px solid $color-silver;
-$border_btn: 1px solid $color-silver;
-
+$border-submenu: 1px solid $border-color;
+$border_btn: 1px solid $border-color;
 
 //*=====  shadows ======*//
 $shadow-1: 0 0 25px rgba(63, 78, 100, 0.15);
@@ -113,11 +112,14 @@ $shadow-2: 0px 7px 15px 3px rgba(50, 50, 50, 0.7);
 $shadow-3: 3px 5px 10px rgba(154, 154, 154, 0.25);
 
 //*====== gradient ======*//
-$linear-gradient:linear-gradient(90deg,rgba(47, 43, 53, 0.44) 46.35%, rgba(255, 255, 255, 0) 100%);
+$linear-gradient: linear-gradient(
+  90deg,
+  rgba(47, 43, 53, 0.44) 46.35%,
+  rgba(255, 255, 255, 0) 100%
+);
 
 //*======= transition ======//
 $base-tranzition: all 250ms ease-out;
-
 
 //*==========  fonts  ===========*//
 $font-family_title_section: $font-2;
@@ -128,3 +130,6 @@ $font-family_title_category: $font-2;
 $font-weight_title_category: $font-Thin;
 $font-size_title_category: 4rem;
 
+$__color_foot_svg: $color-asbestos;
+$__color_foot_placehold: $color-asbestos;
+$__brd_foot_input: 1px solid $color-asbestos;

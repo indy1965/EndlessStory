@@ -1,8 +1,10 @@
 /*****************************
-00 - Base - Global
+02 - Base - Typography
 *****************************/
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -35,7 +37,6 @@ html {
   box-sizing: border-box;
 }
 
-
 body {
   font-size: $body-font-size;
   font-family: $body-font;
@@ -48,7 +49,12 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   // font-weight: 700;
   font-family: $body-font;
   color: $heading-color;
@@ -79,7 +85,8 @@ p {
 // }
 
 // Base
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -89,7 +96,8 @@ figure {
   margin: 0;
 }
 
-a, button {
+a,
+button {
   transition: $base-tranzition;
 }
 
@@ -101,10 +109,9 @@ input::-webkit-inner-spin-button {
   /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-input[type=number] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
-
 
 // Сброс настроек обводки кнопки button при нажатии.
 button {
@@ -113,7 +120,12 @@ button {
   }
 }
 
-button, button:focus, input, select, textarea, .slick-slide {
+button,
+button:focus,
+input,
+select,
+textarea,
+.slick-slide {
   outline: none;
 }
 
@@ -123,17 +135,22 @@ a {
   cursor: pointer;
 }
 
-a:active, a:hover, a:focus, a::selection, a:focus {
+a:active,
+a:hover,
+a:focus,
+a::selection,
+a:focus {
   outline: 0;
   border: 0;
 }
 
-.table{
-  display:table;
+.table {
+  display: table;
   border-spacing: 2px;
   border-color: grey;
 
-  & thead th, & th{
+  & thead th,
+  & th {
     text-transform: uppercase;
     padding: 13px 0;
     letter-spacing: 1px;
@@ -143,7 +160,6 @@ a:active, a:hover, a:focus, a::selection, a:focus {
     vertical-align: middle;
   }
 }
-
 
 /*****************************
 01 - Base - Typography
@@ -165,7 +181,7 @@ a:active, a:hover, a:focus, a::selection, a:focus {
 }
 
 .container {
-  max-width: $containerMaxWidth+30+px;
+  max-width: $containerMaxWidth + 30 + px;
   padding: 0 15px;
   margin: 0 auto;
 
@@ -186,7 +202,6 @@ a:active, a:hover, a:focus, a::selection, a:focus {
   }
 }
 
-
 // <ГОТОВЫЕ КЛАССЫ> =====================================================
 // .rub:after {
 //   content: '₽';
@@ -204,14 +219,14 @@ a:active, a:hover, a:focus, a::selection, a:focus {
 //   }
 // }
 
-.txt-left{
+.txt-left {
   text-align: left;
 }
 
-.txt-center{
+.txt-center {
   text-align: center;
 }
 
-.txt-right{
+.txt-right {
   text-align: right;
 }
