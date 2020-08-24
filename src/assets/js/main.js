@@ -98,7 +98,9 @@ $(document).ready(function(){
   ***********************/
 
  $(window).on('scroll', function(){
-  if ($(window).scrollTop() >= $headerTotalHeight) {
+  if ($(window).scrollTop() >= $headerTotalHeight+120) {
+    console.log('headerTotalHeight: ', $headerTotalHeight);
+
       $('.fixed-header').addClass('sticky-header');
   }
   else {

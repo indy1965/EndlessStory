@@ -3,110 +3,110 @@
 *****************************/
 
 //*-- 23.00 - Global Button --*//
-.btn{
-	display: block;
-	text-align: center;
-	position: relative;
-	transition: $base-tranzition;
-	background-color: $color-white;
-	color: $primary-color;
-	font-size: 16px;
-	cursor: pointer;
-	min-width: 184px;
-	min-height: 40px;
-	line-height: 40px;
-	padding: 0 20px;
-	margin: 0;
-	border: none;
-	border-radius:(0);
+.btn {
+  display: block;
+  text-align: center;
+  position: relative;
+  transition: $base-tranzition;
+  background-color: $color-white;
+  color: $primary-color;
+  font-size: 16px;
+  cursor: pointer;
+  min-width: 184px;
+  min-height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  margin: 0;
+  border: none;
+  border-radius: (0);
 
-	@include breakpoint(medium){
-		min-width: 170px;
-		min-height: 35px;
-		line-height: 35px;
+  @include breakpoint(medium) {
+    min-width: 170px;
+    min-height: 35px;
+    line-height: 35px;
   }
 
-	@include breakpoint(small){
-		min-width: 160px;
-		min-height: 45px;
-		line-height: 45px;
+  @include breakpoint(small) {
+    min-width: 160px;
+    min-height: 45px;
+    line-height: 45px;
   }
 
-	@include breakpoint(xsmall){
-		min-width: 150px;
-	}
+  @include breakpoint(xsmall) {
+    min-width: 150px;
+  }
 
-	&:hover{
-		background: $primary-color;
-		color: $color-white;
-	}
-	i{
-		padding-left: 5px;
-	}
-	&.icon-left{
-		i{
-			padding-right: 5px;
-			padding-left: 0;
-		}
-	}
-	&-fullwidth{
-		width: 100%;
-		display: block;
-	}
-	&-small{
-		min-width: 147px;
-		min-height: 40px;
-		line-height: 40px;
-	}
-	&-bg{
-		&-sand{
-			background: $color-sand;
-		}
-		&-primary{
-			background: $primary-color;
-			color: $color-white;
-		}
-		&-dark{
-			background: $heading-color;
-		}
-	}
-	&-no-bg{
-		padding: 0;
-		min-width: auto;
-		min-height: auto;
-		line-height: 1;
-		margin-bottom: 0;
-		background-color: transparent;
-
-		&:hover{
-			background-color: transparent;
-			color: $primary-color;
-		}
-	}
-
-	&-no-bg-brd{
-		border: 1px solid $border-color;
-
-		&:hover{
-      border: 1px solid $primary-color;
+  &:hover {
+    background: $color-hover;
+    color: $color-white;
+  }
+  i {
+    padding-left: 5px;
+  }
+  &.icon-left {
+    i {
+      padding-right: 5px;
+      padding-left: 0;
     }
-	}
+  }
+  &-fullwidth {
+    width: 100%;
+    display: block;
+  }
+  &-small {
+    min-width: 147px;
+    min-height: 40px;
+    line-height: 40px;
+  }
+  &-bg {
+    &-sand {
+      background: $color-sand;
+    }
+    &-primary {
+      background: $primary-color;
+      color: $color-white;
+    }
+    &-dark {
+      background: $heading-color;
+    }
+  }
+  &-no-bg {
+    padding: 0;
+    min-width: auto;
+    min-height: auto;
+    line-height: 1;
+    margin-bottom: 0;
+    background-color: transparent;
 
-	&-color{
-		&-dark{
-			color: $heading-color;
-		}
-		&-white{
-			color: $color-white;
-		}
-	}
-	&-hover{
-		&-2{
-			&:hover{
-				background-color: $heading-color;
-			}
-		}
-	}
+    &:hover {
+      background-color: transparent;
+      color: $primary-color;
+    }
+  }
+
+  &-no-bg-brd {
+    border: 1px solid $border-color;
+
+    &:hover {
+      border: 1px solid $color-hover;
+    }
+  }
+
+  &-color {
+    &-dark {
+      color: $heading-color;
+    }
+    &-white {
+      color: $color-white;
+    }
+  }
+  &-hover {
+    &-2 {
+      &:hover {
+        background-color: $heading-color;
+      }
+    }
+  }
 }
 
 //*-- 23.01 - Submit Button --*//

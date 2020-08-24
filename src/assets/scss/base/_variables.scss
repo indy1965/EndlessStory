@@ -83,11 +83,40 @@ $color-tundor: #404040;
 $color-persi: #ff5951;
 $color-alabaster: #f9f9f9;
 
+/**********************
+#021C1e - Сине-черный
+#004445 - Серо-синий
+#2c7873 - Дождь
+#6fb98f - Зелень
+----
+#363237 - Темно-фиолетовый
+#2d4262 - Индиго
+#73605b - Скалисто-клоичгевый
+#d09683 - Румянец
+----
+#375E97 - Небо
+#fb6542 - Закат
+#ffbb00 - Подсолнух
+#3a681c - Трава
+----
+#344d90 - Насыщенный синий
+#5cc5ef - Бассейн
+#ffb745 - Сок апельсина
+#e7552c - Красный апельсин
+----
+#1e1f26 - Полуночный синий
+#283655 - Чернильный индиго
+#4d648d - Черника
+#d0e1f9 - Фиолетово голубой
+----
+#
+
+*/
 //*===== Colors =====*//
 
-$body-color: #666666;
-$primary-color: $color-wet-asphalt;
-$heading-color: #111111;
+$body-color:    #505050;
+$primary-color: #334a61; //#5a7ea3
+$heading-color: #383838;
 
 //*==== Border Color ====*//
 $border-color: #dddddd;
@@ -95,7 +124,7 @@ $border-color: #dddddd;
 //*==== Color =====*//
 $color-head-bg: rgba(44, 62, 80, 0.95); //Цвет шапки
 $color-footer-bg: rgba(44, 62, 80, 0.95); // Цвет подвала
-$color-hover: #5a7ea3; // Цвет ховера
+$color-hover: #4b6a8a; // Цвет ховера
 
 $color-submenu-bg: lighten($border-color, 10%);
 $color-submenu-boder: $border-color;
