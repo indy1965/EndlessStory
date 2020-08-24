@@ -1,9 +1,11 @@
 <!-- Section Header -->
-<header class="header ">
-  <div class="header__inner fixed-header">
+<header class="header sticky-header">
+
+  <div class="header__inner header-bottom-area d-lg-block">
     <div class="container">
       <div class="header__row">
         <div class="header__column-main-nav main-nav">
+
           <!-- Logo -->
           <div class="main-nav__logo logo-inner">
             <a class="main-nav__logo--link" href="#">
@@ -13,6 +15,7 @@
                 <h2 class="main-nav__logo--text">Endless Story</h2>
             </a>
           </div>
+
           <!--  Блок меню -->
           <nav class="main-nav__menu main-navigation">
             <!-- Меню -->
@@ -58,8 +61,7 @@
                 <!-- icon cart -->
               </li>
               <li class="header-toolbar__item mini-cart-info">
-                <a class="header-toolbar__btn mini-cart-btn" href="#">
-                  <sup class="mini-cart-count" id="mini-cart-count">22</sup>
+                <a class="header-toolbar__btn mini-cart-btn" href="#"><sup class="mini-cart-count" id="mini-cart-count">22</sup>
                 </a>
                 @@include('../components/mini-cart/_minicart.html',{})
               </li>

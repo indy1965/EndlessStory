@@ -129,14 +129,14 @@ $(window).on('scroll', function () {
   });
 
   	/* Header Minicart */
-	$('.mini-cart-btn').on('click', function(e){
-    e.preventDefault();
-		$('.header-minicart').slideToggle(
-      {
-        duration: 800, // продолжительность анимации
-        easing: "linear", // скорость анимации
-      });
-	});
+	// $('.mini-cart-btn').on('click', function(e){
+  //   e.preventDefault();
+	// 	$('.header-minicart').slideToggle(
+  //     {
+  //       duration: 800, // продолжительность анимации
+  //       easing: "linear", // скорость анимации
+  //     });
+	// });
 
 })
 

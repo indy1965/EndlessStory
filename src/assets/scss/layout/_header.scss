@@ -4,8 +4,9 @@
 
 // Стили заголовка
 .header {
+  display: block;
   width: 100%;
-  background: $color-head-bg;
+  z-index: 10;
 
   &__inner {
     padding: 30px 0;
@@ -181,11 +182,17 @@
         position: absolute;
         right: -15px;
         top: -15px;
-        font-size: 14px;
+        //font-family: 'SFProDisplay';
+        font-size: 12px;
+        line-height: 24px;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
         text-align: center;
-        @include circle(22);
+        vertical-align: baseline;
         color: $color-white;
         background: $color-red;
+        padding-right: 2px;
       }
     }
   }
@@ -194,14 +201,14 @@
 /*********************************
  User Account
 *********************************/
-.user-info {
+.user-info{
   &:after {
     position: absolute;
     content: '';
     left: 0;
     top: 100%;
     width: 100%;
-    height: 120%;
+    height: 140%;
   }
 
   &__menu {
@@ -279,18 +286,42 @@
     left: 0;
     top: 100%;
     width: 100%;
-    height: 120%;
+    height: 140%;
   }
 }
 
-.sticky-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  margin: 0;
-  background: $color-head-bg;
-  animation: fadeInDown 0.8s ease-in-out;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
+// .sticky-header {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   z-index: 999;
+//   margin: 0;
+//   background: $color-head-bg;
+//   animation: fadeInDown 0.8s ease-in-out;
+//   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
+// }
+
+/* Header Bottom Area */
+.header-bottom-area{
+  background: $theme-color;
+}
+
+/* Sticky Header */
+.sticky-header{
+  &.is-sticky{
+      .header-bottom-area, .mobile-menu-area{
+          position: fixed;
+          left: 0;
+          right: 0;
+          top: 0;
+          width: 100%;
+          z-index: 99;
+          animation: crSlideInDown 0.5s ease-out 0s 1 both;
+          box-shadow: 0 0 3px rgba(0,0,0,0.3);
+      }
+      .mobile-menu-area{
+          background: #ffffff;
+      }
+  }
 }

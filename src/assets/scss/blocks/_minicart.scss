@@ -1,26 +1,18 @@
 /*****************************
  - minicart
 *****************************/
-
-.mini-cart-info {
-
-  // .mini-cart-item__minicart
-  &__wrapper {
-
+.mini-cart-info{
+  &:hover{
+    .mini-cart.is-minicart{
+      top: 100%;
+      pointer-events: visible;
+      visibility: visible;
+      opacity: 1;
+    }
   }
-  // &:hover{
-  //   .mini-cart-info__wrapper{
-  //       top: 90%;
-  //       pointer-events: visible;
-  //       visibility: visible;
-  //       opacity: 1;
-  //   }
-  // }
 }
 
 .mini-cart {
-  right: 0;
-  top: 100%;
   min-width: 300px;
   margin-top: 30px;
   background:$color-submenu-bg;
@@ -29,17 +21,16 @@
   white-space: nowrap;
   //transform: translateX(-50%);
   box-shadow: $shadow-2;
+  visibility: hidden;
+  opacity: 0;
+  transition: $base-tranzition;
 
   &.header-minicart{
     position: absolute;
-    right: 0;
-    top: 100%;
+    right: -50px;
+    top: 150%;
     z-index: 111;
-    display: none;
-
-    // @media #{$md-layout, $sm-layout}{
-    //     right: -40px;
-    // }
+    //display: none;
   }
 
   a, p, span {
