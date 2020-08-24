@@ -36,7 +36,8 @@ $(document).ready(function(){
   /**********************
 	*Функция нажатия на гамбургер
 	***********************/
-  $('.hamburger-icon').click(function(){
+  $('.hamburger-icon').click(function(e){
+    e.preventDefault();
     $('.hamburger-icon').toggleClass('close');
   })
 
@@ -97,14 +98,25 @@ $(document).ready(function(){
 	* Липкий Заголовок
   ***********************/
 
- $(window).on('scroll', function(){
-  if ($(window).scrollTop() >= $headerTotalHeight+120) {
-    console.log('headerTotalHeight: ', $headerTotalHeight);
+//  $(window).on('scroll', function(){
+//   if ($(window).scrollTop() >= $headerTotalHeight+120) {
+//     console.log('headerTotalHeight: ', $headerTotalHeight);
 
-      $('.fixed-header').addClass('sticky-header');
-  }
-  else {
-      $('.fixed-header').removeClass('sticky-header');
+//       $('.fixed-header').addClass('sticky-header');
+//   }
+//   else {
+//       $('.fixed-header').removeClass('sticky-header');
+//   }
+// });
+
+$(window).on('scroll', function () {
+  var scrollPos = $(this).scrollTop();
+  if (scrollPos > 300) {
+    $('.sticky-header').addClass('is-sticky');
+    console.log('is-sticky');
+  } else {
+
+    $('.sticky-header').removeClass('is-sticky');
   }
 });
 
@@ -114,6 +126,16 @@ $(document).ready(function(){
 
 	$(window).on('load', function(){
 		$('.es-preloader').removeClass("active");
+  });
+
+  	/* Header Minicart */
+	$('.mini-cart-btn').on('click', function(e){
+    e.preventDefault();
+		$('.header-minicart').slideToggle(
+      {
+        duration: 800, // продолжительность анимации
+        easing: "linear", // скорость анимации
+      });
 	});
 
 })
