@@ -1,41 +1,46 @@
+/*****************************
+ - minicart
+*****************************/
+
 .mini-cart-info {
 
   // .mini-cart-item__minicart
   &__wrapper {
-    position: absolute;
-    left: -50%;
-    top: 150%;
-    min-width: 300px;
-    margin-top: 30px;
-    background:$color-submenu-bg;
-    padding: 15px 10px;
-    pointer-events: none;
-    white-space: nowrap;
-    transform: translateX(-50%);
-    box-shadow: $shadow-2;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 111;
-    transition: $base-tranzition;
 
-    @include breakpoint(xblarge){
-      transform:translateX(-67%);
-    }
-    @include breakpoint(xsmall){
-      transform: translateX(-50%);
-    }
   }
-  &:hover{
-    .mini-cart-info__wrapper{
-        top: 90%;
-        pointer-events: visible;
-        visibility: visible;
-        opacity: 1;
-    }
-  }
+  // &:hover{
+  //   .mini-cart-info__wrapper{
+  //       top: 90%;
+  //       pointer-events: visible;
+  //       visibility: visible;
+  //       opacity: 1;
+  //   }
+  // }
 }
 
 .mini-cart {
+  right: 0;
+  top: 100%;
+  min-width: 300px;
+  margin-top: 30px;
+  background:$color-submenu-bg;
+  padding: 15px 10px;
+  pointer-events: none;
+  white-space: nowrap;
+  //transform: translateX(-50%);
+  box-shadow: $shadow-2;
+
+  &.header-minicart{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 111;
+    display: none;
+
+    // @media #{$md-layout, $sm-layout}{
+    //     right: -40px;
+    // }
+  }
 
   a, p, span {
     font-family: $body-font;
