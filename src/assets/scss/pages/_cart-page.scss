@@ -1,0 +1,321 @@
+/*****************************
+ - Section cart
+*****************************/
+
+.cart-row {
+  //display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.cart-column {
+  display: flex;
+}
+
+/*   Блок  Карзины покупок (shopping-cart)  */
+.shopping-cart {
+   // .shopping-cart__form
+  flex: 0 0 66.7%;
+  min-width: 66.7%;
+
+  &__content {
+    display: flex;
+    flex: 0 0 100%;
+    margin: 0;
+  }
+}
+
+/*    Блок калькулятора карзины   calculator-inner   */
+.calculator-inner {
+  // .cart-calculate
+  flex: 0 0 33.3%;
+  min-width: 33.3%;
+  padding: 0 15px;
+
+  &__area{
+    width: 100%;
+
+    &--title {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      &.totals-title{
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
+/*****************************
+ - Cart Page - table-cart
+*****************************/
+.table-cart {
+  // .table-cart__content
+
+  &__content {
+    width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    text-align: center;
+
+    th {
+      min-width: 100px;
+      &:first-child {
+        min-width: 25px;
+      }
+    }
+  }
+}
+
+.product-shop {
+  font-size: 14px;
+
+  &__remove {
+    a {
+      display: block;
+      color: $color-silver;
+      margin: 0;
+      transition: $base-tranzition;
+
+      &:before {
+        font-family: 'fontello';
+        content: '\eadf';
+        font-size: 23px;
+      }
+
+      &:hover {
+        color: $color-red;
+      }
+    }
+  }
+
+  // .product-shop__thumbnail
+  &__thumbnail {
+    .product-img {
+      display: flex;
+      width: 75px;
+      min-width: 75px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+    }
+  }
+
+  // .product-shop__name
+  &__name {
+    min-width: 240px;
+    h3 {
+      line-height: 1.5;
+      font-size: 14px;
+      a {
+        color: $body-color;
+      }
+    }
+  }
+
+  // .product-shop__price
+
+  &__price {
+    padding-right: 5px;
+  }
+
+  // .product-shop__quantity
+
+  &__quantity {
+    text-align: center;
+    padding: 0;
+    .quantity {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 60px;
+      padding: 0;
+      position: relative;
+      &__qtybutton {
+        display: block;
+        position: absolute;
+        font-size: 20px;
+        line-height: 58px;
+        user-select: none;
+        cursor: pointer;
+        height: 58px;
+        width: 20px;
+        top: 0;
+        transition: $base-tranzition;
+
+        &.dec {
+          left: 5px;
+        }
+        &.inc {
+          right: 5px;
+        }
+
+        &:hover {
+          background: $color-silver;
+        }
+      }
+      &__input {
+        text-align: center;
+        font-size: 16px;
+        border: none;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // .product-shop__total-price
+
+  &__total-price {
+    padding-right: 5px;
+    .product-price {
+      &__wrapper {
+        line-height: 1.4;
+        & > span {
+          font-size: 14px;
+          font-weight: $font-SemiBold;
+        }
+      }
+    }
+  }
+}
+
+.product-price {
+  // .product-price__wrapper
+  &__wrapper {
+    line-height: 1.4;
+  }
+}
+
+
+/*****************************
+ - Cart Page - form-table-area
+*****************************/
+.table-area {
+  // .cart-form__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .cart-form__row
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+}
+
+.table-content {
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+
+  &.table {
+    & thead {
+      background: lighten($border-color, 11%);
+      border-top: 1px solid $border-color;
+    }
+    & tr {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+
+/*****************************
+ - Cart Page - cart calculate
+*****************************/
+.cart-calculate {
+  padding-left: 20px;
+
+  &__column{
+    display: flex;
+    flex-direction: column;
+    //background: lighten($border-color, 11%);
+  }
+  // .cart-calculate__totals
+  &__totals {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 0;
+  }
+}
+
+/*  Блок  cart-cupone   */
+.cart-cupone {
+  margin-bottom: 20px;
+
+  // .cart-cupone__form
+  &__form {
+    display: bloc;
+    flex-direction: column;
+  }
+
+  // .cart-cupone__form--input
+  &__form--input {
+    font-size: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding:15px 20px;
+    border: 1px solid $border-color;
+  }
+}
+
+/*  Блок cart-totals */
+.cart-totals {
+  // .acart-totals__title
+  margin-top: 50px;
+
+  &__title {
+    font-size: 12px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/*   Блок  cart-calculator   */
+.cart-calculator {
+  margin-bottom: 20px;
+  // .cart-calculator__item
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid $border-color;
+
+  }
+
+  // .cart-calculator__item--head
+  &__item--head{
+    font-size: 14px;
+    font-weight: $font-Bold;
+    text-transform: capitalize;
+  }
+
+  &__item--value{
+    font-size: 16px;
+
+    span{
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+  // .cart-calculator__item--value
+
+    &__item--head, &__item--value {
+      vertical-align: top;
+      text-transform: capitalize;
+  }
+
+  // .cart-calculator__btn
+  &__btn {
+    &:hover{
+      background: $color-brown;
+    }
+
+  }
+}

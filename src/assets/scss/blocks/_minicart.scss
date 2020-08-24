@@ -92,3 +92,73 @@
   padding: 10px 0;
   width: 120px;
 }
+
+
+
+/***************************
+// .item-minicart
+****************************/
+.item-minicart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  // .item-minicart__remove
+  &__remove-btn {
+    position: absolute;
+    font-size: 22px;
+    color: $color-silver;
+    background-color: trnsparent;
+    right: 4px;
+    top: 0;
+    transition: all 250ms ease-out;
+
+    &:hover {
+      color: $color-alizarin;
+    }
+  }
+
+  // .item-minicart__image
+  &__title {
+    text-align: left;
+    padding-right: 15px;
+    font-weight: $font-Bold;
+    font-size: 1.2em;
+
+    color: $color-black-blue;
+  }
+  &__img {
+    position: absolute;
+    width: 40px;
+    height: 65px;
+    margin: 0;
+    left: 9px;
+    top: 18px;
+  }
+
+
+  // .item-minicart__quantity
+  &__quantity {
+    font-size: 1.2em;
+    font-weight: $font-Regular;
+    display: block;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+  }
+
+  // .item-minicart__amount
+  &__amount {
+    color: $color-midnight-blue-lite;
+    white-space: nowrap;
+    font-weight: $font-Bold;
+    letter-spacing: .05em;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  // .item-minicart__curency-symbol
+}

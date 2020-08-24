@@ -1,0 +1,36 @@
+/*****************************
+ - Section about
+*****************************/
+.section-about{
+
+  &__row{
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img{
+    flex: 1 1 50%;
+  }
+
+  &__descr{
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    padding:0 40px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      font-family: $body-font;
+      font-size: 2em;
+      font-weight: $font-Light;
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 1.3em;
+      font-weight: $font-Light;
+    }
+  }
+}

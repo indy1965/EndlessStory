@@ -1,0 +1,108 @@
+/*****************************
+51 - Utilities - Common
+*****************************/
+
+/**-- Preloader --*/
+.es-preloader {
+  display: none;
+
+  &.active {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999999;
+    background: rgba(255, 255, 255, 1);
+    display: block;
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__child {
+    width: 20px;
+    height: 20px;
+    background-color: $primary-color;
+    border-radius: 100%;
+    display: inline-block;
+    animation: es-bouncedelay 1.4s ease-in-out 0s infinite both;
+  }
+
+  .es-bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+
+  .es-bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+}
+
+
+/*****************************
+50 - Utilities - Helper
+*****************************/
+
+//***************************************
+// Эффект увеличения
+.zoom-out-effect {
+  overflow: hidden;
+
+  img {
+    transform: scale(1.05);
+    transition: transform 0.5s ease-out;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1);
+    }
+  }
+}
+
+// Меню Бургер.
+.hamburger-icon {
+  width: 25px;
+
+  &, &:after, &:before{
+    position: relative;
+    display: block;
+    height: 2px;
+    background-color: $color-white;
+    transition: background-color 0.18s ease 0.40s, transform 0.2s ease 0.38s;
+  }
+
+  &:after, &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+  }
+
+  &:after {
+    top: 7px;
+  }
+
+  &:before {
+    top: -7px;
+  }
+
+  &.close {
+    background-color: transparent;
+    &:after {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    &:before {
+      transform: translateY(7px) rotate(45deg);
+    }
+  }
+}
+

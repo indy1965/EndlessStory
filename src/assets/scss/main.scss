@@ -12,10 +12,10 @@ INDEX:
 ******************************/
 
 /*
-    Defult Primary Color:       #2c2e3d
-    Default Secondary Color:    #ff6a00
-    Default Border Color:       #a6a6a6
-    Default Text Color:         #2c2e3d
+    Defult Primary Color:
+    Default Secondary Color:
+    Default Border Color:
+    Default Text Color:
     Default Body Font:          'Poppins', sans-serif;
 
 */
@@ -26,10 +26,29 @@ INDEX:
 //* <ШРИФТЫ> ============================================================
 // <Подключаем шрифты> ==================================================
 //&display=swap&subset=cyrillic-ext
+//***********************************************************************
+
+@import './variables';
+@import './mixins';
+
+
+//****************************
+//*  Базовые стили
+//****************************
 @import './base/fonts';
-@import './base/variables';
-@import './base/mixins';
 @import './base/typography';
+@import './base/utilites';
+
+//****************************
+//* Компоненты
+//****************************
+@import './elements/animation';
+@import './elements/_button';
+@import './elements/forms';
+@import './blocks/_sections';
+@import './blocks/minicart';
+@import './blocks/section-product-list';
+
 
 //****************************
 //*  Расположение
@@ -37,29 +56,11 @@ INDEX:
 @import './layout/header';
 @import './layout/footer';
 
-//****************************
-//* Компоненты
-//****************************
-@import './components/animation';
-@import './components/secton-slider';
-@import './components/_button';
-@import './components/forms';
-@import './components/_sections';
-@import './components/_section-prod-info';
-@import './components/mini-cart/minicart';
-@import './components/mini-cart/minicart-item';
-@import './components/product/section-product-list';
-@import './components/product/_product-item';
-@import './components/cart/cart-calculate';
-@import './components/cart/form-table-area';
-@import './components/cart/table-cart__content';
 
 //****************************
 //* Страницы
 //****************************
+@import './pages/cart-page';
+@import './pages/product-info-page';
+@import './pages/about-page';
 
-//****************************
-//* Утилиты
-//****************************
-@import './utilites/common';
-@import './utilites/helper';
