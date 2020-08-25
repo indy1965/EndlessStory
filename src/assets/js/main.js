@@ -121,12 +121,20 @@ $(window).on('scroll', function () {
 });
 
   /**********************
-	*Preloader
+	* Прелоадер
 	***********************/
-
 	$(window).on('load', function(){
 		$('.es-preloader').removeClass("active");
   });
+
+  /**********************
+	* Разверните
+	***********************/
+	$(".expand-btn").on('click', function(e){
+		e.preventDefault();
+		var target = $(this).attr('href');
+		$(target).slideToggle('slow');
+	});
 
   	/* Header Minicart */
 	// $('.mini-cart-btn').on('click', function(e){
