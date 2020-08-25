@@ -175,6 +175,30 @@ a:focus {
   display: flex;
 }
 
+.column{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.hide-in-default{
+	display: none;
+}
+
+.form__input--2 {
+  height: 40px;
+}
+
+.form__input--2.nice-select {
+  height: 40px;
+  width: 100%;
+}
+
+    //***********
 .page_content {
   width: 100%;
   overflow: hidden;

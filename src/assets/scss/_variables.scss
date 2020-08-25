@@ -64,7 +64,6 @@ $color-blue-2: #3d72c9;
 $color-copper: #b87333;
 $color-old-rose: #c18775;
 $color-yellow: #ffe11b;
-$color-red: #c2080f;
 $color-red-2: #c4181d;
 $color-pink: #f7a4c7;
 $color-pink-2: #f178ba;
@@ -83,58 +82,64 @@ $color-tundor: #404040;
 $color-persi: #ff5951;
 $color-alabaster: #f9f9f9;
 
-/**********************
-#021C1e - Сине-черный
-#004445 - Серо-синий
-#2c7873 - Дождь
-#6fb98f - Зелень
-----
-#363237 - Темно-фиолетовый
-#2d4262 - Индиго
-#73605b - Скалисто-клоичгевый
-#d09683 - Румянец
-----
-#375E97 - Небо
-#fb6542 - Закат
-#ffbb00 - Подсолнух
-#3a681c - Трава
-----
-#344d90 - Насыщенный синий
-#5cc5ef - Бассейн
-#ffb745 - Сок апельсина
-#e7552c - Красный апельсин
-----
-#1e1f26 - Полуночный синий
-#283655 - Чернильный индиго
-#4d648d - Черника
-#d0e1f9 - Фиолетово голубой
-----
-#
+//**********************
+$color1: #021C1e; // - Сине-черный
+$color2: #004445; // - Серо-синий
+$color3: #2c7873; // - Дождь
+$color4: #6fb98f; // - Зелень
+//----
+$color5: #363237; // - Темно-фиолетовый
+$color6: #2d4262; // - Индиго
+$color7: #73605b; // - Скалисто-клоичгевый
+$color8: #d09683; // - Румянец
+//----
+$color9: #375E97; // - Небо
+$color10: #fb6542; // - Закат
+$color11: #ffbb00; // - Подсолнух
+$color12: #3a681c; // - Трава
+//----
+$color13: #344d90; // - Насыщенный синий
+$color14: #5cc5ef; // - Бассейн
+$color15: #ffb745; // - Сок апельсина
+$color16: #e7552c; // - Красный апельсин
+//----
+$color17: #1e1f26; // - Полуночный синий
+$color18: #283655; // - Чернильный индиго
+$color19: #4d648d; // - Черника
+$color20: #d0e1f9; // - Фиолетово голубой
+//----
 
-*/
+
 //*===== Colors =====*//
 
-$body-color:    #505050;
-$primary-color: #334a61; //#5a7ea3
+$body-color:    #363636;
+$primary-color: #e7552c  ;// #334a61; //#5a7ea3
 $heading-color: #383838;
-$theme-color: rgba(44, 62, 80, 0.95);
+$theme-color:    #2d4262; // rgba(44, 62, 80, 0.95);
+//$select-menu:  #5cc5ef;
 
 //*==== Border Color ====*//
-$border-color: #dddddd;
+$border-color: #c0c0c0;
+$bg-color: #f8f8f8;
 
 //*==== Color =====*//
-$color-head-bg: rgba(44, 62, 80, 0.95); //Цвет шапки
-$color-footer-bg: rgba(44, 62, 80, 0.95); // Цвет подвала
-$color-hover: #4b6a8a; // Цвет ховера
+// Цвет заголовка
+$color-head-bg:  #2d4262;    // rgba(44, 62, 80, 0.95); //Цвет шапки
 
-$color-submenu-bg: lighten($border-color, 10%);
+// Цвет подвала
+$color-footer-top: $color-black; // Цвет шрифта верхней части
+$color-footer-boottom: $color-white; // Цвет шрифта нижней части
+$color-bg-footer-top:$bg-color; //цвет фона верхней части
+$color-bg-footer-boottom: darken(#2d4262,15%); //Цвет фона нижней части.
+
+$color-hover: lighten(#73605b,25%);//#4b6a8a; // Цвет ховера
+
+// Выпадающие меню
+$color-submenu-bg: lighten($border-color, 40%);
 $color-submenu-boder: $border-color;
-$color_title_section: $heading-color;
-$color_title_category: $heading-color;
 
 //*=====  borders ======*//
-$border-submenu: 1px solid $border-color;
-$border_btn: 1px solid $border-color;
+$border:  1px solid $border-color;
 
 //*=====  shadows ======*//
 $shadow-1: 0 0 25px rgba(63, 78, 100, 0.15);
@@ -152,17 +157,22 @@ $linear-gradient: linear-gradient(
 $base-tranzition: all 250ms ease-out;
 
 //*==========  fonts  ===========*//
+// Секции
 $font-family_title_section: $font-2;
 $font-weight_title_section: $font-Thin;
 $font-size_title_section: 4rem; // размер шрифта в em
 
+//*========  Разное ==========*//
+// Категририи
+$color_title_category: $heading-color;
 $font-family_title_category: $font-2;
 $font-weight_title_category: $font-Thin;
 $font-size_title_category: 4rem;
 
-$__color_foot_svg: $color-asbestos;
-$__color_foot_placehold: $color-asbestos;
-$__brd_foot_input: 1px solid $color-asbestos;
+// Форма футера
+$__color_foot_svg: $border-color;  //Цвет иконки
+$__color_foot_placehold: $border-color; // Цвет подсказки инпута
 
-$color_title_card: $color-black-blue;
-$color_text_price-card: $color-black-blue;
+// Карточка товара
+$color_title_card: $color-black-blue; // Заголовок
+$color_text_price-card: $color-black-blue; //Цвет ценика
