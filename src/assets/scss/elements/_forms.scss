@@ -19,18 +19,22 @@
   // .form-footer_input
   &__input {
     border: 0;
-    border-bottom: $__brd_foot_input;
+    border-bottom: &border;
     background-color: transparent;
     width: 100%;
     padding: 10px 10px 10px 5px;
     font-size: 14px;
-    color: white;
+    color: $color-footer-top;
     font-family: $body-font;
     font-weight: $font-Light;
 
     &::placeholder {
       font-size: 14px;
       color: $__color_foot_placehold;
+    }
+
+    &:hover{
+      border-color: #383838;
     }
 
     &:focus {
@@ -65,14 +69,15 @@
     }
 
     &:hover {
-      color: $color-white;
+      color: $color-hover;
     }
   }
 
   &:focus {
-    background: $color-footer-bg;
+    //background: $color-footer-bg;
   }
 }
+
 
 /*-- 26.02 - Cart Form --*/
 

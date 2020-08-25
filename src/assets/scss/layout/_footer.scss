@@ -3,23 +3,35 @@
 *****************************/
 
 .footer {
-  background: $color-footer-bg;
-  color: $color-white;
-  padding-top: 55px;
-  padding-bottom: 30px;
   font-size: 16px;
   font-family: $font-2;
-  font-weight: $font-Thin;
+  font-weight: $font-Regular;
   margin-top: 120px;
+
+  &__top-wrapper{
+    background: $color-bg-footer-top;
+    padding-top: 55px;
+    a,span{
+      color: $color-footer-top;
+    }
+  }
+
+  &__bottom-wrapper{
+    background: $color-bg-footer-boottom;
+    padding: 15px 0;
+    a,span{
+      color: $color-footer-boottom;
+    }
+  }
 
   // .footer__content
   &__content {
     display: flex;
     flex-direction: column;
+
     a {
-      color: $color-white;
       font-family: $font-2;
-      font-weight: $font-Thin;
+      font-weight: $font-Regular;
       line-height: 30px;
       letter-spacing: 0.1em;
     }
@@ -38,6 +50,7 @@
   &__column {
     flex: 1 0 50%;
     display: flex;
+    align-items: center;
 
     @include breakpoint(xsmall) {
       justify-content: center;

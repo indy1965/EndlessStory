@@ -98,3 +98,19 @@
     font-weight: $font-Light;
   }
 }
+
+/**
+ * Section Title
+ */
+
+ .section-title{
+  padding-top: 20px;
+  margin-bottom: 30px;
+  background: $bg-color;
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    height: 200px;
+  }
+}
+
