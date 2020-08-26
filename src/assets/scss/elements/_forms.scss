@@ -19,7 +19,7 @@
   // .form-footer_input
   &__input {
     border: 0;
-    border-bottom: &border;
+    border-bottom: $border-color;
     background-color: transparent;
     width: 100%;
     padding: 10px 10px 10px 5px;
