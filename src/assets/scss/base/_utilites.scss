@@ -106,3 +106,29 @@
   }
 }
 
+%title-checkout{
+  margin-top: 10px;
+
+    h2 {
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 45px;
+
+    @include breakpoint(medium){
+      margin-bottom: 30px;
+    }
+    @include breakpoint(xsmall){
+      margin-bottom: 20px;
+    }
+
+    &:after{
+      content: "";
+      width: 50px;
+      display: block;
+      margin-top: 10px;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-color: inherit;
+    }
+  }
+}

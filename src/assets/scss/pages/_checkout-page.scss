@@ -44,7 +44,7 @@
   align-items: center;
   position: relative;
   padding: 14px 30px;
-  margin-bottom: 31px;
+  //margin-bottom: 10px;
   width: auto;
   word-wrap: break-word;
   background: $bg-color;
@@ -71,41 +71,53 @@
 /********************************
       checkout-input-form
 ********************************/
-.checkout-orders{
+.checkout-orders__row{
+  display: flex;
   padding-bottom: 80px;
+
+  @include breakpoint(medium){
+    padding-bottom: 60px;
+  }
+
+  @include breakpoint(small){
+    padding-bottom: 40px;
+  }
 }
 
 .checkout-bill-detail{
   flex: 0 0 50%;
   max-width: 50%;
-  &__title{
-    margin-top: 10px;
+  // &__title{
+  //   margin-top: 10px;
 
-     h2 {
-      position: relative;
-      font-size: 20px;
-      margin-bottom: 45px;
+  //    h2 {
+  //     position: relative;
+  //     font-size: 20px;
+  //     margin-bottom: 45px;
 
-      @include breakpoint(medium){
-				margin-bottom: 30px;
-			}
-			@include breakpoint(xsmall){
-				margin-bottom: 20px;
-			}
+  //     @include breakpoint(medium){
+	// 			margin-bottom: 30px;
+	// 		}
+	// 		@include breakpoint(xsmall){
+	// 			margin-bottom: 20px;
+	// 		}
 
-      &:after{
-        content: "";
-        width: 50px;
-        display: block;
-        margin-top: 10px;
-        border-bottom-width: 2px;
-        border-bottom-style: solid;
-        border-color: inherit;
-      }
-    }
-  }
+  //     &:after{
+  //       content: "";
+  //       width: 50px;
+  //       display: block;
+  //       margin-top: 10px;
+  //       border-bottom-width: 2px;
+  //       border-bottom-style: solid;
+  //       border-color: inherit;
+  //     }
+  //   }
+ // }
+  @extend %title-checkout !optional;
 }
+
 /****   form-checkout     */
+
 .form-checkout{
   &__row{
     display: flex;
@@ -136,7 +148,7 @@
   }
 
   &__input{
-    border: 1px solid #eeeeee;
+    border: 1px solid $border-color;
     width: 100%;
     height: 40px;
     padding-left: 10px;
@@ -145,5 +157,13 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
+  }
+}
+
+
+/********  checkout-order-details  **********/
+.checkout-order-details{
+  &__title{
+    @extend %title-checkout !optional;
   }
 }
