@@ -3,7 +3,7 @@
 ********************************/
 
 .checkout-top-area{
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .checkout-column{
@@ -44,7 +44,6 @@
   align-items: center;
   position: relative;
   padding: 14px 30px;
-  //margin-bottom: 10px;
   width: auto;
   word-wrap: break-word;
   background: $bg-color;
@@ -85,34 +84,10 @@
 }
 
 .checkout-bill-detail{
-  flex: 0 0 50%;
-  max-width: 50%;
-  // &__title{
-  //   margin-top: 10px;
+  flex: 0 0 66.6%;
+  max-width: 66.6%;
+  padding: 0 55px 0 15px;
 
-  //    h2 {
-  //     position: relative;
-  //     font-size: 20px;
-  //     margin-bottom: 45px;
-
-  //     @include breakpoint(medium){
-	// 			margin-bottom: 30px;
-	// 		}
-	// 		@include breakpoint(xsmall){
-	// 			margin-bottom: 20px;
-	// 		}
-
-  //     &:after{
-  //       content: "";
-  //       width: 50px;
-  //       display: block;
-  //       margin-top: 10px;
-  //       border-bottom-width: 2px;
-  //       border-bottom-style: solid;
-  //       border-color: inherit;
-  //     }
-  //   }
- // }
   @extend %title-checkout !optional;
 }
 
@@ -122,7 +97,6 @@
   &__row{
     display: flex;
     flex-wrap: wrap;
-    margin-left: -5px;
     margin-bottom: 20px;
 
     .form-group, .form-group-2{
@@ -134,7 +108,7 @@
       flex: 0 0 50%;
       max-width: 50%;
     }
-    .form-group--2{
+    .form-group-2{
       flex: 0 0 100%;
       max-width: 100%;
     }
@@ -163,7 +137,55 @@
 
 /********  checkout-order-details  **********/
 .checkout-order-details{
+  flex: 0 0 33.4%;
+  max-width: 33.4%;
+  padding: 40px 15px 45px 15px;
   &__title{
     @extend %title-checkout !optional;
+  }
+}
+
+.table-content{
+
+  margin-bottom: 30px;
+
+  .order-table{
+
+    th{
+      text-align: left;
+    }
+
+    td{
+      text-align: right;
+    }
+  }
+}
+
+.order-table{
+  background-color: transparent;
+  border-collapse: collapse;
+  width: 100%;
+  &-head{
+    border-bottom: 1px solid $border-color;
+  }
+
+  .cart-subtotal, .shipping, .order-total{
+    border-top: 1px solid $border-color;
+  }
+}
+
+.checkout-payment{
+  &__group{
+    margin-bottom: 10px;
+  }
+  &__label{
+    text-transform: uppercase;
+  }
+
+  &__info{
+    p{
+      font-size: 12px;
+      padding-left: 30px;
+    }
   }
 }

@@ -3,27 +3,28 @@
       <div class="checkout-order-details__title ">
           <h2>Ваш заказ</h2>
       </div>
-      <div class="table-content table-responsive mb--30">
-          <table class="table order-table order-table-2">
-              <thead>
-                  <tr>
+      <div class="table-content ">
+          <table class="table order-table">
+              <thead >
+                  <tr class="order-table-head">
                       <th>Товар</th>
-                      <th class="text-right">Total</th>
+                      <th class="txt-right">Сумма</th>
                   </tr>
               </thead>
               <tbody>
                   <tr>
-                      <th>Товар 1
-                          <strong><span>&#10005;</span>1</strong>
+                      <th class="pl--20"><span>Товар 1
+                          <strong><span>&#10005;</span>1</strong></span>
                       </th>
-                      <td class="text-right">$80.00</td>
+                      <td class="txt-right">$80.00</td>
                   </tr>
                   <tr>
-                      <th>Товар 2
-                          <strong><span>&#10005;</span>1</strong>
+                      <th class="pl--20"><span>Товар 2
+                          <strong><span>&#10005;</span>1</strong></span>
                       </th>
-                      <td class="text-right">$60.00</td>
+                      <td class="txt-right">$80.00</td>
                   </tr>
+
               </tbody>
               <tfoot>
                   <tr class="cart-subtotal">
@@ -33,7 +34,7 @@
                   <tr class="shipping">
                       <th>Доставка</th>
                       <td class="text-right">
-                          <span>Flat Rate; $20.00</span>
+                          <span>$20.00</span>
                       </td>
                   </tr>
                   <tr class="order-total">
@@ -43,42 +44,43 @@
               </tfoot>
           </table>
       </div>
+
       <div class="checkout-payment">
           <form action="#" class="payment-form">
-              <div class="payment-group mb--10">
-                  <div class="payment-radio">
+              <div class="checkout-payment__group payment-group">
+                  <div class="checkout-payment__radio">
                       <input type="radio" value="bank" name="payment-method" id="bank" checked>
-                      <label class="payment-label" for="cheque">Прямой банковский перевод</label>
+                      <label class="checkout-payment__label" for="cheque">Прямой банковский перевод</label>
                   </div>
-                  <div class="payment-info" data-method="bank">
+                  <div class="checkout-payment__info payment-info hide-in-default" data-method="bank">
                       <p>Внесите свой платеж непосредственно на ваш банковский счет. Пожалуйста, используйте свой идентификатор заказа в качестве ссылки на оплату. Ваш заказ не будет отправлен до тех пор, пока средства не будут очищены на нашем счете.</p>
                   </div>
               </div>
-              <div class="payment-group mb--10">
-                  <div class="payment-radio">
+              <div class="checkout-payment__group payment-group">
+                  <div class="checkout-payment__radio">
                       <input type="radio" value="cheque" name="payment-method" id="cheque">
-                      <label class="payment-label" for="cheque">
+                      <label class="checkout-payment__label" for="cheque">
                         безналичные платежи
                       </label>
                   </div>
-                  <div class="payment-info cheque hide-in-default" data-method="cheque">
+                  <div class="checkout-payment__info payment-info cheque hide-in-default" data-method="cheque">
                       <p>Пожалуйста, пришлите чек на название магазина, улицу магазина, город магазина, штат магазина / округ, почтовый индекс магазина.</p>
                   </div>
               </div>
-              <div class="payment-group mb--10">
-                  <div class="payment-radio">
+              <div class="checkout-payment__group payment-group">
+                  <div class="checkout-payment__radio">
                       <input type="radio" value="cash" name="payment-method" id="cash">
-                      <label class="payment-label" for="cash">
+                      <label class="payment-radio__label" for="cash">
                         НАЛОЖЕННЫЙ ПЛАТЕЖ
                       </label>
                   </div>
-                  <div class="payment-info cash hide-in-default" data-method="cash">
+                  <div class="checkout-payment__info payment-info cash hide-in-default" data-method="cash">
                       <p>Оплата наличными при доставке товара.</p>
                   </div>
               </div>
               <div class="payment-group mt--20">
                   <p class="mb--15">Ваши персональные данные будут использоваться для обработки вашего заказа, поддержки вашего опыта работы на этом веб-сайте и для других целей, описанных в нашей политике конфиденциальности.</p>
-                  <button type="submit" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">Оформить заказ</button>
+                  <button type="submit" class="btn btn-fullwidth btn-bg-primary btn-hover-2">Оформить заказ</button>
               </div>
           </form>
       </div>

@@ -134,7 +134,31 @@ $(window).on('scroll', function () {
 		e.preventDefault();
 		var target = $(this).attr('href');
 		$(target).slideToggle('slow');
-	});
+  });
+
+  	/**********************
+	* Разверните платежную информацию
+	***********************/
+
+$('input[name="payment-method"]').on('click', function () {
+  var $value = $(this).attr('value');
+
+  $(this).parents('.payment-group').siblings('.payment-group').children('.payment-info').slideUp('100');
+
+  $('[data-method="' + $value + '"]').slideToggle('300');
+});
+
+/**********************
+	*Разверните новую информацию о доставке
+	***********************/
+
+$("#shipdifferetads").on('change', function(){
+  if(  $("#shipdifferetads").prop( "checked" ) ){
+    $(".ship-box-info").slideToggle('slow');
+  }else{
+    $(".ship-box-info").slideToggle('slow');
+  }
+});
 
   	/* Header Minicart */
 	// $('.mini-cart-btn').on('click', function(e){
