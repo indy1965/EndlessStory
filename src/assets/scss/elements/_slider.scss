@@ -1,51 +1,89 @@
+/* Слайдер1 карточки товара */
 /* Слайдер */
-.slick-slider{
 
-  /* Слайдер запущен */
-  &.slick-initialized{}
+  .slick-slider{
 
-  /* Слайдер с точками */
-  &.slick-dotted{}
-}
+    /* Слайдер запущен */
+    &.slick-initialized{}
 
-/* Ограничивающая оболочка */
-.slick-list {}
-
-/* Лента слайдов */
-.slick-track{}
-
-/* Слайд */
-.slick-slide{
-  /* Слайд активный (показывается) */
-  &.slick-active{}
-
-  /* Слайд основной */
-  &.slick-current{}
-
-  /* Слайд по центру */
-  &.slick-center{}
-
-  /* Клонированный слайд */
-  &.slick-cloned{}
-}
-
-/* Стрелка */
-.slick-arrow{
-  /* Стрелка влево */
-  &.slick-prev{}
-  /* Стрелка вправо */
-  &.slick-next{}
-  /* Стрелка не активная */
-  &.slick-disabled{}
-
-}
-
-/* Точки (булиты) */
-.slick-dots{
-  li{
-    /* Активная точка */
-    &.slick-active{}
-    /* Элемент точки */
-    button{}
+    /* Слайдер с точками */
+    &.slick-dotted{}
   }
-}
+
+  /* Ограничивающая оболочка */
+  .slick-list {
+    overflow: hidden;
+  }
+
+  /* Лента слайдов */
+  .slick-track{
+    display: flex;
+  }
+
+  /* Слайд */
+  .slick-slide{
+    /* Слайд активный (показывается) */
+    &.slick-active{}
+
+    /* Слайд основной */
+    &.slick-current{}
+
+    /* Слайд по центру */
+    &.slick-center{}
+
+    /* Клонированный слайд */
+    &.slick-cloned{}
+  }
+
+  /* Стрелка */
+  .slick-arrow{
+    /* Стрелка влево */
+    &.slick-prev{}
+    /* Стрелка вправо */
+    &.slick-next{}
+    /* Стрелка не активная */
+    &.slick-disabled{}
+
+  }
+
+  /* Точки (булиты) */
+  .slick-dots{
+    li{
+      /* Активная точка */
+      &.slick-active{}
+      /* Элемент точки */
+      button{}
+    }
+  }
+
+  .product-info-slider1{
+
+
+    &__item{
+      padding: 0 5px;
+      a{
+        img{
+            width: 100%;
+        }
+      }
+      text-align: center;
+    }
+  }
+
+  .product-info-slider2{
+
+
+    &__item{
+
+      a{
+        img{
+            width: 100%;
+        }
+      }
+      text-align: center;
+    }
+
+    .slick-track{
+      display: block;
+    }
+  }

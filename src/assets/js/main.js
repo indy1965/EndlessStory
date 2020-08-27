@@ -162,67 +162,54 @@ $("#shipdifferetads").on('change', function(){
 
 
 /* Слайдер страницы карточки товара */
-$('.product-info-left__images').slick({
+$('.product-info-slider1').slick({
+  arrows:false,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: false,
-  autoplaySpeed: 5000,
+  //autoplay: false,
+  //autoplaySpeed: 5000,
   dots: false,
   infinite: true,
   centerMode: true,
   centerPadding: 0,
-  prevArrow: '<span class="slider-navigation slider-navigation-prev"><i class="ti ti-caret-left"></i></span>',
-  nextArrow: '<span class="slider-navigation slider-navigation-next"><i class="ti ti-caret-right"></i></span>',
-  asNavFor: '.product-info__thumbs'
+  variableWidth: false,
+  fade:true,
+  asNavFor: '.product-info-slider2'
 });
-// $('.product-info-left__thumbs:not(.product-info-left__thumbs--2)').slick({
-//   slidesToShow: 4,
-//   slidesToScroll: 1,
-//   autoplay: false,
-//   autoplaySpeed: 5000,
-//   dots: false,
-//   infinite: true,
-//   focusOnSelect: true,
-//   centerMode: false,
-//   centerPadding: 0,
-//   prevArrow: '<span class="slider-navigation slider-navigation-prev"><i class="ti ti-caret-left"></i></span>',
-//   nextArrow: '<span class="slider-navigation slider-navigation-next"><i class="ti ti-caret-right"></i></span>',
-//   asNavFor: '.product-info-left__images'
-// });
-$('.product-info-left__thumbs--2').slick({
+
+$('.product-info-slider2').slick({
+  arrows:false,
   slidesToShow: 3,
   slidesToScroll: 1,
-  autoplay: false,
-  autoplaySpeed: 5000,
+  //autoplay: true,
+  //autoplaySpeed: 1000,
   dots: false,
   infinite: true,
   focusOnSelect: true,
   centerMode: false,
   centerPadding: 0,
-  prevArrow: '<span class="slider-navigation slider-navigation-prev"><i class="ti ti-caret-left"></i></span>',
-  nextArrow: '<span class="slider-navigation slider-navigation-next"><i class="ti ti-caret-right"></i></span>',
-  asNavFor: '.product-info-left__images',
+  asNavFor: '.product-info-slider1',
   vertical: true,
-  responsive: [
-  {
-    breakpoint: 992,
-    settings: {
-      vertical: false
-    }
-  },
-  {
-    breakpoint: 768,
-    settings: {
-      vertical: true,
-    }
-  },
-  {
-    breakpoint: 576,
-    settings: {
-      vertical: false,
-    }
-  }
-  ]
+  // responsive: [
+  // {
+  //   breakpoint: 992,
+  //   settings: {
+  //     vertical: false
+  //   }
+  // },
+  // {
+  //   breakpoint: 768,
+  //   settings: {
+  //     vertical: true,
+  //   }
+  // },
+  // {
+  //   breakpoint: 576,
+  //   settings: {
+  //     vertical: false,
+  //   }
+  // }
+  // ]
 });
 
   	/* Header Minicart */
