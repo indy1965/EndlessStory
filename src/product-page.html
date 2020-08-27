@@ -10,10 +10,13 @@
         @@include('./html_component/blocks/_section-titles.html',
         {"title":"Страница товара"})
 
-        @@include('./html_component/blocks/_section-prod-info.html',{})
+        <div class="product-info container">
+          <div class="product-info__row">
+            @@include('./html_component/components/product-info/_slider-product-info.html',{})
+            @@include('./html_component/components/product-info/_product-info.html',{})
+          </div>
+        </div>
 
-        @@include('./html_component/blocks/_section-product-list.html',
-        {"title":"Возможно вам понравится"})
       </main>
       <!-- /main -->
 

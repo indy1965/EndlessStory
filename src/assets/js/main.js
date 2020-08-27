@@ -160,6 +160,71 @@ $("#shipdifferetads").on('change', function(){
   }
 });
 
+
+/* Слайдер страницы карточки товара */
+$('.product-info-left__images').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 5000,
+  dots: false,
+  infinite: true,
+  centerMode: true,
+  centerPadding: 0,
+  prevArrow: '<span class="slider-navigation slider-navigation-prev"><i class="ti ti-caret-left"></i></span>',
+  nextArrow: '<span class="slider-navigation slider-navigation-next"><i class="ti ti-caret-right"></i></span>',
+  asNavFor: '.product-info__thumbs'
+});
+// $('.product-info-left__thumbs:not(.product-info-left__thumbs--2)').slick({
+//   slidesToShow: 4,
+//   slidesToScroll: 1,
+//   autoplay: false,
+//   autoplaySpeed: 5000,
+//   dots: false,
+//   infinite: true,
+//   focusOnSelect: true,
+//   centerMode: false,
+//   centerPadding: 0,
+//   prevArrow: '<span class="slider-navigation slider-navigation-prev"><i class="ti ti-caret-left"></i></span>',
+//   nextArrow: '<span class="slider-navigation slider-navigation-next"><i class="ti ti-caret-right"></i></span>',
+//   asNavFor: '.product-info-left__images'
+// });
+$('.product-info-left__thumbs--2').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 5000,
+  dots: false,
+  infinite: true,
+  focusOnSelect: true,
+  centerMode: false,
+  centerPadding: 0,
+  prevArrow: '<span class="slider-navigation slider-navigation-prev"><i class="ti ti-caret-left"></i></span>',
+  nextArrow: '<span class="slider-navigation slider-navigation-next"><i class="ti ti-caret-right"></i></span>',
+  asNavFor: '.product-info-left__images',
+  vertical: true,
+  responsive: [
+  {
+    breakpoint: 992,
+    settings: {
+      vertical: false
+    }
+  },
+  {
+    breakpoint: 768,
+    settings: {
+      vertical: true,
+    }
+  },
+  {
+    breakpoint: 576,
+    settings: {
+      vertical: false,
+    }
+  }
+  ]
+});
+
   	/* Header Minicart */
 	// $('.mini-cart-btn').on('click', function(e){
   //   e.preventDefault();
